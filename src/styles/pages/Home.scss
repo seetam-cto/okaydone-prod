@@ -1,0 +1,170 @@
+@use '../abstracts/' as *;
+
+.home{
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    &-header{
+        font-family: 'AntiqueMain';
+        font-size: 9rem;
+        text-align: center;
+        color: $white;
+        width: 70%;
+        line-height: 9rem;
+        z-index: 1;
+        letter-spacing: -5px;
+        position: relative;
+        pointer-events: none;
+        margin-top: -15vh;
+        @include mobile{
+            font-size: 4rem;
+            line-height: 3.6rem;
+            font-weight: 500;
+            letter-spacing: -2px;
+        }
+        &-context{
+            font-size: 2rem;
+            line-height: 2rem;
+            letter-spacing: 0;
+            text-align: left;
+            color: $accent;
+            @include mobile{
+                font-size: 1.2rem;
+                line-height: 1.2rem;
+            }
+        }
+        &-lines{
+            display: flex;
+            width: auto;
+            justify-content: center;
+            &-middle{
+                @include mobile{
+                    display: none;
+                }
+            }
+            &-line{
+                height: auto;
+            }
+        }
+    }
+    &-video{
+        position: absolute;
+        z-index: inherit;
+        width: 100vw;
+        height: 100vh;
+        @include flex();
+        overflow: hidden;
+        video{
+            width: 40vw;
+            height: 60vh;
+            object-fit: cover;
+            border-radius: 3rem;
+            position: relative;
+            z-index: 0;
+            @include mobile{
+                width: 80vw;
+                height: 50vh;
+                border-radius: 20px;
+            }
+        }
+        &-overlay{
+            width: 40vw;
+            height: 60vh;
+            position: absolute;
+            z-index: 1;
+            content: "";
+            margin: auto;
+            background-color: #00000090;
+            border-radius: 3rem;
+            border: none;
+            @include mobile{
+                width: 80vw;
+                height: 50vh;
+                border-radius: 20px;
+            }
+        }
+    }
+    &-cta{
+        position: absolute;
+        left: 65%;
+        top: 48%;
+        @include mobile{
+            left: 0;
+            right: 0;
+            top: 60%;
+            @include flex();
+        }
+        &.hcontact{
+            left: 72%;
+            @include mobile{
+                left: 0;
+                right: 0;
+                @include flex();
+            }
+        }
+    }
+    &-down{
+        position: absolute;
+        left: -80px;
+        bottom: -80px;
+    }
+}
+
+.clients{
+    margin-top: 20vh;
+    &-header{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        margin-bottom: 5rem;
+        @include mobile{
+            gap: 10px;
+            flex-direction: column;
+            align-items: center;
+        }
+        &-title{
+            font-family: 'Matter';
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: $purple;
+            margin-top: 0.2rem;
+        }
+        &-subtext{
+            font-family: 'Matter';
+            font-weight: 500;
+            font-size: 2rem;
+            line-height: 2.2rem;
+            width: 60%;
+            color: $white;
+            @include mobile{
+                width: 100%;
+                font-size: 1.1rem;
+                text-align: center;
+            }
+            .purple{
+                color: $purple;
+            }
+            .teal{
+                color: rgb(62, 255, 226);
+            }
+            .yellow{
+                color: $accent;
+            }
+        }
+    }
+    &-cta{
+        width: 100%;
+        height: 20vh;
+        @include flex();
+    }
+}

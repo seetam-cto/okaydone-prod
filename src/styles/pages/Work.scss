@@ -1,0 +1,208 @@
+@use '../abstracts/' as *;
+
+.work{
+    &-hero{
+        height: 65vh;
+        padding-top: 25vh;
+        &-header{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-inline: 10%;
+            height: 100%;
+            h1{
+                width: fit-content;
+                text-align: center;
+                font-family: 'AntiqueMain';
+                font-size: 9rem;
+                color: $white;
+                line-height: 9rem;
+                z-index: 1;
+                letter-spacing: -5px;
+                &:last-child{
+                    align-self: flex-end;
+                }
+            }
+        }
+    }
+    &-filter{
+        &-list{
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            li{
+                a{
+                    color: $white;
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                    font-family: 'Matter';
+                    &.active{
+                        color: $accent;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.brandpage{
+    &-hero{
+        height: 70vh;
+        margin-bottom: 20vh;
+        width: 100%;
+        box-sizing: border-box;
+        background-color: #FAFAF6;
+        position: relative;
+        z-index: 0;
+        &::after{
+            position: absolute;
+            width: 150%;
+            left: -25%;
+            height: 30vh;
+            content: "";
+            bottom: -10vh;
+            background-color: #FAFAF6;
+            border-radius: 0 0 70% 70%;
+            z-index: -1;
+        }
+        &-container{
+            padding-top: 20vh;
+        }
+        &-back{
+            position: absolute;
+            left: -120px;
+            top: -120px;
+            transform: rotate(90deg);
+        }
+        &-title{
+            width: 100%;
+            font-family: 'Matter';
+            font-size: 5rem;
+            font-weight: 400;
+            line-height: 5rem;
+            color: $black;
+        }
+        &-brandname{
+            font-size: 2.2rem;
+            font-weight: 500;
+            margin-top: 20px;
+            font-family: 'AntiqueMain';
+            &.purple{color: $purple;}
+            &.teal{color: $teal;}
+            &.yellow{color: $accent;}
+            &.orange{color: $mainColor;}
+            &.blue{color: $blue;}
+        }
+        &-footer{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            a{
+                width: fit-content;
+                padding: 10px 20px;
+                font-family: 'Matter';
+                text-transform: uppercase;
+                font-size: 1rem;
+                font-weight: 500;
+                color: $purple;
+                border: 1px solid $purple;
+                border-radius: 50px;
+                transition: all 0.3s ease-in-out;
+                &:hover{
+                    background-color: purple;
+                    color: $white;
+                }
+            }
+        }
+        &-categories{
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            li{
+                font-family: 'Matter';
+                font-weight: 600;
+                font-size: 1rem;
+                position: relative;
+                text-transform: uppercase;
+                &:not(:last-child){
+                    &::after{
+                        content: "";
+                        width: 6px;
+                        height: 6px;
+                        border-radius: 50%;
+                        background-color: $purple;
+                        position: absolute;
+                        right: -18px;
+                        top: 2px;
+                        bottom: 0;
+                        margin-block: auto;
+                    }
+                }
+            }
+        }
+    }
+    &-section{
+        &-brand{
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            h1{
+                color: $white;
+                font-family: 'AntiqueMain';
+                font-size: 3.5rem;
+            }
+            .logo{
+                width: 300px;
+                height: 10rem;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
+        &-content{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            min-height: 50vh;
+            margin-top: 10vh;
+            padding-block: 50px;
+            .title{
+                width: 40%;
+                h2{
+                    font-family: 'AntiqueMain';
+                    color: $white;
+                    font-size: 2.2rem;
+                }
+            }
+            .subtitle{
+                width: 50%;
+                ul{
+                    li{
+                        color: $white;
+                        font-family: 'Matter';
+                        font-weight: 1.8rem;
+                        line-height: 1.8rem;
+                        &::before {
+                            content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+                            color: $purple; /* Change the color */
+                            font-weight: bold; /* If you want it to be bold */
+                            display: inline-block; /* Needed to add space between the bullet and the text */
+                            width: 1em; /* Also needed for space (tweak if needed) */
+                            margin-left: -1em; /* Also needed for space (tweak if needed) */
+                          }
+                          margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

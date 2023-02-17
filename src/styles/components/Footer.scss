@@ -1,0 +1,23 @@
+@use '../abstracts/' as *;
+
+.footer{
+    background-color: $purple;
+    width: 100vw;
+    height: 60vh;
+    display: flex;
+    padding-block: 50px;
+    position: relative;
+    &::before{
+        height: var(--curveheight, 10vh);
+        width: 110vw;
+        content: "";
+        position: absolute;
+        top: -4.9vh;
+        left: -25vw;
+        right: -25vw;
+        margin-inline: auto;
+        border-radius: 50% 50% 0 0;
+        background-color: $purple;
+        transition: all 0.2s ease-in-out;
+    }
+}
