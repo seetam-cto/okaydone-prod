@@ -24,7 +24,7 @@ const LinkText = ({text, second = false}) => {
 
 const Logo = ({status}) => {
   return (
-    <div className="navbar-logo-container">
+    <Link href="/" className="navbar-logo-container">
       {!status ? <motion.img
       initial={{x: 100, rotate: 90, scale: 0, opacity: 0}}
       animate={{x: 0, scale: 1, rotate: 0, opacity: 1}}
@@ -47,7 +47,7 @@ const Logo = ({status}) => {
           transition={{duration: 1, type: 'spring', bounce: 0.6}}
           className='part-two'>done</motion.div>
         </div>}
-    </div>
+    </Link>
   )
 }
 
@@ -77,7 +77,7 @@ const Navigation = ({theme = false}) => {
           {!theme && <Logo status={status} />}
         </div>
         <div className="navbar-menu">
-          <BorderedButton invert={menuOpen || theme} text={"Get in touch"} />
+          <BorderedButton link={"/contact-us"} invert={menuOpen || theme} text={"Get in touch"} />
           <div onClick={() => setMenuOpen(!menuOpen)} className={`navbar-menu-button ${menuOpen && 'active'}`}>
             <div className="navbar-menu-button-layers">
               <div className="navbar-menu-button-layers-layer" />
@@ -90,8 +90,8 @@ const Navigation = ({theme = false}) => {
     </header>
     <section className={`menupage ${menuOpen ? 'active' : 'inactive'}`}>
       <div className="container">
-        <div className="row">
-          <div className="col-4">
+        <div className="row menupage-mobile">
+          <div className="col-4 col-sm-12">
             <div className="menupage-contact">
             <h2>Get In Touch</h2>
             <a href="mailto:contact@okaydone.in" className="menupage-contact-link">contact@okaydone.in</a>
@@ -101,7 +101,7 @@ const Navigation = ({theme = false}) => {
             </p>
             </div>
           </div>
-          <div className="col-8">
+          <div className="col-8 col-sm-12">
             <div className="navbar-menu-links">
               {menuOpen && <ul>
                 <li

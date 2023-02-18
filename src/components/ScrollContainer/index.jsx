@@ -9,7 +9,7 @@ import {
 
 export const ScrollContext = React.createContext();
 
-export default props => {
+const ScrollContainer = props => {
   const spacer = useRef(null);
   const container = useRef(null);
   const blocks = useRef([]);
@@ -72,7 +72,7 @@ export default props => {
       window.removeEventListener("resize", resize);
       window.removeEventListener("scroll", updateScroll);
     };
-  }, []);
+  }, [init, resize, updateScroll]);
 
   const addBlock = data => {
     blocks.current = [...blocks.current, createBlock(data, container.current)];
@@ -87,3 +87,6 @@ export default props => {
     </ScrollContext.Provider>
   );
 };
+
+
+export default ScrollContainer;

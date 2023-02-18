@@ -4,11 +4,14 @@
     &-hero{
         height: 65vh;
         padding-top: 25vh;
+        @include mobile{
+            height: 42vh;
+        }
         &-header{
             display: flex;
             flex-direction: column;
             justify-content: center;
-            padding-inline: 10%;
+            max-width: 1028px;
             height: 100%;
             h1{
                 width: fit-content;
@@ -21,6 +24,15 @@
                 letter-spacing: -5px;
                 &:last-child{
                     align-self: flex-end;
+                    @include mobile{
+                        align-self: center;
+                    }
+                }
+                @include mobile{
+                    font-size: 3rem;
+                    line-height: 3.1rem;
+                    letter-spacing: -2px;
+                    align-self: center;
                 }
             }
         }
@@ -30,15 +42,143 @@
             display: flex;
             gap: 30px;
             justify-content: center;
+            &-button{
+                display: none;
+                @include mobile{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 40px;
+                    min-width: 40px;
+                    margin-inline: auto;
+                    border: 2px solid $purple;
+                    border-radius: 50px;
+                    font-size: 1rem;
+                    padding-inline: 15px;
+                    transition: all 0.3s ease-in-out;
+                    font-family: 'Matter';
+                    line-height: 1rem;
+                    background-color: transparent;
+                    outline: none;
+                    color: $white;
+                    i{
+                        transition: all 0.3s ease-in-out;
+                    }
+                }
+                &.active{
+                    background-color: $purple;
+                    padding: 0;
+                }
+            }
+            @include mobile{
+                width: 70%;
+                margin-inline: auto;
+                border: 2px solid $purple;
+                background-color: $bodyBg;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0.5rem 0.5rem 2rem #00000030;
+                transform: scaleY(var(--scale));
+                transition: all 0.4s ease-in-out;
+                transform-origin: 50% 0%;
+            }
             li{
                 a{
                     color: $white;
                     font-size: 1.5rem;
                     font-weight: 500;
                     font-family: 'Matter';
+                    @include mobile{
+                        font-size: 1.2rem;
+                        line-height:2rem;
+                    }
+                    position: relative;
                     &.active{
                         color: $accent;
+                        &::after{
+                            content: "";
+                            width: 6px;
+                            height: 6px;
+                            background-color: $accent;
+                            border-radius: 20px;
+                            position: absolute;
+                            bottom: -15px;
+                            left: 0;
+                            right:0;
+                            margin-inline: auto;
+                            @include mobile{
+                                display: none;
+                            }
+                        }
                     }
+                }
+            }
+        }
+    }
+    &-box{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        margin-top: 10vh;
+        @include mobile{
+            grid-template-columns: 100%;
+            margin-top: 0vh;
+        }
+        &-item{
+            position: relative;
+            width: 90%;
+            height: 400px;
+            border-radius: 30px;
+            overflow: hidden;
+            @include mobile{
+                width: 100%;
+            }
+            img{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                z-index: 0;
+            }
+            &-content{
+                position: absolute;
+                width: 100%;
+                height: 50%;
+                bottom: 0;
+                left: 0;
+                z-index: 1;
+                padding: 50px 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                background-image: linear-gradient(to bottom, #00000000, #000000A0);
+                &-categories{
+                    display: flex;
+                    gap: 25px;
+                    li{
+                        font-family: 'Matter';
+                        font-size: 1rem;
+                        color: $white;
+                        position: relative;
+                        &:first-child{
+                            &::before{
+                                display: none;
+                            }
+                        }
+                        &::before{
+                            content: "•";
+                            color: $white;
+                            font-size: 0.8rem;
+                            margin-block: auto;
+                            left: -15px;
+                            top: 2px;
+                            position: absolute;
+                        }
+                    }
+                }
+                &-title{
+                    font-family: 'Matter';
+                    color: $white;
+                    font-size: 1.3rem;
                 }
             }
         }
@@ -54,6 +194,16 @@
         background-color: #FAFAF6;
         position: relative;
         z-index: 0;
+        @include mobile{
+            height: 50vh;
+        }
+        &.page{
+            &::after{
+                bottom: -5vh;
+            }
+            height: 50vh !important;
+            margin-bottom: 20vh;
+        }
         &::after{
             position: absolute;
             width: 150%;
@@ -73,6 +223,11 @@
             left: -120px;
             top: -120px;
             transform: rotate(90deg);
+            @include mobile{
+                left: -100px;
+                top: -80px;
+                transform: rotate(90deg) scale(0.7);
+            }
         }
         &-title{
             width: 100%;
@@ -81,6 +236,10 @@
             font-weight: 400;
             line-height: 5rem;
             color: $black;
+            @include mobile{
+                font-size: 1.8rem;
+                line-height: 1.8rem;
+            }
         }
         &-brandname{
             font-size: 2.2rem;
@@ -92,6 +251,9 @@
             &.yellow{color: $accent;}
             &.orange{color: $mainColor;}
             &.blue{color: $blue;}
+            @include mobile{
+                font-size: 1.5rem;
+            }
         }
         &-footer{
             width: 100%;
@@ -99,6 +261,10 @@
             justify-content: space-between;
             align-items: center;
             margin-top: 20px;
+            @include mobile{
+                flex-direction: column;
+                align-items: flex-start;
+            }
             a{
                 width: fit-content;
                 padding: 10px 20px;
@@ -110,6 +276,11 @@
                 border: 1px solid $purple;
                 border-radius: 50px;
                 transition: all 0.3s ease-in-out;
+                @include mobile{
+                    padding: 8px 25px;
+                    font-size: 0.8rem;
+                    margin-top: 20px;
+                }
                 &:hover{
                     background-color: purple;
                     color: $white;
@@ -120,12 +291,22 @@
             display: flex;
             align-items: center;
             gap: 30px;
+            @include mobile{
+                display: block;
+                width: 90%;
+                padding-left: 20px;
+            }
             li{
                 font-family: 'Matter';
                 font-weight: 600;
                 font-size: 1rem;
                 position: relative;
                 text-transform: uppercase;
+                @include mobile{
+                    font-size: 0.8rem;
+                    list-style: disc;
+                    width: 100%;
+                }
                 &:not(:last-child){
                     &::after{
                         content: "";
@@ -138,6 +319,9 @@
                         top: 2px;
                         bottom: 0;
                         margin-block: auto;
+                        @include mobile{
+                            display: none;
+                        }
                     }
                 }
             }
@@ -154,6 +338,11 @@
                 color: $white;
                 font-family: 'AntiqueMain';
                 font-size: 3.5rem;
+                text-align: center;
+                @include mobile{
+                    margin-top: 1rem;
+                    font-size: 1.5rem;
+                }
             }
             .logo{
                 width: 300px;
@@ -173,24 +362,45 @@
             display: flex;
             justify-content: space-between;
             min-height: 50vh;
-            margin-top: 10vh;
-            padding-block: 50px;
+            margin-top: 50px;
+            padding-top: 100px;
+            @include mobile{
+                flex-direction: column;
+                justify-content: flex-start;
+                min-height: unset;
+                margin-top: 0;
+            }
             .title{
                 width: 40%;
+                @include mobile{
+                    width: 100%;
+                }
                 h2{
                     font-family: 'AntiqueMain';
                     color: $white;
                     font-size: 2.2rem;
+                    @include mobile{
+                        text-align: center;
+                        margin-bottom: 20px;
+                    }
                 }
             }
             .subtitle{
                 width: 50%;
+                @include mobile{
+                    width: 100%;
+                    padding-left: 20px;
+                }
                 ul{
                     li{
                         color: $white;
                         font-family: 'Matter';
                         font-weight: 1.8rem;
                         line-height: 1.8rem;
+                        @include mobile{
+                            font-size: 1.1rem;
+                            line-height: 1.2rem;
+                        }
                         &::before {
                             content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
                             color: $purple; /* Change the color */
@@ -202,6 +412,106 @@
                           margin-bottom: 10px;
                     }
                 }
+            }
+        }
+        &-chart{
+            background: #000000A0;
+            box-shadow: 0 8px 32px 0 #00000050;
+            backdrop-filter: blur( 10px );
+            -webkit-backdrop-filter: blur( 10px );
+            border: 1px solid #00000020;
+            padding: 30px;
+            border-radius: 30px;
+            font-size: 1rem;
+            margin-top: 10vh;
+            @include mobile{
+                padding: 15px;
+                border-radius: 15px;
+            }
+            .title{
+                width: 100%;
+                text-align: center;
+                h2{
+                    font-family: 'AntiqueMain';
+                    color: $white;
+                    font-size: 2.2rem;
+                    @include mobile{
+                        text-align: center;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+        &-image{
+            width: 100%;
+            height: 70vh;
+            box-shadow: 0 8px 32px 0 #00000050;
+            border-radius: 30px;
+            margin-top: 10vh;
+            box-sizing: border-box;
+            overflow: hidden;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+            @include mobile{
+                border-radius: 15px;
+                height: 40vh;
+                box-sizing: border-box;
+            }
+        }
+        &-campaign{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 50vh;
+            margin-top: 50px;
+            padding-top: 0px;
+            @include mobile{
+                flex-direction: column;
+                justify-content: flex-start;
+                min-height: unset;
+                margin-top: 100px;
+            }
+            .title{
+                width: 100%;
+                h2{
+                    font-family: 'AntiqueMain';
+                    color: $white;
+                    font-size: 2.2rem;
+                    margin-bottom: 50px;
+                    span{
+                        font-size: 1.5rem;
+                        color: var(--spancolor, #FFC64E);
+                    }
+                    @include mobile{
+                        text-align: center;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+            &-slider{
+                height: 40vh;
+                width: 100%;
+            }
+        }
+        &-contenteditor{
+            h1,h3{
+                color: $white;
+                font-family: 'Matter';
+                font-size: 1.2rem;
+                font-weight: 500;
+                margin-top: 20px;
+            }
+            p{
+                color: $white;
+                font-family: 'Matter';
+                font-size: 0.9rem;
+                font-weight: 100;
+                text-align: justify;
             }
         }
     }

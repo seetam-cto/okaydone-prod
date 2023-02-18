@@ -1,31 +1,16 @@
 import Link from 'next/link'
 import React, {useEffect, useState} from 'react'
+import logo from "../../assets/logo.png"
 
 const Footer = () => {
-    const [scrollPosition, setScrollPosition] = useState(0);
-    const [pageHeight, setPageHeight] = useState(0)
-    const [fHeight, setFHeight] = useState(0)
-    const handleScroll = () => {
-        const position = window.pageYOffset;
-        setScrollPosition(position);
-    };
-    useEffect(() => {
-        if(((scrollPosition/pageHeight)*100) > 70){
-            setFHeight(10 - ((scrollPosition/pageHeight)*10))
-        }
-    },[scrollPosition])
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll, { passive: true });
-        setPageHeight(document.body.scrollHeight)
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
     return (
-        <footer className="footer" style={{"--curveheight": `${fHeight}vh`}}>
+        <footer className="footer">
             <div className="container">
                 <div className="row">
-                    <div className="col-5">
+                    <div className="col-sm-12 m-only footer-logo">
+                        <img src={logo.src} />
+                    </div>
+                    <div className="col-5 col-sm-12">
                         <h2 className="footer-title-small">
                             GET OUR NEWS
                         </h2>
@@ -33,16 +18,16 @@ const Footer = () => {
                             get our<br />newsletter
                         </h3>
                         <div className="footer-newsletter">
-                            <input type="email" className="footer-newsletter-input" />
+                            <input type="email" className="footer-newsletter-input" placeholder='Enter your email' />
                             <button className="footer-newsletter-button">
-
+                                <i className='bx bx-right-arrow-alt'></i>
                             </button>
                         </div>
                     </div>
-                    <div className="col-2">
-                        <img src="/logo.png" />
+                    <div className="col-2 d-only footer-logo">
+                        <img src={logo.src} alt="okaydone-logo" />
                     </div>
-                    <div className="col-5">
+                    <div className="col-5 col-sm-12 footer-title-contact">
                         <h2 className="footer-title-small">
                             GET IN TOUCH
                         </h2>
@@ -52,23 +37,23 @@ const Footer = () => {
                 </div>
                 <div className="footer-divider" />
                 <div className="row footer-bottom">
-                    <div className="col-6">
+                    <div className="col-6 col-sm-12">
                         <ul className="footer-bottom-links">
-                            <li><Link href={"/priavacy-policy"}>Privacy Policy</Link></li>
+                            <li><Link href={"/privacy-policy"}>Privacy Policy</Link></li>
                             <li><Link href={"/disclaimer"}>Disclaimer</Link></li>
                             <li><Link href={"/terms-conditions"}>Terms & Conditions</Link></li>
                             <li>© 2023 | OkayDone</li>
                         </ul>
                     </div>
-                    <div className="col-6">
-                        <li>SEE WHAT WE'RE UP TO</li>
-                        <li>
-                            <ul className="footer-socials">
-                                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
-                            </ul>
-                        </li>
+                    <div className="col-6 col-sm-12">
+                        <div className="footer-bottom-rights">
+                        <span>SEE WHAT WE&apos;RE UP TO</span>
+                        <ul className="footer-socials">
+                            <li><a className="footer-socials-box" href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a className="footer-socials-box" href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a className="footer-socials-box" href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                        </ul>
+                        </div>
                     </div>
                 </div>
             </div>

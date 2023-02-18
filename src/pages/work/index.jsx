@@ -5,12 +5,15 @@ import ScrollContainer from '@/components/ScrollContainer'
 import { fetchClients } from '@/controller/Content'
 import HomeContact from '@/sections/Contact'
 import Head from 'next/head'
-import { AnimatePresence, motion } from 'framer-motion'
+import {motion } from 'framer-motion'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
+import React, {useState} from "react"
+import rcb from "../../assets/brands/rcb/rcb.png"
 
 export default function Work({data}) {
   const router = useRouter()
+  const [filterOpen, setFilterOpen] = useState(false)
   const {filter} = router.query
   return (
     <>
@@ -32,50 +35,109 @@ export default function Work({data}) {
               </div>
             </div>
           </div>
-         <div className="container">
-          <ul className="work-filter-list">
-              <motion.li
-              key={"filter1"}
-              initial={{y: 50, opacity: 0}}
-              animate={{y: 0, opacity: 1}}
-              transition={{type: 'spring', bounce: 0.4, delay: 0.5}}
-              >
-                <Link className={!filter ? "active" : ""} href={"/work"}>All</Link>
-              </motion.li>
-              <motion.li
-              key={"filter2"}
-              initial={{y: 50, opacity: 0}}
-              animate={{y: 0, opacity: 1}}
-              transition={{type: 'spring', bounce: 0.4, delay: 0.6}}
-              >
-                <Link className={filter === "socialmedia" ? "active" : ""} href={"/work?filter=socialmedia"}>Social Media</Link>
-              </motion.li>
-              <motion.li
-              key={"filter3"}
-              initial={{y: 50, opacity: 0}}
-              animate={{y: 0, opacity: 1}}
-              transition={{type: 'spring', bounce: 0.4, delay: 0.7}}
-              >
-                <Link className={filter === "webdev" ? "active" : ""} href={"/work?filter=webdev"}>Web Development</Link>
-              </motion.li>
-              <motion.li
-              key={"filter4"}
-              initial={{y: 50, opacity: 0}}
-              animate={{y: 0, opacity: 1}}
-              transition={{type: 'spring', bounce: 0.4, delay: 0.8}}
-              >
-                <Link className={filter === "media" ? "active" : ""} href={"/work?filter=media"}>Media</Link>
-              </motion.li>
-              <motion.li
-              key={"filter5"}
-              initial={{y: 50, opacity: 0}}
-              animate={{y: 0, opacity: 1}}
-              transition={{type: 'spring', bounce: 0.4, delay: 0.9}}
-              >
-                <Link className={filter === "performance" ? "active" : ""} href={"/work?filter=performance"}>Performance Marketing</Link>
-              </motion.li>
+          <div className="container">
+            <ul className="work-filter-list d-only">
+                <motion.li
+                key={"filter1"}
+                initial={{y: 50, opacity: 0}}
+                animate={{y: 0, opacity: 1}}
+                transition={{type: 'spring', bounce: 0.4, delay: 0.5}}
+                >
+                  <Link className={!filter ? "active" : ""} href={"/work"}>All</Link>
+                </motion.li>
+                <motion.li
+                key={"filter2"}
+                initial={{y: 50, opacity: 0}}
+                animate={{y: 0, opacity: 1}}
+                transition={{type: 'spring', bounce: 0.4, delay: 0.6}}
+                >
+                  <Link className={filter === "socialmedia" ? "active" : ""} href={"/work?filter=socialmedia"}>Social Media</Link>
+                </motion.li>
+                <motion.li
+                key={"filter3"}
+                initial={{y: 50, opacity: 0}}
+                animate={{y: 0, opacity: 1}}
+                transition={{type: 'spring', bounce: 0.4, delay: 0.7}}
+                >
+                  <Link className={filter === "webdev" ? "active" : ""} href={"/work?filter=webdev"}>Web Development</Link>
+                </motion.li>
+                <motion.li
+                key={"filter4"}
+                initial={{y: 50, opacity: 0}}
+                animate={{y: 0, opacity: 1}}
+                transition={{type: 'spring', bounce: 0.4, delay: 0.8}}
+                >
+                  <Link className={filter === "media" ? "active" : ""} href={"/work?filter=media"}>Media</Link>
+                </motion.li>
+                <motion.li
+                key={"filter5"}
+                initial={{y: 50, opacity: 0}}
+                animate={{y: 0, opacity: 1}}
+                transition={{type: 'spring', bounce: 0.4, delay: 0.9}}
+                >
+                  <Link className={filter === "performance" ? "active" : ""} href={"/work?filter=performance"}>Performance Marketing</Link>
+                </motion.li>
             </ul>
-         </div>
+            <button className={`work-filter-list-button ${filterOpen ? "active" : ""}`}
+            onClick={() => setFilterOpen(!filterOpen)}
+            >
+              {filterOpen ? <i class="fa-solid fa-xmark"></i> : "Filter"}
+            </button>
+            <ul className="work-filter-list m-only" style={{"--scale": filterOpen ? 1 : 0}}>
+                <motion.li
+                key={"filter1"}
+                initial={{y: 50, opacity: 0}}
+                animate={{y: 0, opacity: 1}}
+                transition={{type: 'spring', bounce: 0.4, delay: 0.5}}
+                >
+                  <Link className={!filter ? "active" : ""} href={"/work"}>All</Link>
+                </motion.li>
+                <motion.li
+                key={"filter2"}
+                initial={{y: 50, opacity: 0}}
+                animate={{y: 0, opacity: 1}}
+                transition={{type: 'spring', bounce: 0.4, delay: 0.6}}
+                >
+                  <Link className={filter === "socialmedia" ? "active" : ""} href={"/work?filter=socialmedia"}>Social Media</Link>
+                </motion.li>
+                <motion.li
+                key={"filter3"}
+                initial={{y: 50, opacity: 0}}
+                animate={{y: 0, opacity: 1}}
+                transition={{type: 'spring', bounce: 0.4, delay: 0.7}}
+                >
+                  <Link className={filter === "webdev" ? "active" : ""} href={"/work?filter=webdev"}>Web Development</Link>
+                </motion.li>
+                <motion.li
+                key={"filter4"}
+                initial={{y: 50, opacity: 0}}
+                animate={{y: 0, opacity: 1}}
+                transition={{type: 'spring', bounce: 0.4, delay: 0.8}}
+                >
+                  <Link className={filter === "media" ? "active" : ""} href={"/work?filter=media"}>Media</Link>
+                </motion.li>
+                <motion.li
+                key={"filter5"}
+                initial={{y: 50, opacity: 0}}
+                animate={{y: 0, opacity: 1}}
+                transition={{type: 'spring', bounce: 0.4, delay: 0.9}}
+                >
+                  <Link className={filter === "performance" ? "active" : ""} href={"/work?filter=performance"}>Performance Marketing</Link>
+                </motion.li>
+            </ul>
+            <div className="work-box">
+              <Link href="/work/royal-challengers-banglore" className="work-box-item">
+                <img src={rcb.src} alt="" />
+                <div className="work-box-item-content">
+                  <ul className="work-box-item-content-categories">
+                    <li>Social Media</li>
+                    <li>Performance Marketing</li>
+                  </ul>
+                  <h2 className="work-box-item-content-title">Empowering an epic fan moment through powerful social media showmanship</h2>
+                </div>
+              </Link>
+            </div>
+          </div>
           <HomeContact />
           <Footer />
         </ScrollContainer>

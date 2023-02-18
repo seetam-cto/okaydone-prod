@@ -9,8 +9,113 @@ import { useRouter } from 'next/router'
 import WorkHero from '@/sections/Work/WorkHero'
 import logo from "../../assets/brands/rcb/royal-challengers-bangalore.png"
 import { motion } from 'framer-motion'
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+  defaults
+} from 'chart.js';
+import { Line } from 'react-chartjs-2';
+import { useState } from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import 'swiper/css'
+import rcb from "../../assets/brands/rcb/rcb.png"
+import slide1 from "../../assets/brands/rcb/slide1.jpg"
+import slide2 from "../../assets/brands/rcb/slide2.jpg"
+import slide3 from "../../assets/brands/rcb/slide3.jpg"
 
-export default function RCB({data}) {
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend
+);
+
+defaults.font.family = 'Matter'
+defaults.font.size = 12
+defaults.font.weight = 500
+defaults.color = "#FFFFFF"
+
+export default function RCB() {
+  const [xx, setXx] = useState(null)
+  const tooltipgen = (tooltipItems) => {
+    if(tooltipItems[0]?.label === "2022"){
+      return "#8 Sports team in the world"
+    }else if(tooltipItems[0]?.label === "2023"){
+      return "🎉 #5 Sports team in the world"
+    }else{
+      return ""
+    }
+  }
+  const options = {
+    responsive: true,
+    animations: {
+      tension: {
+        duration: 3000,
+        easing: 'ease',
+        from: 0.5,
+        to: 0.2,
+        loop: true
+      }
+    },
+    plugins: {
+      legend: {
+        display: false,
+        position: 'top',
+        labels: {
+          color: "#FFFFFF",
+          font: {
+            family: "Matter" // Add your font here to change the font of your legend label
+          }
+        },
+      },
+      tooltip: {
+        bodyColor: "#FFC64E",
+        callbacks: {
+          footer: tooltipgen
+        }
+      }
+    },
+    scales: {
+      y: {
+        title: {
+          display: true,
+          text: 'Interactions (In Millions)'
+        },
+        grid: {color: '#ffffff10'}
+      },
+      x: {
+        title: {
+          display: true,
+          text: 'Years'
+        },
+        grid: {color: '#ffffff10'}
+      }
+    }
+  };
+  const labels = ['2020','2021','2022','2023'];
+
+  const data = {
+    labels,
+    datasets: [
+      {
+        label: 'Interactions (In Millions)',
+        data: [139, 155, 820, 948],
+        borderColor: '#A374FF',
+        backgroundColor: '#A374FF',
+        pointStyle: 'circle',
+        pointRadius: 6,
+      }
+    ],
+  };
   const router = useRouter()
   const {filter} = router.query
   return (
@@ -30,6 +135,8 @@ export default function RCB({data}) {
             title={"Empowering an epic fan moment through powerful social media showmanship"}
             brand={"Royal Challengers Banglore"}
             categories={["Social Media", "Performance Marketing"]}
+            back={"/work"}
+            link={"#"}
             color={"purple"} />
           </div>
           <div className="container">
@@ -38,6 +145,12 @@ export default function RCB({data}) {
                 <img src={logo.src} alt="" />
               </div>
               <h1>Royal Challengers Banglore</h1>
+            </div>
+            <div className="brandpage-section-chart">
+              <div className="title">
+                <h2>Milestones</h2>
+              </div>
+              <Line options={options} data={data} />
             </div>
             <div className="brandpage-section-content">
               <div className="title">
@@ -78,6 +191,84 @@ export default function RCB({data}) {
                 </ul>
               </div>
             </div>
+            <div className="brandpage-section-image">
+              <img src={rcb.src} alt="" />
+            </div>
+            <div className="brandpage-section-content">
+              <div className="title">
+                <h2>Brand Challenges</h2>
+              </div>
+              <div className="subtitle">
+                <ul>
+                  <motion.li
+                  key={`rcb-subtitle-miles1`}
+                  initial={{x: 150, opacity: 0}}
+                  whileInView={{x: 0, opacity: 1}}
+                  transition={{duration: 0.5, bounce: 0.4, type: 'spring', delay: 0.2}}
+                  >Lack of effective communication</motion.li>
+                  <motion.li
+                  key={`rcb-subtitle-miles2`}
+                  initial={{x: 150, opacity: 0}}
+                  whileInView={{x: 0, opacity: 1}}
+                  transition={{duration: 0.5, bounce: 0.4, type: 'spring', delay: 0.3}}
+                  >Low interaction</motion.li>
+                  <motion.li
+                  key={`rcb-subtitle-miles3`}
+                  initial={{x: 150, opacity: 0}}
+                  whileInView={{x: 0, opacity: 1}}
+                  transition={{duration: 0.5, bounce: 0.4, type: 'spring', delay: 0.4}}
+                  >Lack of topical content</motion.li>
+                  <motion.li
+                  key={`rcb-subtitle-miles4`}
+                  initial={{x: 150, opacity: 0}}
+                  whileInView={{x: 0, opacity: 1}}
+                  transition={{duration: 0.5, bounce: 0.4, type: 'spring', delay: 0.5}}
+                  >Monotonous content</motion.li>
+                  <motion.li
+                  key={`rcb-subtitle-miles5`}
+                  initial={{x: 150, opacity: 0}}
+                  whileInView={{x: 0, opacity: 1}}
+                  transition={{duration: 0.5, bounce: 0.4, type: 'spring', delay: 0.6}}
+                  >Week connect with fans</motion.li>
+                </ul>
+              </div>
+            </div>
+            <div className="brandpage-section-campaign">
+              <div className="title">
+                <h2><span style={{"--spancolor": "#FFC64E"}}>Campaign #1</span><br />Ee Sala Cup Namde</h2>
+              </div>
+               <div className="brandpage-section-campaign-slider">
+                <Swiper
+                  spaceBetween={50}
+                  breakpoints={{
+                    320: {
+                      slidesPerView: 1,
+                      spaceBetween: 20
+                    },
+                    480: {
+                      slidesPerView: 1,
+                      spaceBetween: 30
+                    },
+                    768: {
+                      slidesPerView: 3,
+                      spaceBetween: 20
+                    },
+                  }}
+                  onSlideChange={() => console.log('slide change')}
+                  onSwiper={(swiper) => console.log(swiper)}
+                >
+                  <SwiperSlide className="brandpage-section-campaign-slider-slide">
+                    <img src={slide1.src} alt="" />
+                  </SwiperSlide>
+                  <SwiperSlide className="brandpage-section-campaign-slider-slide">
+                    <img src={slide2.src} alt="" />
+                  </SwiperSlide>
+                  <SwiperSlide className="brandpage-section-campaign-slider-slide">
+                    <img src={slide3.src} alt="" />
+                  </SwiperSlide>
+                </Swiper>
+               </div>
+            </div>
           </div>
           <HomeContact />
           <Footer />
@@ -85,9 +276,4 @@ export default function RCB({data}) {
       </main>
     </>
   )
-}
-
-export async function getServerSideProps(){
-  const res = await fetchClients()
-  return { props: { data: res }}
 }

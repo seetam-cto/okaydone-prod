@@ -1,4 +1,4 @@
-import LayeredButton, { ArrowButton } from '@/components/Button';
+import LayeredButton, { ArrowButton, ArrowButtonAction } from '@/components/Button';
 import React from 'react'
 import Tilt from 'react-parallax-tilt';
 import { motion } from 'framer-motion';
@@ -51,16 +51,16 @@ const Hero = () => {
         </Tilt>
       </motion.div>
       <h1 className="hero-header">
-        <span className='hero-header-context'>content that is</span><br />
+        <div className='hero-header-context'>content that is</div>
         <TextLine text={"recent"} />
         <TextLine text={"relevant"} middle={true} />
         <TextLine text={"relatable"} />
       </h1>
       <div className="hero-cta">
-        <LayeredButton text={"Discover what we do"} />
+        <LayeredButton link={"/solutions"} text={"Discover what we do"} />
       </div>
       <div className="hero-down">
-        <ArrowButton direction='down' theme='dark' />
+        <ArrowButtonAction action={() => window.scrollBy(0,1000)} direction='down' theme='dark' />
       </div>
     </section>
   )

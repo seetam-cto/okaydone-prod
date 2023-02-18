@@ -5,6 +5,7 @@ import ScrollContainer from '@/components/ScrollContainer'
 import { fetchClients } from '@/controller/Content'
 import Clients from '@/sections/Clients'
 import HomeContact from '@/sections/Contact'
+import Featured from '@/sections/Featured'
 import Hero from '@/sections/Hero'
 import Head from 'next/head'
 
@@ -23,6 +24,7 @@ export default function Home({data}) {
         <ScrollContainer>
         <Hero />
         <Clients clients={data && data.clients} />
+        <Featured />
         <HomeContact />
         <Footer />
         </ScrollContainer>

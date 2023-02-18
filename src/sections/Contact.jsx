@@ -23,7 +23,7 @@ const TextLine = ({text, middle}) => {
 
 const HomeContact = () => {
   return (
-    <section className="hero">
+    <section className="hero contact">
       <h1 className="hero-header">
         <span className='hero-header-context'></span><br />
         <TextLine text={"disruptive"} />
@@ -31,7 +31,7 @@ const HomeContact = () => {
         <TextLine text={"and... done"} />
       </h1>
       <div className="hero-cta hcontact">
-        <LayeredButton text={"Get in touch"} />
+        <LayeredButton link={"/contact-us"} text={"Get in touch"} />
       </div>
     </section>
   )
