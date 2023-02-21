@@ -15,6 +15,11 @@ import web from "../assets/solutions/web.svg"
 
 //solutions backimg
 import backimg from "../assets/w14.jpg"
+import social from "../assets/brands/oneplus/pic1.jpg"
+import infOne from "../assets/brands/oneplus/pic1.jpeg"
+import briggs from "../assets/brands/briggs/pic1.jpg"
+import switchoff from "../assets/brands/switchoff/pic1.jpg"
+import rcb from "../assets/brands/rcb/slide2.jpg"
 
 export default function Solutions() {
   return (
@@ -32,8 +37,8 @@ export default function Solutions() {
             <SolHero />
             <div className='container'>
                 <div className='solutions-heading'>
-                    <h1>immersive</h1>
-                    <h1>experience</h1>
+                    <h1>everything</h1>
+                    <h1>digital</h1>
                 </div>
             </div>
             <Service
@@ -43,7 +48,7 @@ export default function Solutions() {
             link={"/solutions/social-media-marketing"}
             flexalign={"flex-start"}
             color={"#A374FF"}
-            backimg={backimg.src}
+            backimg={social.src}
             />
             <Service
             title={"Production House"}
@@ -52,7 +57,7 @@ export default function Solutions() {
             link={"/solutions/production-house"}
             flexalign={"flex-end"}
             color={"#FFC64E"}
-            backimg={backimg.src}
+            backimg={briggs.src}
             />
             <Service
             title={"Influencer Marketing"}
@@ -61,7 +66,7 @@ export default function Solutions() {
             link={"/solutions/influencer-marketing"}
             flexalign={"flex-start"}
             color={"#17F1D1"}
-            backimg={backimg.src}
+            backimg={infOne.src}
             />
             <Service
             title={"Experience Design & Web Development"}
@@ -70,7 +75,7 @@ export default function Solutions() {
             link={"/solutions/web-development"}
             flexalign={"flex-end"}
             color={"#FFAD00"}
-            backimg={backimg.src}
+            backimg={switchoff.src}
             />
             <Service
             title={"Performance Marketing"}
@@ -79,7 +84,7 @@ export default function Solutions() {
             link={"/solutions/performance-marketing"}
             flexalign={"flex-start"}
             color={"#00B2FF"}
-            backimg={backimg.src}
+            backimg={rcb.src}
             />
             <Footer />
         </ScrollContainer>

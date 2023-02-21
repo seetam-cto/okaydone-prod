@@ -1,8 +1,8 @@
 import React from 'react'
 import Link from 'next/link'
 import { MouseParallaxContainer, MouseParallaxChild } from "react-parallax-mouse"
-import backimg1 from "../assets/b5.jpg"
-import backimg2 from "../assets/w14.jpg"
+import backimg1 from "../assets/brands/ayatana/cover.jpg"
+import backimg2 from "../assets/brands/rcb/slide1.jpg"
 
 const Featured = () => {
   return (
@@ -10,11 +10,12 @@ const Featured = () => {
         <div className="container">
             <div className="row">
                 <div className="col-12">
-                    <h1>Featured Insights</h1>
+                    <h1>featured insights</h1>
                 </div>
             </div>
             <div className="row">
-                <div className="col-6 col-sm-12">
+                <div className="col-1"></div>
+                <div className="col-5 col-sm-12">
                     <div className="featured-container" style={{"--align": "flex-start"}}>
                         <div className="featured-content">
                             <div className="featured-content-backimg">
@@ -24,9 +25,9 @@ const Featured = () => {
                                     </MouseParallaxChild>
                                 </MouseParallaxContainer>
                             </div>
-                            <h5>Product Photography</h5>
-                            <h2>Product Photography for a splendid craft beer brewery retailing across Bengaluru</h2>
-                            <Link href={"#"} className='featured-content-link' style={{"--color": "teal"}}>Continue reading</Link>
+                            <h5>AYATANA</h5>
+                            <h2>Adopting new-age strategies to build India's most <span>popular luxury resort</span></h2>
+                            <Link href={"/work/ayatana"} className='featured-content-link' style={{"--color": "teal"}}>Continue reading</Link>
                         </div>
                     </div>
                 </div>
@@ -40,9 +41,9 @@ const Featured = () => {
                                     </MouseParallaxChild>
                                 </MouseParallaxContainer>
                             </div>
-                            <h5>Wedding Photography</h5>
-                            <h2>Destination Wedding Photo Story for India&apos;s first Miss Earth (2010), Nicole Faria Pawar</h2>
-                            <Link href={"#"} className='featured-content-link' style={{"--color": "teal"}}>Continue reading</Link>
+                            <h5>ROYAL CHALLENGERS BENGALORE</h5>
+                            <h2>Empowering an <span>epic fan moment</span> through powerful social media showmanship</h2>
+                            <Link href={"/work/royal-challengers-bengalore"} className='featured-content-link' style={{"--color": "teal"}}>Continue reading</Link>
                         </div>
                     </div>
                 </div>

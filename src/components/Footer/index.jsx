@@ -12,7 +12,7 @@ const Footer = () => {
                     </div>
                     <div className="col-5 col-sm-12">
                         <h2 className="footer-title-small">
-                            GET OUR NEWS
+                            STAY UP TO DATE
                         </h2>
                         <h3 className='footer-title'>
                             get our<br />newsletter
@@ -25,7 +25,7 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className="col-2 d-only footer-logo">
-                        <img src={logo.src} alt="okaydone-logo" />
+                        {/* <img src="/logo.svg" alt="okaydone-logo" /> */}
                     </div>
                     <div className="col-5 col-sm-12 footer-title-contact">
                         <h2 className="footer-title-small">
@@ -33,28 +33,35 @@ const Footer = () => {
                         </h2>
                         <a href="mailto:contact@okaydone.in">contact@okaydone.in</a>
                         <a href="tel:+91 98860 98992">+91 98860 98992</a>
+                        <p>#17, 13th Cross Road,<br />7th Main Rd, Indiranagar,<br /> Bengaluru, Karnataka - 560038</p>
                     </div>
                 </div>
                 <div className="footer-divider" />
                 <div className="row footer-bottom">
                     <div className="col-6 col-sm-12">
+                        <ul className="footer-bottom-links left">
+                            <li>All Rights Reserved. All Wrongs Reversed.</li>
+                        </ul>
+                    </div>
+                    <div className="col-6 col-sm-12">
                         <ul className="footer-bottom-links">
                             <li><Link href={"/privacy-policy"}>Privacy Policy</Link></li>
                             <li><Link href={"/disclaimer"}>Disclaimer</Link></li>
                             <li><Link href={"/terms-conditions"}>Terms & Conditions</Link></li>
-                            <li>© 2023 | OkayDone</li>
+                            <li>© 2023 | Okay Done</li>
                         </ul>
                     </div>
-                    <div className="col-6 col-sm-12">
+                    {/* <div className="col-6 col-sm-12">
                         <div className="footer-bottom-rights">
                         <span>SEE WHAT WE&apos;RE UP TO</span>
                         <ul className="footer-socials">
                             <li><a className="footer-socials-box" href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
                             <li><a className="footer-socials-box" href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a className="footer-socials-box" href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
                             <li><a className="footer-socials-box" href="#"><i class="fa-brands fa-youtube"></i></a></li>
                         </ul>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </footer>

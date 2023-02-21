@@ -64,12 +64,19 @@ export const BorderedButton = ({link = "#", action = null, text, invert=false}) 
       </div>
     </div>
     ):( 
-    <Link href={link} className="button-box bordered">
+    <motion.div
+    key={"nav-contact-btn"}
+    initial={{opacity: 0}}
+    animate={{opacity: 1}}
+    transition={{duration: 0.4}}
+    >
+      <Link href={link} className="button-box bordered">
       <div className={`button-box-texts ${invert ? 'invert' : ''}`}>
           <span className="button-box-texts-top">{text}</span>
           <span className="button-box-texts-bottom">{text}</span>
       </div>
     </Link>
+    </motion.div>
   )
   }
   </>

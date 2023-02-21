@@ -8,7 +8,7 @@ const LinkText = ({text, second = false}) => {
   <motion.p
   initial={{x: 300, opacity: 0}}
   animate={{x: 0, opacity: 1}}
-  transition={{duration: 1.5, delay: 1, bounce: 0.5, type: 'spring'}}
+  transition={{duration: 1, delay: 1, bounce: 0.5, type: 'spring'}}
   className={`link-text ${second ? 'behind' : ''}`}>
     {text.split("").map((letter, i) => 
     <div
@@ -25,27 +25,27 @@ const LinkText = ({text, second = false}) => {
 const Logo = ({status}) => {
   return (
     <Link href="/" className="navbar-logo-container">
-      {!status ? <motion.img
+      <motion.img
       initial={{x: 100, rotate: 90, scale: 0, opacity: 0}}
       animate={{x: 0, scale: 1, rotate: 0, opacity: 1}}
       exit={{x: 100, opacity: 0}}
       transition={{duration: 1, type: 'spring', bounce: 0.3}}
-      key="navbar-logo" className='navbar-logo-img' src="/logo.svg" /> 
-      : <div className='navbar-logo-text'>
+      key="navbar-logo" className='navbar-logo-img' src="/logo.svg" />
+      {status && <div className='navbar-logo-text'>
           <motion.div 
           initial={{x: 100, skew: -20, opacity: 0}}
           animate={{x: 0, skew: 0,opacity: 1}}
           exit={{x: 100, opacity: 0}}
           key={"navbar-logo-part-one"}
           transition={{duration: 1, type: 'spring', bounce: 0.3}}
-          className='part-one'>okay</motion.div>
+          className='part-one'>kay</motion.div>
           <motion.div
           initial={{x: -100, skew: 20, opacity: 0}} 
           animate={{x: 0, skew: 0, opacity: 1}}
           exit={{x: -100, opacity: 0}}
           key={"navbar-logo-part-two"}
           transition={{duration: 1, type: 'spring', bounce: 0.6}}
-          className='part-two'>done</motion.div>
+          className='part-two'>D<span>o</span>ne</motion.div>
         </div>}
     </Link>
   )
@@ -77,7 +77,7 @@ const Navigation = ({theme = false}) => {
           {!theme && <Logo status={status} />}
         </div>
         <div className="navbar-menu">
-          <BorderedButton link={"/contact-us"} invert={menuOpen || theme} text={"Get in touch"} />
+          {status && <BorderedButton link={"/contact-us"} invert={menuOpen || theme} text={"Get in touch"} />}
           <div onClick={() => setMenuOpen(!menuOpen)} className={`navbar-menu-button ${menuOpen && 'active'}`}>
             <div className="navbar-menu-button-layers">
               <div className="navbar-menu-button-layers-layer" />
@@ -91,17 +91,17 @@ const Navigation = ({theme = false}) => {
     <section className={`menupage ${menuOpen ? 'active' : 'inactive'}`}>
       <div className="container">
         <div className="row menupage-mobile">
-          <div className="col-4 col-sm-12">
+          <div className="col-5 col-sm-12">
             <div className="menupage-contact">
             <h2>Get In Touch</h2>
             <a href="mailto:contact@okaydone.in" className="menupage-contact-link">contact@okaydone.in</a>
             <a href="tel:+91 98860 98992" className="menupage-contact-link">+91 98860 98992</a>
             <p className="menupage-contact-address">
-            13th Cross Road, #17, 7th Main Rd, Indiranagar, Bengaluru, Karnataka 560038
+            13th Cross Road, #17,<br />7th Main Rd, Indiranagar, <br />Bengaluru, Karnataka - 560038
             </p>
             </div>
           </div>
-          <div className="col-8 col-sm-12">
+          <div className="col-7 col-sm-12">
             <div className="navbar-menu-links">
               {menuOpen && <ul>
                 <li
@@ -110,6 +110,13 @@ const Navigation = ({theme = false}) => {
                 onMouseLeave={() => setActiveLink("")}
                 >
                   <Link href="/solutions" className='navbar-menu-links-link'>
+                    <motion.div
+                    initial={{y: -50, opacity: 0}}
+                    animate={{y: 0, opacity: 1}}
+                    transition={{delay:1.5, bounce: 0.3, type: 'spring', duration: 0.6}}
+                    className="navbar-menu-links-link-bg">
+                      SOLUTIONS
+                    </motion.div>
                     <LinkText text={"What we do"}/>
                     {activeLink === "one" && <div
                     key="middle-line1"
@@ -126,6 +133,13 @@ const Navigation = ({theme = false}) => {
                 onMouseLeave={() => setActiveLink("")}
                 >
                   <Link href="/work" className='navbar-menu-links-link'>
+                    <motion.div
+                    initial={{y: -50, opacity: 0}}
+                    animate={{y: 0, opacity: 1}}
+                    transition={{delay:1.5, bounce: 0.3, type: 'spring', duration: 0.6}}
+                    className="navbar-menu-links-link-bg">
+                      OUR WORK
+                    </motion.div>
                     <LinkText text={"What we did"}/>
                     {activeLink === "two" && <div
                     key="middle-line1"
@@ -136,7 +150,7 @@ const Navigation = ({theme = false}) => {
                     <LinkText second={true} text={"What we did"}/>
                   </Link>
                 </li>
-                <li
+                {/* <li
                 key={'menu-link3'}
                 onMouseEnter={() => setActiveLink("three")}
                 onMouseLeave={() => setActiveLink("")}
@@ -151,14 +165,21 @@ const Navigation = ({theme = false}) => {
                     </div>}
                     <LinkText second={true} text={"Wanna do it?"}/>
                   </Link>
-                </li>
+                </li> */}
                 <li
                 key={'menu-link4'}
                 onMouseEnter={() => setActiveLink("four")}
                 onMouseLeave={() => setActiveLink("")}
                 >
-                  <Link href="/" className='navbar-menu-links-link'>
-                    <LinkText text={"let us do it"}/>
+                  <Link href="/contact-us" className='navbar-menu-links-link'>
+                    <motion.div
+                    initial={{y: -50, opacity: 0}}
+                    animate={{y: 0, opacity: 1}}
+                    transition={{delay:1.5, bounce: 0.3, type: 'spring', duration: 0.6}}
+                    className="navbar-menu-links-link-bg">
+                      CONTACT US
+                    </motion.div>
+                    <LinkText text={"let us do it"} />
                     {activeLink === "four" && <div
                     key="middle-line1"
                     className="middle-line four">

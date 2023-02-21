@@ -65,12 +65,16 @@ const ScrollContainer = props => {
   };
 
   useEffect(() => {
-    init();
-    window.addEventListener("resize", resize);
-    window.addEventListener("scroll", updateScroll);
+    if(window.innerWidth > 768){
+      init();
+      window.addEventListener("resize", resize);
+      window.addEventListener("scroll", updateScroll);
+    }
     return () => {
-      window.removeEventListener("resize", resize);
-      window.removeEventListener("scroll", updateScroll);
+      if(window.innerWidth > 768){
+        window.removeEventListener("resize", resize);
+        window.removeEventListener("scroll", updateScroll);
+      }
     };
   }, [init, resize, updateScroll]);
 

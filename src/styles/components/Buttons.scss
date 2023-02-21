@@ -182,6 +182,12 @@
                 &.blue{
                     background-color: $blue;
                 }
+                &.black{
+                    background-color: $black;
+                }
+                &.red{
+                    background-color: $red;
+                }
                 i{
                     &.static{
                         @include animate(fadeUpArrow, 0.4s, ease-in-out, 1)
@@ -263,6 +269,18 @@
                 border-color: $blue;
                 i{
                     color: $black;
+                }
+            }
+            &.red{
+                border-color: $red;
+                i{
+                    color: $black;
+                }
+            }
+            &.black{
+                border-color: $black;
+                i{
+                    color: #c1c1c1;
                 }
             }
         }

@@ -11,10 +11,10 @@ const Clients = ({clients}) => {
                     OUR CLIENTS
                 </div>
                 <div className="clients-header-subtext">
-                    It&apos;s not a gamble, no rolling the dice <br />
-                    We work with <span className='purple'>brands of all shapes and size</span><br />
-                    Stories of <span className='teal'>tech</span>, <span className='yellow'>luxury</span> to sports we tell <br />
-                    Take a look at our partnerships
+                    It&apos;s not a gamble, no rolling the dice, <br />
+                    We work with <span className='purple'>brands of all shapes and size</span> <br />
+                    Stories of <span className='teal'>tech</span>, <span className='yellow'>luxury</span> to <span className='purple'>sports</span> we tell, 
+                    <br />Take a look at our partnerships in the carousel.
                 </div>
             </div>
         </div>

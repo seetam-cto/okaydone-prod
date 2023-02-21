@@ -32,29 +32,61 @@
     }
     &-logo{
         pointer-events: all;
+        &-container{
+            position: relative;
+        }
         &-img{
-            height: 10vh;
             object-fit: contain;
+            z-index: 1;
+            position: absolute;
+            width: 2.8rem;
+            top: -2.7rem;
+            left: 1.4rem;
             @include mobile{
-                height: 50px;
+                width: 25px;
+                left: 1rem;
+                top: -1.5rem;
             }
         }
         &-text{
-            font-family: $fontFamily;
-            font-size: 3rem;
+            font-family: 'PelitaBold';
+            font-size: 3.5rem;
+            line-height: 1.9rem;
             display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin-block: auto;
+            height: 8vh;
+            z-index: 0;
+            letter-spacing: -3px;
             @include mobile{
+                top: 1rem;
                 font-size: 2rem;
+                line-height: 1rem;
             }
             .part-one{
-                color: $teal;
+                color: $white;
+                margin-right: -1.30rem;
+                @include mobile{
+                    margin-right: -0.8rem;
+                }
             }
             .part-two{
                 color: $white;
+                span{
+                    color: transparent;
+                    font-size: 3rem;
+                    @include mobile{
+                        font-size: 2rem;
+                    }
+                }
             }
         }
         &.active{
-            .part-two{
+            .part-two, .part-one{
                 color: $black;
             }
         }
@@ -64,8 +96,8 @@
         gap: 1rem;
         pointer-events: all;
         &-button{
-            width: 7.5vh;
-            height: 7.5vh;
+            width: 62px;
+            height: 62px;
             background-color: $purple;
             border-radius: 50%;
             overflow: hidden;
@@ -185,6 +217,7 @@
                 position: relative;
                 display: block;
                 height: 7.5rem;
+                margin-bottom: 1rem;
                 @include mobile{
                     height: 4rem;
                 }
@@ -227,28 +260,28 @@
                     animation-delay: 0.3s;
                 }
                 &.one{
-                    width: 63%;
+                    width: 75%;
                     @include mobile{
                         width: 90%;
                         height: 8px;
                     }
                 }
                 &.two{
-                    width: 66%;
+                    width: 80%;
                     @include mobile{
                         width: 92%;
                         height: 8px;
                     }
                 }
                 &.three{
-                    width: 67%;
+                    width: 82%;
                     @include mobile{
                         width: 94%;
                         height: 8px;
                     }
                 }
                 &.four{
-                    width: 55%;
+                    width: 68%;
                     @include mobile{
                         width: 84%;
                         height: 8px;
@@ -278,6 +311,15 @@
                     }
                     position: absolute;
                     display: flex;
+                }
+                &-bg{
+                    color: #00000060;
+                    font-family: 'Matter';
+                    font-weight: 600;
+                    font-size: 1rem;
+                    position: absolute;
+                    bottom: -5px;
+                    left: 5px;
                 }
             }
         }
@@ -364,7 +406,8 @@
             font-style: normal;
             line-height: 1.2;
             color: $black;
-            font-family: $fontFamily;
+            font-family: 'Matter';
+            font-weight: 600;
             width: 100%;
             @include mobile{
                 font-size: 1.5rem;
@@ -375,7 +418,7 @@
         &-address{
             width: 100%;
             font-family: 'Matter';
-            font-size: 1rem;
+            font-size: 1.2rem;
             font-weight: 500;
         }
     }

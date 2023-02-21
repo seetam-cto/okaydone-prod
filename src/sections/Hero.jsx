@@ -39,7 +39,6 @@ const Hero = () => {
         transitionSpeed={700}
         transitionEasing={"ease"}
         perspective={1000}
-        gyroscope={true}
         trackOnWindow={false}>
         <video
         autoPlay={true}

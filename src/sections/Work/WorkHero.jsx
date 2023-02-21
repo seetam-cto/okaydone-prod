@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 import React from 'react'
 import { motion } from 'framer-motion'
 
-const WorkHero = ({title, brand, categories = [], color = "", link = "#", banner, extraClass="", back="/"}) => {
+const WorkHero = ({brand, categories = [], color = "", logo, banner, extraClass="", back="/"}) => {
     const router = useRouter()
   return (
     <div className={`brandpage-hero ${extraClass}`}>
@@ -12,8 +12,13 @@ const WorkHero = ({title, brand, categories = [], color = "", link = "#", banner
         </div>
         <div className="container">
             <div className="brandpage-hero-container">
-                <h1 className={`brandpage-hero-title`}>{title}</h1>
-                <h3 className={`brandpage-hero-brandname ${color}`}>{brand}</h3>
+                <div className={`brandpage-hero-casestudy ${color}`}>Case Study</div>
+                <h1 className={`brandpage-hero-title ${color}`}>
+                    <div className="logo">
+                        <img src={logo} alt="" />
+                    </div>
+                    {brand}
+                </h1>
                 <div className="brandpage-hero-footer">
                     <ul className="brandpage-hero-categories">
                         {categories && categories.map((cat, i) => (
@@ -22,7 +27,6 @@ const WorkHero = ({title, brand, categories = [], color = "", link = "#", banner
                             </motion.li>
                         ))}
                     </ul>
-                    {link && <a href={link}>View Case</a>}
                 </div>
             </div>
         </div>

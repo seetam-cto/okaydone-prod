@@ -10,6 +10,8 @@ import { useRouter } from 'next/router'
 import Link from 'next/link'
 import React, {useState} from "react"
 import rcb from "../../assets/brands/rcb/rcb.png"
+import oneplus from "../../assets/brands/oneplus/cover.jpg"
+import ayatana from "../../assets/brands/ayatana/cover.jpg"
 
 export default function Work({data}) {
   const router = useRouter()
@@ -36,7 +38,7 @@ export default function Work({data}) {
             </div>
           </div>
           <div className="container">
-            <ul className="work-filter-list d-only">
+            {/* <ul className="work-filter-list d-only">
                 <motion.li
                 key={"filter1"}
                 initial={{y: 50, opacity: 0}}
@@ -77,13 +79,13 @@ export default function Work({data}) {
                 >
                   <Link className={filter === "performance" ? "active" : ""} href={"/work?filter=performance"}>Performance Marketing</Link>
                 </motion.li>
-            </ul>
-            <button className={`work-filter-list-button ${filterOpen ? "active" : ""}`}
+            </ul> */}
+            {/* <button className={`work-filter-list-button ${filterOpen ? "active" : ""}`}
             onClick={() => setFilterOpen(!filterOpen)}
             >
               {filterOpen ? <i class="fa-solid fa-xmark"></i> : "Filter"}
-            </button>
-            <ul className="work-filter-list m-only" style={{"--scale": filterOpen ? 1 : 0}}>
+            </button> */}
+            {/* <ul className="work-filter-list m-only" style={{"--scale": filterOpen ? 1 : 0}}>
                 <motion.li
                 key={"filter1"}
                 initial={{y: 50, opacity: 0}}
@@ -124,21 +126,48 @@ export default function Work({data}) {
                 >
                   <Link className={filter === "performance" ? "active" : ""} href={"/work?filter=performance"}>Performance Marketing</Link>
                 </motion.li>
-            </ul>
+            </ul> */}
             <div className="work-box">
-              <Link href="/work/royal-challengers-banglore" className="work-box-item">
+              <Link href="/work/royal-challengers-bangalore" className="work-box-item">
                 <img src={rcb.src} alt="" />
                 <div className="work-box-item-content">
                   <ul className="work-box-item-content-categories">
                     <li>Social Media</li>
                     <li>Performance Marketing</li>
                   </ul>
-                  <h2 className="work-box-item-content-title">Empowering an epic fan moment through powerful social media showmanship</h2>
+                  <h2 className="work-box-item-content-title">Empowering an <span>epic fan moment</span> through powerful social media showmanship</h2>
+                </div>
+              </Link>
+              <Link href="/work/oneplus" className="work-box-item">
+                <img src={oneplus.src} alt="" />
+                <div className="work-box-item-content">
+                  <ul className="work-box-item-content-categories">
+                    <li>Influencer Marketing</li>
+                  </ul>
+                  <h2 className="work-box-item-content-title">Creative influencer campaign for the most successful smartphone brand in India</h2>
+                </div>
+              </Link>
+              <Link href="/work/ayatana" className="work-box-item">
+                <img src={ayatana.src} alt="" />
+                <div className="work-box-item-content">
+                  <ul className="work-box-item-content-categories">
+                    <li>Social Media</li>
+                    <li>Performance Marketing</li>
+                  </ul>
+                  <h2 className="work-box-item-content-title">Creative influencer campaign for the most successful smartphone brand in India</h2>
+                </div>
+              </Link>
+              <Link href="/work/bengaluru-city-police" className="work-box-item">
+                <img src={oneplus.src} alt="" />
+                <div className="work-box-item-content">
+                  <ul className="work-box-item-content-categories">
+                    <li>Social Media</li>
+                  </ul>
+                  <h2 className="work-box-item-content-title">Creative influencer campaign for the most successful smartphone brand in India</h2>
                 </div>
               </Link>
             </div>
           </div>
-          <HomeContact />
           <Footer />
         </ScrollContainer>
       </main>
