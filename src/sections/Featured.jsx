@@ -26,7 +26,7 @@ const Featured = () => {
                                 </MouseParallaxContainer>
                             </div>
                             <h5>AYATANA</h5>
-                            <h2>Adopting new-age strategies to build India's most <span>popular luxury resort</span></h2>
+                            <h2>Adopting new-age strategies to build India&apos;s most <span>popular luxury resort</span></h2>
                             <Link href={"/work/ayatana"} className='featured-content-link' style={{"--color": "teal"}}>Continue reading</Link>
                         </div>
                     </div>

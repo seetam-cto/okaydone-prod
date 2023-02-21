@@ -50,7 +50,7 @@ export default function Ayatana() {
           </div>
           <div className="container">
             <div className="brandpage-section-brand">
-              <h1>Adopting new-age strategies to build India's most <span>popular luxury resort</span></h1>
+              <h1>Adopting new-age strategies to build India&apos;s most <span>popular luxury resort</span></h1>
             </div>
             <div className="brandpage-section-content">
               <div className="title">
@@ -75,7 +75,7 @@ export default function Ayatana() {
                   initial={{x: 150, opacity: 0}}
                   whileInView={{x: 0, opacity: 1}}
                   transition={{duration: 0.5, bounce: 0.4, type: 'spring', delay: 0.4}}
-                  >Century's worst floods hit the region days from the launch</motion.li>
+                  >Century&apos;s worst floods hit the region days from the launch</motion.li>
                   <motion.li
                   key={`rcb-subtitle-miles3`}
                   initial={{x: 150, opacity: 0}}
