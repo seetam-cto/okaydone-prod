@@ -15,9 +15,9 @@ import web from "../assets/solutions/web.svg"
 
 //solutions backimg
 import backimg from "../assets/w14.jpg"
-import social from "../assets/brands/oneplus/pic1.jpg"
+import social from "../assets/solutions/content-gravy.jpg"
 import infOne from "../assets/brands/oneplus/mirror/pic4.jpg"
-import briggs from "../assets/brands/briggs/pic1.jpg"
+import briggs from "../assets/solutions/damn-nice.jpg"
 import switchoff from "../assets/brands/switchoff/pic1.jpg"
 import rcb from "../assets/brands/rcb/slide2.jpg"
 
