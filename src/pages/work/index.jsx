@@ -69,7 +69,7 @@ export default function Work({data}) {
                     <li>Social Media</li>
                     <li>Performance Marketing</li>
                   </ul>
-                  <h2 className="work-box-item-content-title">Adopting new-age strategies to build India's most popular luxury resort</h2>
+                  <h2 className="work-box-item-content-title">Adopting new-age strategies to build India&apos;s most popular luxury resort</h2>
                 </div>
               </Link>
               <Link href="/work/bengaluru-city-police" className="work-box-item">
