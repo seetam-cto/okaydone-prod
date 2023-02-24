@@ -42,8 +42,8 @@ export default function ContactUs() {
                         <p>
                             Together we&apos;ll make your organization thrive through premium, personalized & immersive experiences.
                         </p>
-                        <p>Curious about how we can help you with your projects?</p>
-                        <p>Reach out and we&apos;ll be happy top discuss your plans!</p>
+                        <p>Curious about how we can help with your projects?</p>
+                        <p>Reach out and we&apos;ll be happy to discuss your plans!</p>
                     </div>
                 </div>
                 <div className="contact-form">

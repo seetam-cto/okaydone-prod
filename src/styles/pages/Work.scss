@@ -11,16 +11,16 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            max-width: 1028px;
+            max-width: 900px;
             height: 100%;
             margin-inline: auto;
             h1{
                 width: fit-content;
                 text-align: center;
                 font-family: 'AntiqueMain';
-                font-size: 9rem;
+                font-size: 7rem;
                 color: $white;
-                line-height: 9rem;
+                line-height: 7rem;
                 z-index: 1;
                 letter-spacing: -5px;
                 &:last-child{
@@ -141,6 +141,7 @@
             }
             @include mobile{
                 width: 100%;
+                height: 35vh;
             }
             img{
                 position: absolute;
@@ -156,19 +157,31 @@
                 bottom: 0;
                 left: 0;
                 z-index: 1;
-                padding: 50px 20px;
+                padding: 30px 20px;
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-end;
-                background-image: linear-gradient(to bottom, #00000000, #000000A0);
+                background-image: linear-gradient(to bottom, #00000000, #000000C0);
+                @include mobile{
+                    padding: 20px;
+                }
+                h1{
+                    color: $white;
+                    font-family: 'AntiqueMain';
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                }
                 &-categories{
                     display: flex;
                     gap: 25px;
                     li{
                         font-family: 'Matter';
-                        font-size: 1rem;
+                        font-size: 0.9rem;
                         color: $white;
                         position: relative;
+                        @include mobile{
+                            font-size: 0.9rem;
+                        }
                         &:first-child{
                             &::before{
                                 display: none;
@@ -192,6 +205,9 @@
                     font-weight: 100;
                     span{
                         font-weight: 600;
+                    }
+                    @include mobile{
+                        font-size: 1rem;
                     }
                 }
             }
@@ -234,27 +250,13 @@
             font-family: 'Matter';
             font-size: 3rem;
             font-weight: 800;
-            color: $purple;
+            color: $black;
             letter-spacing: -1px;
             padding-top: 2vh;
             margin-bottom: 10vh;
             @include mobile{
                 margin-bottom: 4vh;
                 font-size: 2rem;
-            }
-            &.teal{
-                color: $teal;
-            }
-            &.red{
-                color: $red;
-            }
-            &.black{
-                color: $black;
-            }
-            &.gold{
-                background: -webkit-linear-gradient(#BF9235, #e1d376, #BF9235);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
             }
         }
         &-container{
@@ -301,7 +303,7 @@
             }
             .logo{
                 width: 280px;
-                height: 250px;
+                height: 200px;
                 @include mobile{
                     width: 180px;
                     height: 140px;
@@ -465,8 +467,7 @@
                         font-weight: 100;
                         line-height: 1.8rem;
                         span{
-                            color: $accent;
-                            font-style: italic;
+                            color: $accent !important;
                         }
                         @include mobile{
                             font-size: 0.9rem;
@@ -495,6 +496,8 @@
             border-radius: 30px;
             font-size: 1rem;
             margin-top: 10vh;
+            max-width: 700px;
+            margin-inline: auto;
             @include mobile{
                 padding: 15px;
                 border-radius: 15px;
@@ -535,7 +538,7 @@
             }
             @include mobile{
                 border-radius: 15px;
-                height: 40vh;
+                height: 30vh;
                 margin-top: 50px;
                 box-sizing: border-box;
             }
@@ -578,9 +581,9 @@
             }
             &-videos{
                 width: 100%;
-                margin-block: 5vh 10vh;
+                margin-block: 0vh 10vh;
                 &-video{
-                    width: 95%;
+                    width: 100%;
                     border-radius: 25px;
                     box-shadow: 0.5rem 0.5rem 1rem #00000030;
                     @include mobile{
@@ -588,20 +591,15 @@
                         border-radius: 10px;
                         margin-bottom: 20px;
                     }
-                    &.left{
-                        align-self: flex-start;
-                    }
-                    &.right{
-                        margin-left: 5%;
-                        @include mobile{
-                            margin-left: 0;
-                        }
-                    }
                 }
             }
             &-slider{
                 height: 40vh;
                 width: 100%;
+                &.twitter{
+                    height: auto;
+                    margin-bottom: 5vh;
+                }
                 h2{
                     width: 100%;
                     margin-block: 3rem 2rem;
@@ -701,11 +699,25 @@
                         color: $white;
                         font-weight: 100;
                         margin-bottom: 10px;
+                        span{
+                            color: $accent !important;
+                        }
                         @include mobile{
                             font-size: 0.9rem;
                             margin-inline: 40px 20px;
                         }
                     }
+                }
+                &-image{
+                    width: 100%;
+                    border-radius: 20px;
+                    object-fit: cover;
+                    object-position: 50% 5%;
+                    height: 350px;
+                }
+                &-divider{
+                    height: 50px;
+                    width: 100%;
                 }
             }
 

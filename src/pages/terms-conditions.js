@@ -5,7 +5,7 @@ import ScrollContainer from '@/components/ScrollContainer'
 import HomeContact from '@/sections/Contact'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
-import WorkHero from '@/sections/Work/WorkHero'
+import {OtherHero} from '@/sections/Work/WorkHero'
 
 export default function Terms() {
   return (
@@ -21,13 +21,13 @@ export default function Terms() {
         <Navigation theme={true} />
         <ScrollContainer>
           <div className="brandpage">
-            <WorkHero
-            title={"Terms & Conditions"}
-            brand={"-19th Feb 2023"}
+          <OtherHero
+            title={""}
+            brand={"Terms of Use"}
             extraClass={"page"}
             link={null}
             back={"/"}
-            color={"purple"} />
+            color={"black"} />
           </div>
           <div className="container">
             <div className="brandpage-section-contenteditor">
@@ -131,9 +131,8 @@ export default function Terms() {
               <p><br /><br /></p>
             </div>
           </div>
-          <HomeContact />
-          <Footer />
         </ScrollContainer>
+        <Footer />
       </main>
     </>
   )

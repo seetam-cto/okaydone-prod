@@ -8,6 +8,7 @@
     padding-block: 50px;
     position: relative;
     margin-top: 10vh;
+    z-index: 100;
     @include mobile{
         padding-inline: 20px;
         height: auto;

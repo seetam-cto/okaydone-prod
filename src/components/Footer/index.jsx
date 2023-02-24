@@ -46,7 +46,7 @@ const Footer = () => {
                     <div className="col-6 col-sm-12">
                         <ul className="footer-bottom-links">
                             <li><Link href={"/privacy-policy"}>Privacy Policy</Link></li>
-                            <li><Link href={"/disclaimer"}>Disclaimer</Link></li>
+                            {/* <li><Link href={"/disclaimer"}>Disclaimer</Link></li> */}
                             <li><Link href={"/terms-conditions"}>Terms & Conditions</Link></li>
                             <li>© 2023 | Okay Done</li>
                         </ul>

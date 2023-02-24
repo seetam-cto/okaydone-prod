@@ -19,7 +19,7 @@ const SolHero = () => {
             </div>
             <div className="container solutions-hero-head">
                 <h1>what we do</h1>
-                <h3>We craft <span className='yellow'>immersive digital experience</span> for <span className="teal">forward-thinking companies</span></h3>
+                <h3>We craft <span className='yellow'>immersive digital experiences</span> for <span className="teal">forward-thinking companies</span></h3>
             </div>
         </div>
     )

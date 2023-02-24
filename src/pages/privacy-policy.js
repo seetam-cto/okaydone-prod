@@ -5,7 +5,7 @@ import ScrollContainer from '@/components/ScrollContainer'
 import HomeContact from '@/sections/Contact'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
-import WorkHero from '@/sections/Work/WorkHero'
+import {OtherHero} from '@/sections/Work/WorkHero'
 
 export default function PrivacyPolicy() {
   const router = useRouter()
@@ -22,13 +22,13 @@ export default function PrivacyPolicy() {
         <Navigation theme={true} />
         <ScrollContainer>
           <div className="brandpage">
-            <WorkHero
-            title={"Privacy Policy"}
-            brand={"-19th Feb 2023"}
+            <OtherHero
+            title={""}
+            brand={"Privacy Policy"}
             extraClass={"page"}
             link={null}
             back={"/"}
-            color={"purple"} />
+            color={"black"} />
           </div>
           <div className="container">
             <div className="brandpage-section-contenteditor">
@@ -115,9 +115,8 @@ export default function PrivacyPolicy() {
               <p><span >If you have questions or concerns about this Policy, please contact Okay Done at</span><span >&nbsp;</span><span >contact@okaydone.in.</span></p>
             </div>
           </div>
-          <HomeContact />
-          <Footer />
         </ScrollContainer>
+        <Footer />
       </main>
     </>
   )

@@ -16,9 +16,9 @@
             width: fit-content;
             text-align: center;
             font-family: 'AntiqueMain';
-            font-size: 9rem;
+            font-size: 7rem;
             color: $white;
-            line-height: 9rem;
+            line-height: 7rem;
             z-index: 1;
             letter-spacing: -5px;
             @include mobile{
@@ -40,9 +40,9 @@
                 width: 100%;
                 text-align: center;
                 font-family: 'AntiqueMain';
-                font-size: 9rem;
+                font-size: 7rem;
                 color: $white;
-                line-height: 9rem;
+                line-height: 7rem;
                 z-index: 1;
                 letter-spacing: -5px;
                 @include mobile{
@@ -54,7 +54,7 @@
                 width: 100%;
                 font-family: Matter;
                 font-weight: 500;
-                font-size: 2.5rem;
+                font-size: 2rem;
                 text-align: center;
                 color: $white;
                 .yellow{
@@ -90,11 +90,11 @@
                 box-shadow: 0.7rem 0.8rem 2rem #00000030;
             }
             &-1{
-                width: 260px;
-                height: 220px;
+                width: 230px;
+                height: 200px;
                 position: absolute;
                 left: 25%;
-                top: 20%;
+                top: 15%;
                 img{
                     border-radius: 15px;
                     object-position: 50% 10%;
@@ -108,11 +108,11 @@
                 }
             }
             &-2{
-                width: 320px;
-                height: 280px;
+                width: 280px;
+                height: 240px;
                 position: absolute;
                 left: 60%;
-                top: 14%;
+                top: 10%;
                 img{
                     border-radius: 15px;
                     transform: rotate(10deg);
@@ -128,8 +128,8 @@
                 width: 330px;
                 height: 220px;
                 position: absolute;
-                left: 30%;
-                top: 70%;
+                left: 25%;
+                top: 65%;
                 img{
                     border-radius: 15px;
                     transform: rotate(-5deg);
@@ -142,11 +142,11 @@
                 }
             }
             &-4{
-                width: 330px;
-                height: 250px;
+                width: 300px;
+                height: 220px;
                 position: absolute;
                 left: 60%;
-                top: 70%;
+                top: 65%;
                 img{
                     border-radius: 15px;
                     width: 100%;
@@ -285,7 +285,7 @@
             }
             &-img{
                 width: 200px;
-                height: 350px;
+                height: 300px;
                 overflow: visible !important;
                 img{
                     width: 100%;

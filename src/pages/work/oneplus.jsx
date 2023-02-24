@@ -2,27 +2,11 @@ import Background from '@/components/Background'
 import Footer from '@/components/Footer'
 import Navigation from '@/components/Navigation'
 import ScrollContainer from '@/components/ScrollContainer'
-import { fetchClients } from '@/controller/Content'
-import HomeContact from '@/sections/Contact'
 import Head from 'next/head'
-import { useRouter } from 'next/router'
 import WorkHero from '@/sections/Work/WorkHero'
 import logo from "../../assets/brands/oneplus/oneplus-logo.webp"
 import { motion } from 'framer-motion'
 import LazyLoad from 'react-lazyload';
-import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
-  Tooltip,
-  Legend,
-  defaults
-} from 'chart.js';
-import { Line } from 'react-chartjs-2';
-import { useState } from 'react'
 import SwiperCore, { Pagination, Autoplay } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
@@ -33,9 +17,7 @@ import CountUp from 'react-countup'
 import Lottie from 'react-lottie-player/dist/LottiePlayerLight'
 
 import duration from "../../assets/animaticons/duration.json"
-import spend from "../../assets/animaticons/spend.json"
 import interactions from "../../assets/animaticons/interactions.json"
-import followers from "../../assets/animaticons/followers.json"
 
 //camp 3 videos
 // import video1 from "../../assets/brands/oneplus/videos/video1.mp4"
@@ -49,6 +31,8 @@ import mpic5 from "../../assets/brands/oneplus/mirror/pic5.jpg"
 import mpic6 from "../../assets/brands/oneplus/mirror/pic6.jpg"
 import mpic7 from "../../assets/brands/oneplus/mirror/pic7.jpg"
 import mpic8 from "../../assets/brands/oneplus/mirror/pic8.jpg"
+import mirrorMain1 from "../../assets/brands/oneplus/mirror/main1.jpg"
+import mirrorMain2 from "../../assets/brands/oneplus/mirror/main2.jpg"
 
 //campaign2 pics
 import cpic1 from "../../assets/brands/oneplus/campaign1/pic1.jpg"
@@ -58,97 +42,14 @@ import cpic4 from "../../assets/brands/oneplus/campaign1/pic4.jpg"
 import cpic5 from "../../assets/brands/oneplus/campaign1/pic5.jpg"
 import cpic6 from "../../assets/brands/oneplus/campaign1/pic6.jpg"
 import cpic7 from "../../assets/brands/oneplus/campaign1/pic7.jpg"
+import cMain1 from "../../assets/brands/oneplus/campaign1/main1.jpg"
+import cMain2 from "../../assets/brands/oneplus/campaign1/main2.jpg"
 
-
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
-  Tooltip,
-  Legend
-);
-
-defaults.font.family = 'Matter'
-defaults.font.size = 12
-defaults.font.weight = 500
-defaults.color = "#FFFFFF"
+//diwali campaign
+import dMain1 from "../../assets/brands/oneplus/diwali/main1.jpg"
+import dMain2 from "../../assets/brands/oneplus/diwali/main2.jpg"
 
 export default function OnePlus() {
-  const [xx, setXx] = useState(null)
-  const tooltipgen = (tooltipItems) => {
-    if(tooltipItems[0]?.label === "2022"){
-      return "#8 Sports team in the world"
-    }else if(tooltipItems[0]?.label === "2023"){
-      return "🎉 #5 Sports team in the world"
-    }else{
-      return ""
-    }
-  }
-  const options = {
-    responsive: true,
-    animations: {
-      tension: {
-        duration: 3000,
-        easing: 'ease',
-        from: 0.5,
-        to: 0.2,
-        loop: true
-      }
-    },
-    plugins: {
-      legend: {
-        display: false,
-        position: 'top',
-        labels: {
-          color: "#FFFFFF",
-          font: {
-            family: "Matter" // Add your font here to change the font of your legend label
-          }
-        },
-      },
-      tooltip: {
-        bodyColor: "#FFC64E",
-        callbacks: {
-          footer: tooltipgen
-        }
-      }
-    },
-    scales: {
-      y: {
-        title: {
-          display: true,
-          text: 'Interactions (In Millions)',
-        },
-        grid: {color: '#ffffff10'}
-      },
-      x: {
-        title: {
-          display: true,
-          text: 'Years'
-        },
-        grid: {color: '#ffffff10'}
-      }
-    }
-  };
-  const labels = ['2020','2021','2022','2023'];
-
-  const data = {
-    labels,
-    datasets: [
-      {
-        label: 'Interactions (In Millions)',
-        data: [139, 155, 820, 948],
-        borderColor: '#A374FF',
-        backgroundColor: '#A374FF',
-        pointStyle: 'circle',
-        pointRadius: 6,
-      }
-    ],
-  };
-  const router = useRouter()
-  const {filter} = router.query
   return (
     <>
       <Head>
@@ -163,7 +64,7 @@ export default function OnePlus() {
         <ScrollContainer>
           <div className="brandpage-hero">
             <WorkHero
-            brand={"Oneplus"}
+            brand={"OnePlus"}
             categories={["Influencer Marketing"]}
             back={"/work"}
             logo={logo.src}
@@ -171,7 +72,7 @@ export default function OnePlus() {
           </div>
           <div className="container">
             <div className="brandpage-section-brand">
-              <h1>Creative influencer campaign for the most successful smartphone brand in India</h1>
+              <h1>Creative <span>influencer campaign</span> for the most successful smartphone brand in India</h1>
             </div>
             <div className="brandpage-section-campaign">
               <div className="title">
@@ -208,6 +109,15 @@ export default function OnePlus() {
                       <li>The campaign represented the idea of the 90Hz refresh rate in the OnePlus 7T Pro through multiple mirror reflections of artists</li>
                       <li>Collaborated with ten celebrities</li>
                     </ul>
+                  </div>
+                  <div className="col-12">
+                    <div className="brandpage-section-campaign-stats-divider">&nbsp;</div>
+                  </div>
+                  <div className="col-6 col-sm-12">
+                    <img className='brandpage-section-campaign-stats-image left' src={mirrorMain1.src} alt="" />
+                  </div>
+                  <div className="col-6 col-sm-12">
+                    <img className='brandpage-section-campaign-stats-image right' src={mirrorMain2.src} alt="" />
                   </div>
                 </div>
                 <div className="brandpage-section-campaign-slider">
@@ -304,6 +214,15 @@ export default function OnePlus() {
                       <li>Collaborated with eight celebrities</li>
                     </ul>
                   </div>
+                  <div className="col-12">
+                    <div className="brandpage-section-campaign-stats-divider">&nbsp;</div>
+                  </div>
+                  <div className="col-6 col-sm-12">
+                    <img className='brandpage-section-campaign-stats-image left' src={cMain1.src} alt="" />
+                  </div>
+                  <div className="col-6 col-sm-12">
+                    <img className='brandpage-section-campaign-stats-image right' src={cMain2.src} alt="" />
+                  </div>
                 </div>
                 <div className="brandpage-section-campaign-slider">
                   <h2>Gallery</h2>
@@ -362,7 +281,7 @@ export default function OnePlus() {
             </div>
             <div className="brandpage-section-campaign">
               <div className="title">
-                <h2><span style={{"--spancolor": "#FFC64E"}}>Campaign #3</span><br />#Yourfestiveshot (Diwali campaign)</h2>
+                <h2><span style={{"--spancolor": "#FFC64E"}}>Campaign #3</span><br />#YourFestiveShot (Diwali campaign)</h2>
               </div>
               <div className="brandpage-section-campaign-stats">
                 <div className="row">
@@ -396,6 +315,15 @@ export default function OnePlus() {
                       <li>Collaborated with 75+ photographers, influencers, & travelers for #YourFestiveShot campaign</li>
                       <li>OnePlus’s most successful O2O campaign</li>
                     </ul>
+                  </div>
+                  <div className="col-12">
+                    <div className="brandpage-section-campaign-stats-divider">&nbsp;</div>
+                  </div>
+                  <div className="col-6 col-sm-12">
+                    <img className='brandpage-section-campaign-stats-image left' src={dMain1.src} alt="" />
+                  </div>
+                  <div className="col-6 col-sm-12">
+                    <img className='brandpage-section-campaign-stats-image right' src={dMain2.src} alt="" />
                   </div>
                 </div>
               </div>
@@ -434,7 +362,7 @@ export default function OnePlus() {
                   initial={{x: 150, opacity: 0}}
                   whileInView={{x: 0, opacity: 1}}
                   transition={{duration: 0.5, bounce: 0.4, type: 'spring', delay: 0.2}}
-                  >As celebrations and festivities double up when shared with others, <span>#Yourfestiveshot</span>  gave users a chance to feature their festive Diwali photographs on OnePlus billboards around the country!</motion.li>
+                  >As celebrations and festivities double up when shared with others, <span>#YourFestiveShot</span>  gave users a chance to feature their festive Diwali photographs on OnePlus billboards around the country!</motion.li>
                   <motion.li
                   key={`rcb-subtitle-miles2`}
                   initial={{x: 150, opacity: 0}}
@@ -457,8 +385,10 @@ export default function OnePlus() {
               </div>
             </div>
           </div>
-          <Footer />
+          <br />
+          <br />
         </ScrollContainer>
+        <Footer />
       </main>
     </>
   )

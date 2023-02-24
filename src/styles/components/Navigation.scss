@@ -335,7 +335,7 @@
     left: 0;
     z-index: 998;
     transform: translateY(-100%);
-    transition: all 1s ease-in-out;
+    transition: all 0.5s ease-in-out;
     display: flex;
     align-items: flex-end;
     padding-bottom: 10vh;
@@ -353,7 +353,7 @@
         bottom: -0px;
         left: 0;
         content: "";
-        transition: all 1s ease-in-out;
+        transition: all 0.5s ease-in-out;
         
     }
     @include keyframes(slidein){
@@ -368,7 +368,7 @@
         100%{transform: translateY(-100%); opacity: 1;}
     }
     &.active{
-        @include animate(slidein, 1s, ease-in-out, 1);
+        @include animate(slidein, 0.5s, ease-in-out, 1);
         &::after{
             border-radius: 0%;
             bottom: -140px;
@@ -377,7 +377,7 @@
         opacity: 1
     }
     &.inactive{
-        @include animate(slideout, 1s, ease-in-out, 1);
+        @include animate(slideout, 0.5s, ease-in-out, 1);
         &::after{
             border-radius: 50%;
             bottom: -0px;

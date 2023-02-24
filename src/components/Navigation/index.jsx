@@ -8,7 +8,7 @@ const LinkText = ({text, second = false}) => {
   <motion.p
   initial={{x: 300, opacity: 0}}
   animate={{x: 0, opacity: 1}}
-  transition={{duration: 1, delay: 1, bounce: 0.5, type: 'spring'}}
+  transition={{duration: 0.6, delay: 0.5, bounce: 0.5, type: 'spring'}}
   className={`link-text ${second ? 'behind' : ''}`}>
     {text.split("").map((letter, i) => 
     <div
@@ -97,7 +97,7 @@ const Navigation = ({theme = false}) => {
             <a href="mailto:contact@okaydone.in" className="menupage-contact-link">contact@okaydone.in</a>
             <a href="tel:+91 98860 98992" className="menupage-contact-link">+91 98860 98992</a>
             <p className="menupage-contact-address">
-            13th Cross Road, #17,<br />7th Main Rd, Indiranagar, <br />Bengaluru, Karnataka - 560038
+            #17, 13th Cross Road,<br />7th Main Rd, Indiranagar, <br />Bengaluru, Karnataka - 560038
             </p>
             </div>
           </div>

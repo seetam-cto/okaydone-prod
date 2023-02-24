@@ -9,7 +9,7 @@ import Featured from '@/sections/Featured'
 import Hero from '@/sections/Hero'
 import Head from 'next/head'
 
-export default function Home({data}) {
+export default function Home() {
   return (
     <>
       <Head>
@@ -23,7 +23,7 @@ export default function Home({data}) {
         <Navigation />
         <ScrollContainer>
         <Hero />
-        <Clients clients={data && data.clients} />
+        <Clients />
         <Featured />
         <HomeContact />
         <Footer />
@@ -31,9 +31,4 @@ export default function Home({data}) {
       </main>
     </>
   )
-}
-
-export async function getServerSideProps(){
-  const res = await fetchClients()
-  return { props: { data: res }}
 }

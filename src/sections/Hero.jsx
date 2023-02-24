@@ -16,7 +16,7 @@ export const TextLine = ({text, middle}) => {
           {letter}
         </motion.div>
       )}
-      {middle && <div className='hero-header-lines-middle'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>}
+      {middle && <div className='hero-header-lines-middle'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>}
     </div>
   )
 }
@@ -45,6 +45,7 @@ const Hero = () => {
         controls={false}
         loop={true}
         muted={true}
+        playsInline={true}
         src={'/hero-video.mp4'} />
         <div className="hero-video-overlay" />
         </Tilt>

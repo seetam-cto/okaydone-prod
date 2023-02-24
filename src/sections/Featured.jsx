@@ -14,8 +14,7 @@ const Featured = () => {
                 </div>
             </div>
             <div className="row">
-                <div className="col-1"></div>
-                <div className="col-5 col-sm-12">
+                <div className="col-6 col-sm-12">
                     <div className="featured-container" style={{"--align": "flex-start"}}>
                         <div className="featured-content">
                             <div className="featured-content-backimg">
@@ -43,7 +42,7 @@ const Featured = () => {
                             </div>
                             <h5>ROYAL CHALLENGERS BENGALORE</h5>
                             <h2>Empowering an <span>epic fan moment</span> through powerful social media showmanship</h2>
-                            <Link href={"/work/royal-challengers-bengalore"} className='featured-content-link' style={{"--color": "teal"}}>Continue reading</Link>
+                            <Link href={"/work/royal-challengers-bangalore"} className='featured-content-link' style={{"--color": "teal"}}>Continue reading</Link>
                         </div>
                     </div>
                 </div>
