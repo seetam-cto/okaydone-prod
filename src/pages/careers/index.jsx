@@ -30,7 +30,7 @@ export default function Careers() {
                     </div>
                     <div className="col-6 col-sm-12">
                         <p className='careers-subhead'>
-                        Come work with amazing people creating great things, in a culture that puts its people first. Ready to bring your experience and perspective to our team? Join us and let's build the best immersive experiences we can dream up together.
+                        Come work with amazing people creating great things, in a culture that puts its people first. Ready to bring your experience and perspective to our team? Join us and let&apos;s build the best immersive experiences we can dream up together.
                         </p>
                     </div>
                 </div>
