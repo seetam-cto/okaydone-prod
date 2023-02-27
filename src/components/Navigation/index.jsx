@@ -150,22 +150,29 @@ const Navigation = ({theme = false}) => {
                     <LinkText second={true} text={"What we did"}/>
                   </Link>
                 </li>
-                {/* <li
+                <li
                 key={'menu-link3'}
                 onMouseEnter={() => setActiveLink("three")}
                 onMouseLeave={() => setActiveLink("")}
                 >
-                  <Link href="/" className='navbar-menu-links-link'>
-                    <LinkText text={"Wanna do it?"}/>
+                  <Link href="/careers" className='navbar-menu-links-link'>
+                    <motion.div
+                    initial={{y: -50, opacity: 0}}
+                    animate={{y: 0, opacity: 1}}
+                    transition={{delay:1.5, bounce: 0.3, type: 'spring', duration: 0.6}}
+                    className="navbar-menu-links-link-bg">
+                      CAREERS
+                    </motion.div>
+                    <LinkText text={"wanna do it?"} />
                     {activeLink === "three" && <div
                     key="middle-line1"
                     className="middle-line three">
                       <div className="middle-line-teal" />
                       <div className="middle-line-purple" />
                     </div>}
-                    <LinkText second={true} text={"Wanna do it?"}/>
+                    <LinkText second={true} text={"wanna do it?"}/>
                   </Link>
-                </li> */}
+                </li>
                 <li
                 key={'menu-link4'}
                 onMouseEnter={() => setActiveLink("four")}

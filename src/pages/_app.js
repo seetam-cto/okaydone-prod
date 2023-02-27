@@ -49,6 +49,8 @@ export default function App({ Component, pageProps }) {
     <AnimatePresence>
     <Component {...pageProps} />
     </AnimatePresence>
+    <Script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js" crossOrigin='anonymous' />
+    <Script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js" crossOrigin='anonymous' />
     </>
   )
 }
