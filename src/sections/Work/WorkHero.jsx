@@ -2,6 +2,7 @@ import { ArrowButton } from '@/components/Button'
 import { useRouter } from 'next/router'
 import React from 'react'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 const WorkHero = ({brand, categories = [], color = "", logo, banner, extraClass="", back="/"}) => {
     const router = useRouter()
@@ -15,7 +16,7 @@ const WorkHero = ({brand, categories = [], color = "", logo, banner, extraClass=
                 <div className={`brandpage-hero-casestudy ${color}`}>Case Study</div>
                 <h1 className={`brandpage-hero-title ${color}`}>
                     <div className="logo">
-                        <img src={logo} alt="" />
+                        <Image width={500} height={400} quality={100}  src={logo} alt="" />
                     </div>
                     {brand}
                 </h1>
@@ -46,7 +47,7 @@ export const OtherHero = ({title, brand, categories = [], color = "", logo = nul
                 <div className={`brandpage-hero-casestudy ${color}`}>{title}</div>
                 <h1 className={`brandpage-hero-title ${color}`}>
                     {logo && <div className="logo">
-                        <img src={logo} alt="" />
+                        <Image width={500} height={400} quality={100} src={logo} alt="" />
                     </div>}
                     {brand}
                 </h1>

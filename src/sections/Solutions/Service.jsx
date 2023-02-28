@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { MouseParallaxContainer, MouseParallaxChild } from "react-parallax-mouse"
@@ -10,7 +11,7 @@ const Service = ({icon, backimg, color, title, subtitle, link, flexalign, logoto
                 <div className={`service-icon ${logotop ? "closetop" : ""}`}>
                 <MouseParallaxContainer resetOnLeave={true} globalFactorX={0.1} globalFactorY={0.1}>
                     <MouseParallaxChild factorX={0.3} factorY={0.5}>
-                        <img src={icon} alt="" />
+                        <Image width={500} height={400} quality={100}  src={icon} alt="" />
                     </MouseParallaxChild>
                 </MouseParallaxContainer>
                 </div>
@@ -18,7 +19,7 @@ const Service = ({icon, backimg, color, title, subtitle, link, flexalign, logoto
                     <div className="service-content-backimg">
                         <MouseParallaxContainer className='service-content-backimg-box' globalFactorX={0.1} globalFactorY={0.1}>
                             <MouseParallaxChild className='service-content-backimg-img' factorX={-10} factorY={-3}>
-                                <img src={backimg} alt="" />
+                                <Image width={500} height={400} quality={100}  src={backimg} alt="" />
                             </MouseParallaxChild>
                         </MouseParallaxContainer>
                     </div>

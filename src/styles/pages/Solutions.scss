@@ -9,6 +9,10 @@
         align-content: space-between;
         padding-inline: 10%;
         align-items: center;
+        &.error{
+            padding-top: 20vh;
+            height: 60vh;
+        }
         @include mobile{
             height: 40vh;
         }

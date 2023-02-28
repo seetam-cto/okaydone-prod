@@ -12,6 +12,7 @@ import oneplus from "../../assets/brands/oneplus/campaign1/main1.jpg"
 import ayatana from "../../assets/brands/ayatana/cover2.jpg"
 import bcp from "../../assets/brands/bcp/cover.jpg"
 import { LoaderScreen } from '@/utilities'
+import Image from 'next/image'
 
 export default function Work() {
   const router = useRouter()
@@ -41,7 +42,7 @@ export default function Work() {
           <div className="container">
             <div className="work-box">
               <Link href="/work/royal-challengers-bangalore" className="work-box-item">
-                <img src={rcb.src} alt="" />
+                <Image width={800} height={600} quality={100} src={rcb.src} alt="" />
                 <div className="work-box-item-content">
                   <h1>Royal Challengers Bangalore</h1>
                   <ul className="work-box-item-content-categories">
@@ -52,7 +53,7 @@ export default function Work() {
                 </div>
               </Link>
               <Link href="/work/oneplus" className="work-box-item">
-                <img src={oneplus.src} alt="" />
+                <Image width={800} height={600} quality={100} src={oneplus.src} alt="" />
                 <div className="work-box-item-content">
                 <h1>OnePlus</h1>
                   <ul className="work-box-item-content-categories">
@@ -62,7 +63,7 @@ export default function Work() {
                 </div>
               </Link>
               <Link href="/work/ayatana" className="work-box-item">
-                <img src={ayatana.src} alt="" />
+                <Image width={800} height={600} quality={100} src={ayatana.src} alt="" />
                 <div className="work-box-item-content">
                 <h1>Ayatana, Coorg</h1>
                   <ul className="work-box-item-content-categories">
@@ -73,7 +74,7 @@ export default function Work() {
                 </div>
               </Link>
               <Link href="/work/bengaluru-city-police" className="work-box-item">
-                <img src={bcp.src} alt="" />
+                <Image width={800} height={600} quality={100} src={bcp.src} alt="" />
                 <div className="work-box-item-content">
                 <h1>Bengaluru City Police</h1>
                   <ul className="work-box-item-content-categories">

@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { MouseParallaxContainer, MouseParallaxChild } from "react-parallax-mouse"
 import backimg1 from "../assets/brands/ayatana/cover.jpg"
 import backimg2 from "../assets/brands/rcb/slide1.jpg"
+import Image from 'next/image'
 
 const Featured = () => {
   return (
@@ -20,7 +21,7 @@ const Featured = () => {
                             <div className="featured-content-backimg">
                                 <MouseParallaxContainer className='featured-content-backimg-box' globalFactorX={0.1} globalFactorY={0.1}>
                                     <MouseParallaxChild className='featured-content-backimg-img' factorX={-10} factorY={-3}>
-                                        <img src={backimg1.src} alt="" />
+                                        <Image width={500} height={400} quality={100} src={backimg1.src} alt="" />
                                     </MouseParallaxChild>
                                 </MouseParallaxContainer>
                             </div>
@@ -36,7 +37,7 @@ const Featured = () => {
                             <div className="featured-content-backimg">
                                 <MouseParallaxContainer className='featured-content-backimg-box' globalFactorX={0.1} globalFactorY={0.1}>
                                     <MouseParallaxChild className='featured-content-backimg-img' factorX={-10} factorY={-3}>
-                                        <img src={backimg2.src} alt="" />
+                                        <Image width={500} height={400} quality={100} src={backimg2.src} alt="" />
                                     </MouseParallaxChild>
                                 </MouseParallaxContainer>
                             </div>

@@ -25,6 +25,7 @@ import Lottie from 'react-lottie-player/dist/LottiePlayerLight'
 // import spend from "../../assets/animaticons/spend.json"
 import interactions from "../../assets/animaticons/interactions.json"
 import { LoaderScreen } from '@/utilities'
+import Image from 'next/image'
 // import followers from "../../assets/animaticons/followers.json"
 
 export default function Ayatana() {
@@ -87,7 +88,7 @@ export default function Ayatana() {
               </div>
             </div>
             <div className="brandpage-section-image notop">
-              <img src={ayatana2.src} alt="" />
+              <Image width={1440} height={1080} quality={100} src={ayatana2.src} alt="" />
             </div>
             <div className="brandpage-section-content">
               <div className="title">
@@ -237,28 +238,28 @@ export default function Ayatana() {
                   onSwiper={(swiper) => console.log(swiper)}
                 >
                   <SwiperSlide className="brandpage-section-campaign-slider-slide">
-                    <img src={slide1.src} alt="" />
+                    <Image width={500} height={400} quality={100} src={slide1.src} alt="" />
                   </SwiperSlide>
                   <SwiperSlide className="brandpage-section-campaign-slider-slide">
-                    <img src={slide2.src} alt="" />
+                    <Image width={500} height={400} quality={100} src={slide2.src} alt="" />
                   </SwiperSlide>
                   <SwiperSlide className="brandpage-section-campaign-slider-slide">
-                    <img src={slide3.src} alt="" />
+                    <Image width={500} height={400} quality={100} src={slide3.src} alt="" />
                   </SwiperSlide>
                   <SwiperSlide className="brandpage-section-campaign-slider-slide">
-                    <img src={slide4.src} alt="" />
+                    <Image width={500} height={400} quality={100} src={slide4.src} alt="" />
                   </SwiperSlide>
                   <SwiperSlide className="brandpage-section-campaign-slider-slide">
-                    <img src={slide5.src} alt="" />
+                    <Image width={500} height={400} quality={100} src={slide5.src} alt="" />
                   </SwiperSlide>
                   <SwiperSlide className="brandpage-section-campaign-slider-slide">
-                    <img src={slide6.src} alt="" />
+                    <Image width={500} height={400} quality={100} src={slide6.src} alt="" />
                   </SwiperSlide>
                   <SwiperSlide className="brandpage-section-campaign-slider-slide">
-                    <img src={slide7.src} alt="" />
+                    <Image width={500} height={400} quality={100} src={slide7.src} alt="" />
                   </SwiperSlide>
                   <SwiperSlide className="brandpage-section-campaign-slider-slide">
-                    <img src={slide8.src} alt="" />
+                    <Image width={500} height={400} quality={100} src={slide8.src} alt="" />
                   </SwiperSlide>
                 </Swiper>
                </div>

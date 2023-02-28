@@ -49,6 +49,7 @@ import cMain2 from "../../assets/brands/oneplus/campaign1/main2.jpg"
 import dMain1 from "../../assets/brands/oneplus/diwali/main1.jpg"
 import dMain2 from "../../assets/brands/oneplus/diwali/main2.jpg"
 import { LoaderScreen } from '@/utilities'
+import Image from 'next/image'
 
 export default function OnePlus() {
   return (
@@ -116,10 +117,10 @@ export default function OnePlus() {
                     <div className="brandpage-section-campaign-stats-divider">&nbsp;</div>
                   </div>
                   <div className="col-6 col-sm-12">
-                    <img className='brandpage-section-campaign-stats-image left' src={mirrorMain1.src} alt="" />
+                    <Image width={800} height={600} quality={100} className='brandpage-section-campaign-stats-image left' src={mirrorMain1.src} alt="" />
                   </div>
                   <div className="col-6 col-sm-12">
-                    <img className='brandpage-section-campaign-stats-image right' src={mirrorMain2.src} alt="" />
+                    <Image width={800} height={600} quality={100} className='brandpage-section-campaign-stats-image right' src={mirrorMain2.src} alt="" />
                   </div>
                 </div>
                 <div className="brandpage-section-campaign-slider">
@@ -153,28 +154,28 @@ export default function OnePlus() {
                   onSwiper={(swiper) => console.log(swiper)}
                 >
                   <SwiperSlide className="brandpage-section-campaign-slider-slide">
-                    <img src={mpic1.src} alt="" />
+                    <Image width={500} height={400} quality={100} src={mpic1.src} alt="" />
                   </SwiperSlide>
                   <SwiperSlide className="brandpage-section-campaign-slider-slide">
-                    <img src={mpic2.src} alt="" />
+                    <Image width={500} height={400} quality={100} src={mpic2.src} alt="" />
                   </SwiperSlide>
                   <SwiperSlide className="brandpage-section-campaign-slider-slide">
-                    <img src={mpic3.src} alt="" />
+                    <Image width={500} height={400} quality={100} src={mpic3.src} alt="" />
                   </SwiperSlide>
                   <SwiperSlide className="brandpage-section-campaign-slider-slide">
-                    <img src={mpic4.src} alt="" />
+                    <Image width={500} height={400} quality={100} src={mpic4.src} alt="" />
                   </SwiperSlide>
                   <SwiperSlide className="brandpage-section-campaign-slider-slide">
-                    <img src={mpic5.src} alt="" />
+                    <Image width={500} height={400} quality={100} src={mpic5.src} alt="" />
                   </SwiperSlide>
                   <SwiperSlide className="brandpage-section-campaign-slider-slide">
-                    <img src={mpic6.src} alt="" />
+                    <Image width={500} height={400} quality={100} src={mpic6.src} alt="" />
                   </SwiperSlide>
                   <SwiperSlide className="brandpage-section-campaign-slider-slide">
-                    <img src={mpic7.src} alt="" />
+                    <Image width={500} height={400} quality={100} src={mpic7.src} alt="" />
                   </SwiperSlide>
                   <SwiperSlide className="brandpage-section-campaign-slider-slide">
-                    <img src={mpic8.src} alt="" />
+                    <Image width={500} height={400} quality={100} src={mpic8.src} alt="" />
                   </SwiperSlide>
                 </Swiper>
                </div>
@@ -220,10 +221,10 @@ export default function OnePlus() {
                     <div className="brandpage-section-campaign-stats-divider">&nbsp;</div>
                   </div>
                   <div className="col-6 col-sm-12">
-                    <img className='brandpage-section-campaign-stats-image left' src={cMain1.src} alt="" />
+                    <Image width={800} height={600} quality={100} className='brandpage-section-campaign-stats-image left' src={cMain1.src} alt="" />
                   </div>
                   <div className="col-6 col-sm-12">
-                    <img className='brandpage-section-campaign-stats-image right' src={cMain2.src} alt="" />
+                    <Image width={800} height={600} quality={100} className='brandpage-section-campaign-stats-image right' src={cMain2.src} alt="" />
                   </div>
                 </div>
                 <div className="brandpage-section-campaign-slider">
@@ -257,25 +258,25 @@ export default function OnePlus() {
                   onSwiper={(swiper) => console.log(swiper)}
                 >
                   <SwiperSlide className="brandpage-section-campaign-slider-slide">
-                    <img src={cpic1.src} alt="" />
+                    <Image width={500} height={400} quality={100} src={cpic1.src} alt="" />
                   </SwiperSlide>
                   <SwiperSlide className="brandpage-section-campaign-slider-slide">
-                    <img src={cpic2.src} alt="" />
+                    <Image width={500} height={400} quality={100} src={cpic2.src} alt="" />
                   </SwiperSlide>
                   <SwiperSlide className="brandpage-section-campaign-slider-slide">
-                    <img src={cpic3.src} alt="" />
+                    <Image width={500} height={400} quality={100} src={cpic3.src} alt="" />
                   </SwiperSlide>
                   <SwiperSlide className="brandpage-section-campaign-slider-slide">
-                    <img src={cpic4.src} alt="" />
+                    <Image width={500} height={400} quality={100} src={cpic4.src} alt="" />
                   </SwiperSlide>
                   <SwiperSlide className="brandpage-section-campaign-slider-slide">
-                    <img src={cpic5.src} alt="" />
+                    <Image width={500} height={400} quality={100} src={cpic5.src} alt="" />
                   </SwiperSlide>
                   <SwiperSlide className="brandpage-section-campaign-slider-slide">
-                    <img src={cpic6.src} alt="" />
+                    <Image width={500} height={400} quality={100} src={cpic6.src} alt="" />
                   </SwiperSlide>
                   <SwiperSlide className="brandpage-section-campaign-slider-slide">
-                    <img src={cpic7.src} alt="" />
+                    <Image width={500} height={400} quality={100} src={cpic7.src} alt="" />
                   </SwiperSlide>
                 </Swiper>
                </div>
@@ -322,10 +323,10 @@ export default function OnePlus() {
                     <div className="brandpage-section-campaign-stats-divider">&nbsp;</div>
                   </div>
                   <div className="col-6 col-sm-12">
-                    <img className='brandpage-section-campaign-stats-image left' src={dMain1.src} alt="" />
+                    <Image width={800} height={600} quality={100} className='brandpage-section-campaign-stats-image left' src={dMain1.src} alt="" />
                   </div>
                   <div className="col-6 col-sm-12">
-                    <img className='brandpage-section-campaign-stats-image right' src={dMain2.src} alt="" />
+                    <Image width={800} height={600} quality={100} className='brandpage-section-campaign-stats-image right' src={dMain2.src} alt="" />
                   </div>
                 </div>
               </div>

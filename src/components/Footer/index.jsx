@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import React, {useEffect, useState} from 'react'
 import logo from "../../assets/logo.png"
@@ -8,7 +9,7 @@ const Footer = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-sm-12 m-only footer-logo">
-                        <img src={logo.src} />
+                        <Image width={200} height={200} quality={100} src={logo.src} />
                     </div>
                     <div className="col-5 col-sm-12">
                         <h2 className="footer-title-small">

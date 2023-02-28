@@ -38,7 +38,6 @@ export default function ContactUs() {
                             <h1>get in</h1>
                             <h1>touch</h1>
                         </div>
-                        <img src="" alt="" />
                     </div>
                     <div className="col-6 col-sm-12">
                         <p>
