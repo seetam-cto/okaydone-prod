@@ -48,6 +48,7 @@ import cMain2 from "../../assets/brands/oneplus/campaign1/main2.jpg"
 //diwali campaign
 import dMain1 from "../../assets/brands/oneplus/diwali/main1.jpg"
 import dMain2 from "../../assets/brands/oneplus/diwali/main2.jpg"
+import { LoaderScreen } from '@/utilities'
 
 export default function OnePlus() {
   return (
@@ -58,6 +59,7 @@ export default function OnePlus() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <LoaderScreen />
       <main className={"main"}>
         <Background />
         <Navigation theme={true} />
@@ -329,21 +331,19 @@ export default function OnePlus() {
               </div>
               <div className="brandpage-section-campaign-videos">
                 <div className="row">
-                  <div className="col-6 col-sm-12">
-                    <LazyLoad height={200}>
+                  <div className="col-6 col-sm-12 h-200">
+                    
                       <video className='brandpage-section-campaign-videos-video left' controls>
                         <source src="/videos/video1.mp4" type="video/mp4" />
                         Your browser does not support the video tag.
                       </video>
-                    </LazyLoad>
                   </div>
-                  <div className="col-6 col-sm-12">
-                    <LazyLoad height={200}>
+                  <div className="col-6 col-sm-12 h-200">
+                    
                       <video className='brandpage-section-campaign-videos-video right' controls>
                         <source src="/videos/video2.mp4" type="video/mp4" />
                         Your browser does not support the video tag.
                       </video>
-                    </LazyLoad>
                   </div>
                   <div className="col-6 col-sm-12">
                     
@@ -386,9 +386,8 @@ export default function OnePlus() {
             </div>
           </div>
           <br />
-          <br />
+          <Footer />
         </ScrollContainer>
-        <Footer />
       </main>
     </>
   )

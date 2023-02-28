@@ -31,7 +31,7 @@ const Logo = ({status}) => {
       exit={{x: 100, opacity: 0}}
       transition={{duration: 1, type: 'spring', bounce: 0.3}}
       key="navbar-logo" className='navbar-logo-img' src="/logo.svg" />
-      {status && <div className='navbar-logo-text'>
+      <div className='navbar-logo-text'>
           <motion.div 
           initial={{x: 100, skew: -20, opacity: 0}}
           animate={{x: 0, skew: 0,opacity: 1}}
@@ -46,7 +46,7 @@ const Logo = ({status}) => {
           key={"navbar-logo-part-two"}
           transition={{duration: 1, type: 'spring', bounce: 0.6}}
           className='part-two'>D<span>o</span>ne</motion.div>
-        </div>}
+        </div>
     </Link>
   )
 }

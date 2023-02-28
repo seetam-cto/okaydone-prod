@@ -3,6 +3,7 @@ import LayeredButton from '@/components/Button'
 import Footer from '@/components/Footer'
 import Navigation from '@/components/Navigation'
 import ScrollContainer from '@/components/ScrollContainer'
+import { LoaderScreen } from '@/utilities'
 import Head from 'next/head'
 
 export default function Careers() {
@@ -14,6 +15,7 @@ export default function Careers() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <LoaderScreen />
       <main className={"main"}>
         <Background />
         <Navigation />

@@ -44,8 +44,8 @@
             left: 1.4rem;
             @include mobile{
                 width: 25px;
-                left: 1rem;
-                top: -1.5rem;
+                left: 0.75rem;
+                top: -1.4rem;
             }
         }
         &-text{
@@ -71,7 +71,7 @@
                 color: $white;
                 margin-right: -1.30rem;
                 @include mobile{
-                    margin-right: -0.8rem;
+                    margin-right: -0.7rem;
                 }
             }
             .part-two{

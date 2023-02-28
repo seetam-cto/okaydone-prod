@@ -24,6 +24,7 @@ import Lottie from 'react-lottie-player/dist/LottiePlayerLight'
 // import duration from "../../assets/animaticons/duration.json"
 // import spend from "../../assets/animaticons/spend.json"
 import interactions from "../../assets/animaticons/interactions.json"
+import { LoaderScreen } from '@/utilities'
 // import followers from "../../assets/animaticons/followers.json"
 
 export default function Ayatana() {
@@ -35,6 +36,7 @@ export default function Ayatana() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <LoaderScreen />
       <main className={"main"}>
         <Background />
         <Navigation theme={true} />

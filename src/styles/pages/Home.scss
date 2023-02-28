@@ -130,9 +130,10 @@
         left: -80px;
         bottom: -80px;
     }
-    &.contact{
+    &.home-contact{
         font-size: 7rem;
         line-height: 7.5rem !important;
+        height: 70vh;
         @include mobile{
             height: 50vh;
             padding-top: 0vh !important;
@@ -147,10 +148,18 @@
             }
         }
     }
+    @include mobile{
+        padding-bottom: 100px;
+    }
 }
 
 .clients{
     margin-top: 20vh;
+    .container{
+        @include mobile{
+            padding-inline: 0px !important;
+        }
+    }
     &-header{
         width: 100%;
         display: flex;
@@ -159,6 +168,7 @@
         margin-bottom: 5rem;
         @include mobile{
             gap: 10px;
+            margin-bottom: 0rem;
             flex-direction: column;
             align-items: center;
         }
@@ -200,11 +210,15 @@
         width: 100%;
         height: 20vh;
         @include flex();
+        @include mobile{
+            height: 10vh;
+            margin-top: -2vh;
+        }
     }
 }
 
 .featured{
-    margin-block: 10vh;
+    margin-block: 20vh 10vh;
     h1{
         font-family: 'AntiqueMain';
         font-size: 5rem;
@@ -212,7 +226,9 @@
         color: $white;
         margin-bottom: 5vh;
         @include mobile{
-            font-size: 4rem;
+            font-size: 3.6rem;
+            line-height: 3.6rem;
+            text-align: left;
         }
     }
     &-container{

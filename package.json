@@ -29,6 +29,7 @@
     "react-countup": "^6.4.1",
     "react-dom": "18.2.0",
     "react-lazyload": "^3.2.0",
+    "react-lottie": "^1.2.3",
     "react-lottie-player": "^1.5.4",
     "react-parallax-mouse": "^2.0.1",
     "react-parallax-tilt": "^1.7.95",

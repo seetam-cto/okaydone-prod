@@ -9,10 +9,6 @@ import { motion } from 'framer-motion'
 import SwiperCore, { Pagination, Autoplay } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
-import rcb from "../../assets/brands/rcb/rcb.png"
-import slide1 from "../../assets/brands/rcb/slide1.jpg"
-import slide2 from "../../assets/brands/rcb/slide2.jpg"
-import slide3 from "../../assets/brands/rcb/slide3.jpg"
 import CountUp from 'react-countup'
 import Lottie from 'react-lottie-player/dist/LottiePlayerLight'
 import { TwitterTweetEmbed } from 'react-twitter-embed'
@@ -20,6 +16,7 @@ import duration from "../../assets/animaticons/duration.json"
 import spend from "../../assets/animaticons/spend.json"
 import interactions from "../../assets/animaticons/interactions.json"
 import followers from "../../assets/animaticons/followers.json"
+import { LoaderScreen } from '@/utilities'
 SwiperCore.use([Autoplay]);
 export default function BCP() {
   return (
@@ -30,6 +27,7 @@ export default function BCP() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <LoaderScreen />
       <main className={"main"}>
         <Background />
         <Navigation theme={true} />
@@ -287,8 +285,8 @@ export default function BCP() {
                </div>
             </div>
           </div>
+          <Footer />
         </ScrollContainer>
-        <Footer />
       </main>
     </>
   )

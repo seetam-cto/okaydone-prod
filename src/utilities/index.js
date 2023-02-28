@@ -1,3 +1,7 @@
+import * as loadAnim from "../assets/animaticons/loader-3dots.json"
+import Lottie from "react-lottie"
+import {motion} from "framer-motion"
+
 export const setTransform = (el, transform) => {
     el.style.transform = transform;
     el.style.WebkitTransform = transform;
@@ -128,3 +132,31 @@ export const setTransform = (el, transform) => {
     return array;
   }
   
+
+const loaderOptions = {
+    loop: true,
+    autoplay: true, 
+    animationData: loadAnim,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  };
+
+ export const LoaderScreen = () => {
+  return (
+    <>
+      <div id={'loaderbg'}/>
+      <motion.div
+      key={"main-loader"}
+      initial={{y: '-120%'}}
+      animate={{y: 0}}
+      transition={{type: 'spring', bounce: 0.2, duration: 0.5}}
+      id={'globalLoader'}>
+        <Lottie options={loaderOptions}
+        height={200}
+        isClickToPauseDisabled={true}
+        width={200}/>
+      </motion.div>
+    </>
+    )
+ }

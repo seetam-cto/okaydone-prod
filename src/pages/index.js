@@ -2,11 +2,11 @@ import Background from '@/components/Background'
 import Footer from '@/components/Footer'
 import Navigation from '@/components/Navigation'
 import ScrollContainer from '@/components/ScrollContainer'
-import { fetchClients } from '@/controller/Content'
 import Clients from '@/sections/Clients'
 import HomeContact from '@/sections/Contact'
 import Featured from '@/sections/Featured'
 import Hero from '@/sections/Hero'
+import { LoaderScreen } from '@/utilities'
 import Head from 'next/head'
 
 export default function Home() {
@@ -18,6 +18,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <LoaderScreen />
       <main className={"main"}>
         <Background />
         <Navigation />

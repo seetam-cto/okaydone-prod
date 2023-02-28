@@ -40,7 +40,7 @@ const Footer = () => {
                 <div className="row footer-bottom">
                     <div className="col-6 col-sm-12">
                         <ul className="footer-bottom-links left">
-                            <li>All Rights Reserved. All Wrongs Reversed.</li>
+                            <li><span className='m-only'>© 2023 | Okay Done<br /></span> All Rights Reserved. All Wrongs Reversed.</li>
                         </ul>
                     </div>
                     <div className="col-6 col-sm-12">
@@ -48,7 +48,7 @@ const Footer = () => {
                             <li><Link href={"/privacy-policy"}>Privacy Policy</Link></li>
                             {/* <li><Link href={"/disclaimer"}>Disclaimer</Link></li> */}
                             <li><Link href={"/terms-conditions"}>Terms & Conditions</Link></li>
-                            <li>© 2023 | Okay Done</li>
+                            <li className='d-only'>© 2023 | Okay Done</li>
                         </ul>
                     </div>
                     {/* <div className="col-6 col-sm-12">

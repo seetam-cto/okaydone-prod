@@ -34,7 +34,7 @@ const TextLine = ({text, middle, extra = null}) => {
 
 const HomeContact = () => {
   return (
-    <section className="hero contact">
+    <section className="hero home-contact">
       <h1 className="hero-header cc">
         <span className='hero-header-context'></span><br />
         <TextLine text={"disruptive"} />

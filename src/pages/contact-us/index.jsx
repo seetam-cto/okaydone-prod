@@ -8,6 +8,7 @@ import {motion } from 'framer-motion'
 import Link from 'next/link'
 import React, {use, useState} from "react"
 import LayeredButton from '@/components/Button'
+import { LoaderScreen } from '@/utilities'
 
 export default function ContactUs() {
   const [userData, setUserData] = useState({
@@ -24,6 +25,7 @@ export default function ContactUs() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <LoaderScreen />
       <main className={"main"}>
         <Background />
         <Navigation />

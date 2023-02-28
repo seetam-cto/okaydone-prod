@@ -3,13 +3,31 @@ import '../styles/blobz.min.css'
 import Script from 'next/script'
 import dynamic from 'next/dynamic'
 import { AnimatePresence } from 'framer-motion';
-import Router from 'next/router';
+import Router, { useRouter } from 'next/router';
+import { useEffect } from 'react';
 
 const AnimatedCursor = dynamic(() => import('react-animated-cursor'), {
   ssr: false
 });
 
 export default function App({ Component, pageProps }) {
+  const router = useRouter()
+  useEffect(() => {
+    if (typeof window !== 'undefined'){
+      const loader = document.getElementById('globalLoader');
+      const loaderbg = document.getElementById('loaderbg');
+      if (loader){
+        setTimeout(() => {
+          loaderbg.style.opacity = "0"
+          loader.style.transform = 'translateY(120%)'
+          setTimeout(() => {
+            loaderbg.style.display = "none"
+            loader.style.display = 'none';
+          }, 1000)
+        }, 2000)
+      }
+    }
+  },[router])
   return (
     <>
     <AnimatedCursor

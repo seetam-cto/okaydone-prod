@@ -6,6 +6,7 @@ import HomeContact from '@/sections/Contact'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import {OtherHero} from '@/sections/Work/WorkHero'
+import { LoaderScreen } from '@/utilities'
 
 export default function Terms() {
   return (
@@ -16,6 +17,7 @@ export default function Terms() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <LoaderScreen />
       <main className={"main"}>
         <Background />
         <Navigation theme={true} />

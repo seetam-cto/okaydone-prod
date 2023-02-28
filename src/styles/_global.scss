@@ -75,6 +75,52 @@ body {
     }
 }
 
+#loaderbg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: $bodyBg;
+    z-index: 1500;
+}
+
+#globalLoader{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    background-color: $purple;
+    transition: all 0.6s ease-out;
+    &::before{
+        width: 120%;
+        position: absolute;
+        top: -15vh;
+        height: 20vh;
+        border-radius: 50% 50% 0% 0%;
+        content: "";
+        left: 0;
+        margin-inline: -10%;
+        z-index: 1999;
+        background-color: $purple;
+    }
+    &::after{
+        width: 120%;
+        position: absolute;
+        bottom: -15vh;
+        height: 20vh;
+        border-radius: 0% 0% 50% 50%;
+        content: "";
+        left: 0;
+        margin-inline: -10%;
+        z-index: 1999;
+        background-color: $purple;
+    }
+    @include flex(center, center);
+}
+
 section{
     width: 100%;
     @include mobile{
@@ -165,4 +211,8 @@ li {
     @include mobile{
         display: block !important;
     }
+}
+
+.h-200{
+    min-height: 200px;
 }

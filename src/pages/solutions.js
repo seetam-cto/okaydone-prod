@@ -14,12 +14,12 @@ import production from "../assets/solutions/production.svg"
 import web from "../assets/solutions/web.svg"
 
 //solutions backimg
-import backimg from "../assets/w14.jpg"
 import social from "../assets/solutions/content-gravy.jpg"
 import infOne from "../assets/brands/oneplus/mirror/pic4.jpg"
 import briggs from "../assets/solutions/damn-nice.jpg"
 import switchoff from "../assets/brands/switchoff/pic1.jpg"
-import rcb from "../assets/brands/rcb/slide2.jpg"
+import rcb from "../assets/solutions/pm.jpeg"
+import { LoaderScreen } from '@/utilities'
 
 export default function Solutions() {
   return (
@@ -30,6 +30,7 @@ export default function Solutions() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <LoaderScreen />
       <main className={"main"}>
         <Background />
         <Navigation />

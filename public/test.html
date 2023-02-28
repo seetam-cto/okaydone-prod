@@ -13,6 +13,19 @@
         user-select:none;
         }
 
+        .glass{
+            /* From https://css.glass */
+            background: rgba(255, 255, 255, 0.65);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(8.2px);
+            -webkit-backdrop-filter: blur(8.2px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+
         .img{
             border-radius: 20px;
             background-size: cover;
@@ -28,6 +41,11 @@
             object-fit: contain;
             margin: auto;
             pointer-events: none;
+        }
+
+        .img .logo.large{
+            width: 180px;
+            height: 200px;
         }
 
         html, body, .stage {
@@ -77,39 +95,69 @@
     </style>
 </head>
 <body>
-    <div id="cmouse" class="cmouse">Drag Me</div>
+    <div id="cmouse" class="cmouse">Drag</div>
     <div class="stage">
         <div class="container">
           <div class="ring">
             <div class="img" style="background-image: url(./clients/ayatana-bg.jpg);">
-                <img class="logo" src="./clients/ayatana-logo.png" alt="">
+                <div class="glass"><img class="logo" src="./clients/ayatana-logo.png" alt=""></div>
             </div>
             <div class="img" style="background-image: url(./clients/bcp-bg.jpg);">
-                <img class="logo" src="./clients/bcp-logo.png" alt="">
+                <div class="glass"><img class="logo" src="./clients/bcp-logo.png" alt=""></div>
             </div>
             <div class="img" style="background-image: url(./clients/bira-bg.jpg);">
-                <img class="logo" src="./clients/bira-logo.png" alt="">
+                <div class="glass"><img class="logo" src="./clients/bira-logo.png" alt=""></div>
             </div>
             <div class="img" style="background-image: url(./clients/ceat-bg.jpg);">
-                <img class="logo" src="./clients/ceat-logo.png" alt="">
+                <div class="glass"><img class="logo" src="./clients/ceat-logo.png" alt=""></div>
             </div>
             <div class="img" style="background-image: url(./clients/clear-trip-bg.jpg);">
-                <img class="logo" src="./clients/clear-trip-logo.png" alt="">
+                <div class="glass"><img class="logo" src="./clients/clear-trip-logo.png" alt=""></div>
             </div>
             <div class="img" style="background-image: url(./clients/godrej-bg.jpg);">
-                <img class="logo" src="./clients/godrej-logo.png" alt="">
+                <div class="glass"><img class="logo" src="./clients/godrej-logo.png" alt=""></div>
             </div>
             <div class="img" style="background-image: url(./clients/google-bg.jpg);">
-                <img class="logo" src="./clients/google-logo.png" alt="">
+                <div class="glass"><img class="logo" src="./clients/google-logo.png" alt=""></div>
             </div>
             <div class="img" style="background-image: url(./clients/heineken-bg.jpg);">
-                <img class="logo" src="./clients/heineken-logo.png" alt="">
+                <div class="glass"><img class="logo" src="./clients/heineken-logo.png" alt=""></div>
+            </div>
+            <div class="img" style="background-image: url(./clients/lll-bg.jpg);">
+                <div class="glass"><img class="logo" src="./clients/lll-logo.png" alt=""></div>
+            </div>
+            <div class="img" style="background-image: url(./clients/hangover-bg.jpg);">
+                <div class="glass"><img class="logo" src="./clients/hangover-logo.png" alt=""></div>
+            </div>
+            <div class="img" style="background-image: url(./clients/rcb-bg.jpg);">
+                <div class="glass"><img class="logo" src="./clients/rcb-logo.png" alt=""></div>
             </div>
             <div class="img" style="background-image: url(./clients/lll-bg.jpg);">
                 <img class="logo" src="./clients/lll-logo.png" alt="">
             </div>
             <div class="img" style="background-image: url(./clients/hangover-bg.jpg);">
                 <img class="logo" src="./clients/hangover-logo.png" alt="">
+            </div>
+            <div class="img" style="background-image: url(./clients/heineken-bg.jpg);">
+                <img class="logo large" src="./clients/heineken-logo.png" alt="">
+            </div>
+            <div class="img" style="background-image: url(./clients/lll-bg.jpg);">
+                <img class="logo" src="./clients/lll-logo.png" alt="">
+            </div>
+            <div class="img" style="background-image: url(./clients/hangover-bg.jpg);">
+                <img class="logo" src="./clients/hangover-logo.png" alt="">
+            </div>
+            <div class="img" style="background-image: url(./clients/heineken-bg.jpg);">
+                <img class="logo large" src="./clients/heineken-logo.png" alt="">
+            </div>
+            <div class="img" style="background-image: url(./clients/lll-bg.jpg);">
+                <img class="logo" src="./clients/lll-logo.png" alt="">
+            </div>
+            <div class="img" style="background-image: url(./clients/hangover-bg.jpg);">
+                <img class="logo" src="./clients/hangover-logo.png" alt="">
+            </div>
+            <div class="img" style="background-image: url(./clients/heineken-bg.jpg);">
+                <img class="logo large" src="./clients/heineken-logo.png" alt="">
             </div>
           </div>
         </div>
@@ -122,17 +170,17 @@
         gsap.timeline()
             .set('.ring', { rotationY:180, cursor:'grab' }) //set initial rotationY so the parallax jump happens off screen
             .set('.img',  { // apply transform rotations to each image
-            rotateY: (i)=> i*-36,
-            transformOrigin: '50% 50% 500px',
-            z: -500,
+            rotateY: (i)=> i*-18,
+            transformOrigin: '50% 50% 1000px',
+            z: -1000,
             backgroundPosition:(i)=>getBgPos(i),
             backfaceVisibility:'hidden'
             })    
             .from('.img', {
-            duration:1.5,
+            duration:2.5,
             y:200,
             opacity:0,
-            stagger:0.1,
+            stagger:0.05,
             ease:'expo'
             })
             .add(()=>{
@@ -176,7 +224,7 @@
 
 
         function getBgPos(i){ //returns the background-position string to create parallax movement in each image
-        return ( 100-gsap.utils.wrap(0,360,gsap.getProperty('.ring', 'rotationY')-180-i*36)/360*500 )+'px 0px';
+        return ( 100-gsap.utils.wrap(0,360,gsap.getProperty('.ring', 'rotationY')-180-i*18)/360*500 )+'px 0px';
         }
     </script>
     <script>

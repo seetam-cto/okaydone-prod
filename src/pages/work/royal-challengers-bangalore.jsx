@@ -32,6 +32,7 @@ import spend from "../../assets/animaticons/spend.json"
 import interactions from "../../assets/animaticons/interactions.json"
 import followers from "../../assets/animaticons/followers.json"
 import Image from 'next/image'
+import { LoaderScreen } from '@/utilities'
 
 ChartJS.register(
   CategoryScale,
@@ -136,6 +137,7 @@ export default function RCB() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <LoaderScreen />
       <main className={"main"}>
         <Background />
         <Navigation theme={true} />
