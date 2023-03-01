@@ -15,7 +15,7 @@
 
         .glass{
             /* From https://css.glass */
-            background: rgba(255, 255, 255, 0.65);
+            /* background: rgba(255, 255, 255, 0.65);
             border-radius: 16px;
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
             backdrop-filter: blur(8.2px);
@@ -23,7 +23,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 10px;
+            padding: 10px; */
         }
 
         .img{
@@ -46,6 +46,14 @@
         .img .logo.large{
             width: 180px;
             height: 200px;
+        }
+
+        .img .logo.light{
+            filter: drop-shadow(0px 0px 10px #ffffff);
+        }
+
+        .img .logo.dark{
+            filter: drop-shadow(0px 0px 25px #000000);
         }
 
         html, body, .stage {
@@ -100,25 +108,25 @@
         <div class="container">
           <div class="ring">
             <div class="img" style="background-image: url(./clients/ayatana-bg.jpg);">
-                <div class="glass"><img class="logo" src="./clients/ayatana-logo.png" alt=""></div>
+                <div class="glass"><img class="logo light" src="./clients/ayatana-logo.png" alt=""></div>
             </div>
             <div class="img" style="background-image: url(./clients/bcp-bg.jpg);">
-                <div class="glass"><img class="logo" src="./clients/bcp-logo.png" alt=""></div>
+                <div class="glass"><img class="logo dark" src="./clients/bcp-logo.png" alt=""></div>
             </div>
             <div class="img" style="background-image: url(./clients/bira-bg.jpg);">
-                <div class="glass"><img class="logo" src="./clients/bira-logo.png" alt=""></div>
+                <div class="glass"><img class="logo light" src="./clients/bira-logo.png" alt=""></div>
             </div>
             <div class="img" style="background-image: url(./clients/ceat-bg.jpg);">
-                <div class="glass"><img class="logo" src="./clients/ceat-logo.png" alt=""></div>
+                <div class="glass"><img class="logo light" src="./clients/ceat-logo.png" alt=""></div>
             </div>
             <div class="img" style="background-image: url(./clients/clear-trip-bg.jpg);">
-                <div class="glass"><img class="logo" src="./clients/clear-trip-logo.png" alt=""></div>
+                <div class="glass"><img class="logo light" src="./clients/clear-trip-logo.png" alt=""></div>
             </div>
             <div class="img" style="background-image: url(./clients/godrej-bg.jpg);">
-                <div class="glass"><img class="logo" src="./clients/godrej-logo.png" alt=""></div>
+                <div class="glass"><img class="logo light" src="./clients/godrej-logo.png" alt=""></div>
             </div>
             <div class="img" style="background-image: url(./clients/google-bg.jpg);">
-                <div class="glass"><img class="logo" src="./clients/google-logo.png" alt=""></div>
+                <div class="glass"><img class="logo light" src="./clients/google-logo.png" alt=""></div>
             </div>
             <div class="img" style="background-image: url(./clients/heineken-bg.jpg);">
                 <div class="glass"><img class="logo" src="./clients/heineken-logo.png" alt=""></div>

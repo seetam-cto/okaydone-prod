@@ -189,10 +189,13 @@
         margin-top: 1rem;
         z-index: 10;
         @include mobile{
-            width: 150px;
+            width: 180px;
             height: auto;
             display: flex;
             align-items: flex-end;
+            img{
+                height: fit-content;
+            }
         }
     }
     &-content{
