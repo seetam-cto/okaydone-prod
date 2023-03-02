@@ -335,14 +335,14 @@ export default function OnePlus() {
                   <div className="col-6 col-sm-12 h-200">
                     
                       <video className='brandpage-section-campaign-videos-video left' controls>
-                        <source src="/videos/video1.mp4" type="video/mp4" />
+                        <source src="/videos/video1.mp4#t=0.001" type="video/mp4" />
                         Your browser does not support the video tag.
                       </video>
                   </div>
                   <div className="col-6 col-sm-12 h-200">
                     
                       <video className='brandpage-section-campaign-videos-video right' controls>
-                        <source src="/videos/video2.mp4" type="video/mp4" />
+                        <source src="/videos/video2.mp4#t=0.001" type="video/mp4" />
                         Your browser does not support the video tag.
                       </video>
                   </div>
