@@ -107,7 +107,7 @@
     }
     &-cta{
         position: absolute;
-        left: 62%;
+        left: 58%;
         top: 48%;
         @include mobile{
             left: 0;
@@ -116,8 +116,8 @@
             @include flex();
         }
         &.hcontact{
-            left: 70%;
-            top: 53.5%;
+            left: 67%;
+            top: 37%;
             @include mobile{
                 left: 0;
                 right: 0;
