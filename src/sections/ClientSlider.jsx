@@ -32,7 +32,7 @@ import 'swiper/css/pagination'
 const ClientSlider = () => {
     return (
       <div className="clientslider">
-          <iframe src="/test.html" frameborder="0"></iframe>
+          <iframe src="/test.html" frameBorder="0"></iframe>
       </div>
     )
 }
