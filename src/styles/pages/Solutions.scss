@@ -188,6 +188,9 @@
         object-fit: contain;
         margin-top: 1rem;
         z-index: 10;
+        img{
+            height: fit-content;
+        }
         @include mobile{
             width: 180px;
             height: auto;
