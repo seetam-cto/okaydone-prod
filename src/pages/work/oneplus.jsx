@@ -109,7 +109,7 @@ export default function OnePlus() {
                   <div className="col-9 col-sm-12">
                     <h2 className='brandpage-section-campaign-stats-head'>Campaign Insights</h2>
                     <ul className="brandpage-section-campaign-stats-list">
-                      <li>The campaign represented the idea of the 90Hz refresh rate in the OnePlus 7T Pro through multiple mirror reflections of artists</li>
+                      <li>The campaign represented the 90Hz refresh rate in the OnePlus 7T Pro through multiple mirror reflections of artists</li>
                       <li>Collaborated with ten celebrities</li>
                     </ul>
                   </div>
@@ -369,7 +369,7 @@ export default function OnePlus() {
                   initial={{x: 150, opacity: 0}}
                   whileInView={{x: 0, opacity: 1}}
                   transition={{duration: 0.5, bounce: 0.4, type: 'spring', delay: 0.3}}
-                  >The images on the billboard kept changing in real time, as more and more people uploaded their festive shots on social media using the hashtag <span>#YourFestiveShot</span></motion.li>
+                  >The images on the billboard kept changing in real-time, as more and more people uploaded their festive shots on social media using the hashtag <span>#YourFestiveShot</span></motion.li>
                   <motion.li
                   key={`rcb-subtitle-miles3`}
                   initial={{x: 150, opacity: 0}}

@@ -223,7 +223,7 @@ export default function RCB() {
                   initial={{x: 150, opacity: 0}}
                   whileInView={{x: 0, opacity: 1}}
                   transition={{duration: 0.5, bounce: 0.4, type: 'spring', delay: 0.6}}
-                  >Weak connect with fans</motion.li>
+                  >Weak connection with fans</motion.li>
                 </ul>
               </div>
             </div>

@@ -94,13 +94,13 @@ export default function BCP() {
                   initial={{x: 150, opacity: 0}}
                   whileInView={{x: 0, opacity: 1}}
                   transition={{duration: 0.5, bounce: 0.4, type: 'spring', delay: 0.2}}
-                  >Consistency in quality of the content by leaving no room for the audience to troll or ridicule the institution.</motion.li>
+                  >Consistency in the quality of the content by leaving no room for the audience to troll or ridicule the institution.</motion.li>
                   <motion.li
                   key={`rcb-subtitle-miles2`}
                   initial={{x: 150, opacity: 0}}
                   whileInView={{x: 0, opacity: 1}}
                   transition={{duration: 0.5, bounce: 0.4, type: 'spring', delay: 0.3}}
-                  >Platform centric content that is appealing to the respective audience bases.</motion.li>
+                  >Platform-centric content that is appealing to the respective audience bases.</motion.li>
                   <motion.li
                   key={`rcb-subtitle-miles3`}
                   initial={{x: 150, opacity: 0}}
@@ -112,7 +112,7 @@ export default function BCP() {
                   initial={{x: 150, opacity: 0}}
                   whileInView={{x: 0, opacity: 1}}
                   transition={{duration: 0.5, bounce: 0.4, type: 'spring', delay: 0.5}}
-                  >Humanised the institution with adopting a more relatable and personable communication style.</motion.li>
+                  >Humanised the institution by adopting a more relatable and personable communication style.</motion.li>
                 </ul>
               </div>
             </div>

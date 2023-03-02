@@ -107,31 +107,31 @@ export default function Ayatana() {
                   initial={{x: 150, opacity: 0}}
                   whileInView={{x: 0, opacity: 1}}
                   transition={{duration: 0.5, bounce: 0.4, type: 'spring', delay: 0.3}}
-                  >Consistent relatable content with <span>popular faces</span> was ensured through and through.</motion.li>
+                  >Consistent, relatable content with <span>popular faces</span> was ensured through and through.</motion.li>
                   <motion.li
                   key={`rcb-subtitle-miles3`}
                   initial={{x: 150, opacity: 0}}
                   whileInView={{x: 0, opacity: 1}}
                   transition={{duration: 0.5, bounce: 0.4, type: 'spring', delay: 0.4}}
-                  >Branding was primarily through influencer marketing with <span>zero ad spends</span>, through the brand launch.</motion.li>
+                  >Branding was primarily through influencer marketing with <span>zero ad spends</span> through the brand launch.</motion.li>
                   <motion.li
                   key={`rcb-subtitle-miles4`}
                   initial={{x: 150, opacity: 0}}
                   whileInView={{x: 0, opacity: 1}}
                   transition={{duration: 0.5, bounce: 0.4, type: 'spring', delay: 0.5}}
-                  >Portrayed Coorg as a safe region to travel and explore to gain first mover advantage post the flood.</motion.li>
+                  >Portrayed Coorg as a safe region to travel and explore to gain first mover advantage after the flood.</motion.li>
                   <motion.li
                   key={`rcb-subtitle-miles5`}
                   initial={{x: 150, opacity: 0}}
                   whileInView={{x: 0, opacity: 1}}
                   transition={{duration: 0.5, bounce: 0.4, type: 'spring', delay: 0.6}}
-                  ><span>Hopped onto trends</span> to increase relatability with the audience which in return increased awareness.</motion.li>
+                  ><span>Hopped onto trends</span> to increase relatability with the audience which increased awareness.</motion.li>
                   <motion.li
                   key={`rcb-subtitle-miles5`}
                   initial={{x: 150, opacity: 0}}
                   whileInView={{x: 0, opacity: 1}}
                   transition={{duration: 0.5, bounce: 0.4, type: 'spring', delay: 0.7}}
-                  >Coupled influencer marketing with performance marketing to increase positive brand uplift which resulted in <span>higher conversions and sales</span>.</motion.li>
+                  >Paired influencer marketing with performance marketing to increase positive brand uplift which resulted in <span>higher conversions and sales</span>.</motion.li>
                 </ul>
               </div>
             </div>

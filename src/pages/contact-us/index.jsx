@@ -2,11 +2,8 @@ import Background from '@/components/Background'
 import Footer from '@/components/Footer'
 import Navigation from '@/components/Navigation'
 import ScrollContainer from '@/components/ScrollContainer'
-import HomeContact from '@/sections/Contact'
 import Head from 'next/head'
-import {motion } from 'framer-motion'
-import Link from 'next/link'
-import React, {use, useState} from "react"
+import React, {useRef, useState} from "react"
 import LayeredButton from '@/components/Button'
 import { LoaderScreen } from '@/utilities'
 
@@ -17,6 +14,18 @@ export default function ContactUs() {
     email: '',
     message: ''
   })
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_ykz9dze', 'template_2296oar', form.current, 'NQEfer8jvyEvzUa4n')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
   return (
     <>
       <Head>
