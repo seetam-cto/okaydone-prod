@@ -32,7 +32,7 @@ const LayeredButton = ({link = "#", action = console.log(""), text}) => {
       animate={{scale: 1}}
       transition={{duration: 1, type: 'spring', bounce: 0.4}}
       whileHover={{scale: 0.95}}
-      key={`text-button-${Math.random()}`}
+      key={`text-button-${link}}`}
       className="button-box">
           <div className="button-box-background">
               <div className="button-box-background-layers">
@@ -65,9 +65,9 @@ export const BorderedButton = ({link = "#", action = null, text, invert=false}) 
     </div>
     ):( 
     <motion.div
-    key={"nav-contact-btn"}
+    key={`nav-contact-btn${link}`}
     initial={{opacity: 0}}
-    animate={{opacity: 1}}
+    whileInView={{opacity: 1}}
     transition={{duration: 0.4}}
     >
       <Link href={link} className="button-box bordered">
