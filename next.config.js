@@ -8,7 +8,7 @@ const nextConfig = {
     return [
       {
         source: '/blogs/:path*',
-        destination: 'http://localhost:8000/:path*',
+        destination: 'http://localhost/blogs/:path*'
       }
     ]
   }
