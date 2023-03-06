@@ -4,6 +4,14 @@ const nextConfig = {
   images: {
     domains: ['images.unsplash.com', 'media.graphassets.com', 'picsum.photos'],
   },
+  async rewrites(){
+    return [
+      {
+        source: '/blogs/:path*',
+        destination: 'http://localhost:8000/:path*',
+      }
+    ]
+  }
 }
 
 const withVideos = require('next-videos')
