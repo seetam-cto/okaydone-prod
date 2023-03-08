@@ -196,6 +196,29 @@ const Navigation = ({theme = false}) => {
                     <LinkText second={true} text={"let us do it"}/>
                   </Link>
                 </li>
+                <li
+                key={'menu-link5'}
+                onMouseEnter={() => setActiveLink("five")}
+                onMouseLeave={() => setActiveLink("")}
+                >
+                  <Link href="/blogs" className='navbar-menu-links-link'>
+                    <motion.div
+                    initial={{y: -50, opacity: 0}}
+                    animate={{y: 0, opacity: 1}}
+                    transition={{delay:1.5, bounce: 0.3, type: 'spring', duration: 0.6}}
+                    className="navbar-menu-links-link-bg">
+                      BLOGS
+                    </motion.div>
+                    <LinkText text={"read about it"} />
+                    {activeLink === "five" && <div
+                    key="middle-line1"
+                    className="middle-line five">
+                      <div className="middle-line-teal" />
+                      <div className="middle-line-purple" />
+                    </div>}
+                    <LinkText second={true} text={"read about it"}/>
+                  </Link>
+                </li>
               </ul>}
             </div>
           </div>

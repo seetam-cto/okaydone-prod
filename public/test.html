@@ -199,7 +199,7 @@
             .add(()=>{
             $('.img').on('mouseenter', (e)=>{
                 let current = e.currentTarget;
-                gsap.to('.img', {opacity:(i,t)=>(t==current)? 1:0.5, ease:'power3'})
+                gsap.to('.img', {opacity:(i,t)=>(t==current)? 1:1, ease:'power3'})
             })
             $('.img').on('mouseleave', (e)=>{
                 gsap.to('.img', {opacity:1, ease:'power2.inOut'})
@@ -213,7 +213,7 @@
         function dragStart(e){ 
         if (e.touches) e.clientX = e.touches[0].clientX;
         xPos = Math.round(e.clientX);
-        gsap.set('.ring', {cursor:'grabbing'})
+        gsap.set('.ring', {cursor:'none'})
         $(window).on('mousemove touchmove', drag);
         }
 

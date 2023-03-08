@@ -22,7 +22,8 @@ const Background = () => {
     return (
         <div className="background">
             <div id="blob"></div>
-            <div className="background-overlay"></div>
+            {/* <div className="background-overlay">
+            </div> */}
         </div>
     )
 }

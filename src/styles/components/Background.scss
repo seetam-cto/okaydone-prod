@@ -8,30 +8,30 @@
     left: 0;
     z-index: -1;
     #blob{
-        width: 400px;
-        height: 400px;
-        background: linear-gradient(
-          120deg,
-          #ffb871,
-          #68ffcf,
-          #A374FF,
-          #FFC64E,
-          #ff65e5
-        );
-        background-size: cover;
+        width: 1000px;
+        height: 1000px;
+        // background: linear-gradient(
+        //   120deg,
+        //   #ffb871,
+        //   #68ffcf,
+        //   #A374FF,
+        //   #FFC64E,
+        //   #ff65e5
+        // );
+        background-image: url(../../assets/bgblur.png);
+        background-size: 300% 300%;
+        background-position: center center;
         position: absolute;
         pointer-events: none;
         z-index: 1;
+        // filter: blur(200px);
         transition: 0.6s linear;
-        animation: blobRadius 15s linear infinite, blobBackground 20s ease infinite;
+        animation: blobRadius 15s linear infinite;
         transform: translate(-50%, -50%)
       }
       @keyframes blobRadius {
-        0%, 100% { border-radius: 80% 77% 80% 40% / 40% 40% 80% 80%; }
-          20% { border-radius: 47% 73% 61% 59% / 47% 75% 45% 73%; }
-          40% { border-radius: 46% 74% 74% 46% / 74% 58% 62% 46%; }
-          60% { border-radius: 47% 73% 61% 59% / 40% 40% 80% 80%; }
-          80% { border-radius: 50% 70% 52% 68% / 51% 61% 59% 69%; }
+        0% { transform: translate(-50%, -50%) rotate(0deg);}
+        100% { transform:translate(-50%, -50%) rotate(360deg);}
       }
       @keyframes blobBackground {
         0%, 100% { background-position: 0% 50%; }
@@ -42,8 +42,16 @@
         top: 0;
         left: 0;
         z-index: 2;
-        backdrop-filter: blur(200px);
+        // backdrop-filter: blur(0px);
+        transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+        will-change: filter;
         width: 100vw;
         height: 100vh;
+        // animation: bgblur .4s 1 forwards;
       }
+      @keyframes bgblur {
+        0% { backdrop-filter: blur(0); }
+        100% { backdrop-filter: blur(200px); }
+     }
 }
