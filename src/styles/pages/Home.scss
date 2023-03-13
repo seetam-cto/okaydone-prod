@@ -40,7 +40,6 @@
             width: fit-content;
             text-align: center;
             margin-inline: auto;
-            transform: translateX(-35%);
             @include mobile{
                 width: 100%;
                 text-align: center;
@@ -155,6 +154,10 @@
 
 .clients{
     margin-top: 20vh;
+    @include mobile{
+        margin-top: 0vh;
+        padding-top: 20vh;
+    }
     .container{
         @include mobile{
             padding-inline: 0px !important;
@@ -189,7 +192,8 @@
             color: $white;
             @include mobile{
                 width: 100%;
-                font-size: 1rem;
+                font-size: 0.9rem;
+                line-height: 1.2rem;
                 text-align: center;
             }
             .purple{
@@ -283,7 +287,7 @@
             }
         }
         h5{
-            color: #989898;
+            color: $mainColor;
             font-size: 1rem;
             font-family: 'Matter';
             font-weight: 500;

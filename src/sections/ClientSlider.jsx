@@ -1,11 +1,5 @@
 import React, {useState, useEffect, useRef} from 'react'
-import 'react-circular-carousel/dist/index.css'
-// import { shuffle } from '@/utilities'
-// import Image from 'next/image'
-// import SwiperCore, { Pagination, Autoplay } from 'swiper'
-// import { Swiper, SwiperSlide } from 'swiper/react'
-import 'swiper/css'
-import 'swiper/css/pagination'
+
 // import mpic1 from "../assets/brands/clients/ayatana-bg.jpg"
 // import mpic2 from "../assets/brands/clients/bcp-bg.jpg"
 // import mpic3 from "../assets/brands/clients/bira-bg.jpg"
@@ -15,7 +9,7 @@ import 'swiper/css/pagination'
 // import mpic7 from "../assets/brands/clients/google-bg.jpg"
 // import mpic8 from "../assets/brands/clients/heineken-bg.jpg"
 // import mpic9 from "../assets/brands/clients/lll-bg.png"
-// import mpic10 from "../assets/brands/clients/oneplus-bg.jpg"
+import mpic10 from "../assets/brands/clients/oneplus-bg.jpg"
 
 // //logos
 // import lpic2 from "../assets/brands/clients/bcp-logo.png"
@@ -31,8 +25,74 @@ import 'swiper/css/pagination'
 
 const ClientSlider = () => {
     return (
-      <div className="clientslider">
-          <iframe src="/test.html" frameBorder="0"></iframe>
+      <div data-cursor-text="DRAG" data-cursor-size="100px" data-cursor-color="#A374FF" className="clientslider">
+        {/* <iframe src="/test.html" frameBorder="0"></iframe> */}
+        <div className="stage">
+        <div className="conta">
+          <div className="ring">
+            <div className="img" style={{backgroundImage: 'url(./clients/gamyam-bg.jpg);'}}>
+                <img className="logo large" src="./clients/gamyam-logo.png" alt="" />
+            </div>
+            <div className="img" style={{backgroundImage: 'url(./clients/motilal-bg.jpg);'}}>
+                <img className="logo large" src="./clients/motilal-logo.png" alt="" />
+            </div>
+            <div className="img" style={{backgroundImage: 'url(./clients/heineken-bg.jpg);'}}>
+                <div className="glass"><img className="logo large" src="./clients/heineken-logo.png" alt="" /></div>
+            </div>
+            <div className="img" style={{backgroundImage: 'url(./clients/lll-bg.jpg);'}}>
+                <div className="glass"><img className="logo" src="./clients/lll-logo.png" alt="" /></div>
+            </div>
+            <div className="img" style={{backgroundImage: 'url(./clients/btp-bg.jpg);'}}>
+                <div className="glass"><img className="logo" src="./clients/btp-logo.png" alt="" /></div>
+            </div>
+            <div className="img" style={{backgroundImage: 'url(./clients/godrej-bg.jpg);'}}>
+                <div className="glass"><img className="logo dark" src="./clients/godrej-logo.png" alt="" /></div>
+            </div>
+            <div className="img" style={{backgroundImage: 'url(./clients/ceat-bg.jpg);'}}>
+                <div className="glass"><img className="logo dark" src="./clients/ceat-logo.png" alt="" /></div>
+            </div>
+            <div className="img" style={{backgroundImage: 'url(./clients/hcg-bg.jpg);'}}>
+                <img className="logo large" src="./clients/healthcare-global-logo.png" alt="" />
+            </div>
+            <div className="img" style={{backgroundImage: 'url(./clients/google-bg.jpg);'}}>
+                <div className="glass"><img className="logo dark" src="./clients/google-logo.png" alt="" /></div>
+            </div>
+            <div className="img" style={{backgroundImage: 'url(./clients/bcp-bg.jpg);'}}>
+                <div className="glass"><img className="logo dark" src="./clients/bcp-logo.png" alt="" /></div>
+            </div>
+            <div className="img" style={{backgroundImage: 'url(./clients/rcb-bg.jpg);'}}>
+                <div className="glass"><img className="logo" src="./clients/rcb-logo.png" alt="" /></div>
+            </div>
+            <div className="img" style={{backgroundImage: 'url(./clients/oneplus-bg.jpg);'}}>
+                <img className="logo large" src="./clients/oneplus-logo.png" alt="" />
+            </div>
+            <div className="img" style={{backgroundImage: 'url(./clients/ayatana-bg.jpg);'}}>
+                <div className="glass"><img className="logo light" src="./clients/ayatana-logo.png" alt="" /></div>
+            </div>
+            <div className="img" style={{backgroundImage: 'url(./clients/pernod-bg.jpg);'}}>
+                <div className="glass"><img className="logo large" src="./clients/pernod-logo.png" alt="" /></div>
+            </div>
+            <div className="img" style={{backgroundImage: 'url(./clients/nrai-bg.jpg);'}}>
+                <img className="logo" src="./clients/nrai-logo.png" alt="" />
+            </div>
+            <div className="img" style={{backgroundImage: 'url(/clients/clear-trip-bg.jpg);'}}>
+                <div className="glass"><img className="logo light large" src="./clients/clear-trip-logo.png" alt="" /></div>
+            </div>
+            <div className="img" style={{backgroundImage: 'url(./clients/itbt-bg.jpg);'}}>
+                <img className="logo dark" src="./clients/itbt-logo.png" alt="" />
+            </div>
+            <div className="img" style={{backgroundImage: 'url(./clients/stepinout-bg.jpg);'}}>
+                <img className="logo large" src="./clients/steppin-out-logo.png" alt="" />
+            </div>
+            <div className="img" style={{backgroundImage: 'url(./clients/jain-bg.jpg);'}}>
+                <img className="logo" src="./clients/jain-logo.png" alt="" />
+            </div>
+            <div className="img" style={{backgroundImage: 'url(./clients/startup-karnataka-bg.jpg);'}}>
+                <img className="logo large" src="./clients/startup-karnataka-logo.png" alt="" />
+            </div>
+          </div>
+        </div>
+    </div>
       </div>
     )
 }

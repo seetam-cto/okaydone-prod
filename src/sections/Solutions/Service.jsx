@@ -3,12 +3,12 @@ import Link from 'next/link'
 import React from 'react'
 import { MouseParallaxContainer, MouseParallaxChild } from "react-parallax-mouse"
 
-const Service = ({icon, backimg, color, title, subtitle, link, flexalign, logotop}) => {
+const Service = ({icon, backimg, color, title, subtitle, link, flexalign, logotop, adjust = false}) => {
   return (
     <div className="service">
         <div className="container">
             <div className="service-container" style={{"--align":flexalign}}>
-                <div className={`service-icon ${logotop ? "closetop" : ""}`}>
+                <div className={`service-icon ${logotop ? "closetop" : ""} ${adjust ? 'adjust' : ''}`}>
                 <MouseParallaxContainer resetOnLeave={true} globalFactorX={0.1} globalFactorY={0.1}>
                     <MouseParallaxChild factorX={0.3} factorY={0.5}>
                         <Image width={500} height={400} quality={100}  src={icon} alt="" />

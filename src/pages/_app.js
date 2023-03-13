@@ -4,13 +4,27 @@ import Script from 'next/script'
 import dynamic from 'next/dynamic'
 import { AnimatePresence } from 'framer-motion';
 import Router, { useRouter } from 'next/router';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { Cursor } from 'react-creative-cursor';
+import 'react-creative-cursor/dist/styles.css';
+import { ToastContainer } from 'react-toastify';
 
-const AnimatedCursor = dynamic(() => import('react-animated-cursor'), {
-  ssr: false
-});
+import 'react-toastify/dist/ReactToastify.css';
+// const AnimatedCursor = dynamic(() => import('react-animated-cursor'), {
+//   ssr: false
+// });
+
 
 export default function App({ Component, pageProps }) {
+  const [ww, setWw] = useState(true)
+  useEffect(() => {
+    const media = window.innerWidth
+    if(media > 768){
+      setWw(true)
+    }else{
+      setWw(false)
+    }
+  },[])
   const router = useRouter()
   useEffect(() => {
     if (typeof window !== 'undefined'){
@@ -30,27 +44,7 @@ export default function App({ Component, pageProps }) {
   },[router])
   return (
     <>
-    <AnimatedCursor
-      innerSize={8}
-      outerSize={45}
-      color='23, 241, 209'
-      outerAlpha={0.2}
-      innerScale={0.7}
-      outerScale={5}
-      clickables={[
-        'a',
-        'input[type="text"]',
-        'input[type="email"]',
-        'input[type="number"]',
-        'input[type="submit"]',
-        'input[type="image"]',
-        'label[for]',
-        'select',
-        'textarea',
-        'button',
-        '.link'
-      ]}
-    />
+    {ww && <Cursor isGelly={true} cursorBackgrounColor="#17F1D150" sizeAnimationEase="ease" />}
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet' />
     <Script src="https://kit.fontawesome.com/cbd809fbae.js" crossOrigin='anonymous' />
     <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-2SVMGLKE6P" />
@@ -67,8 +61,7 @@ export default function App({ Component, pageProps }) {
     <AnimatePresence>
     <Component {...pageProps} />
     </AnimatePresence>
-    <Script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js" crossOrigin='anonymous' />
-    <Script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js" crossOrigin='anonymous' />
+    <ToastContainer />
     </>
   )
 }

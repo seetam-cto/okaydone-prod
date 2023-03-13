@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 
-const LayeredButton = ({link = "#", action = console.log(""), text}) => {
+const LayeredButton = ({id = '', link = "#", action = console.log(""), text}) => {
   return (
     <>
     {action ? (
@@ -12,6 +12,7 @@ const LayeredButton = ({link = "#", action = console.log(""), text}) => {
       transition={{duration: 1, type: 'spring', bounce: 0.4}}
       whileHover={{scale: 0.95}}
       key={`text-button-${Math.random()}`}
+      id={id}
       onClick={action} className="button-box">
           <div className="button-box-background">
               <div className="button-box-background-layers">
@@ -26,7 +27,7 @@ const LayeredButton = ({link = "#", action = console.log(""), text}) => {
           </div>
       </motion.div>
     ):(
-      <Link href={link}>
+      <Link href={link} id={id}>
       <motion.div
       initial={{scale: 0}}
       animate={{scale: 1}}
@@ -49,6 +50,30 @@ const LayeredButton = ({link = "#", action = console.log(""), text}) => {
       </Link>
     )}
     </>
+  )
+}
+
+export const FormButton = ({id = '', key, action = console.log(""), text}) => {
+  return (
+      <motion.div
+      initial={{scale: 0}}
+      animate={{scale: 1}}
+      transition={{duration: 1, type: 'spring', bounce: 0.4}}
+      whileHover={{scale: 0.95}}
+      key={key}
+      onClick={action} className="button-box">
+          <div className="button-box-background">
+              <div className="button-box-background-layers">
+                  <div className="button-box-background-layer" />
+                  <div className="button-box-background-layer" />
+                  <div className="button-box-background-layer" />
+              </div>
+          </div>
+          <div className="button-box-texts">
+              <span className="button-box-texts-top">{text}</span>
+              <span className="button-box-texts-bottom">{text}</span>
+          </div>
+      </motion.div>
   )
 }
 
@@ -94,14 +119,25 @@ export const ArrowButton = ({link, direction = 'down', theme = 'dark'}) => {
   )
 }
 
-export const ArrowButtonAction = ({action = console.log(""), direction = 'down', theme = 'dark'}) => {
+export const ArrowButtonAction = ({link = '',action = console.log(""), direction = 'down', theme = 'dark'}) => {
   return (
-    <div onClick={action} className="button-arrow">
+    <>
+    {link ? (
+      <Link href={link} className="button-arrow">
+      <div className={`button-arrow-container ${theme}`}>
+        <i className={`bx bx-${direction}-arrow-alt static`}></i>
+        <i className={`bx bx-${direction}-arrow-alt hover`}></i>
+      </div>
+    </Link>
+    ):(
+      <div onClick={action} className="button-arrow">
       <div className={`button-arrow-container ${theme}`}>
         <i className={`bx bx-${direction}-arrow-alt static`}></i>
         <i className={`bx bx-${direction}-arrow-alt hover`}></i>
       </div>
     </div>
+    )}
+    </>
   )
 }
 

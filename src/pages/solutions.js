@@ -68,6 +68,7 @@ export default function Solutions() {
             flexalign={"flex-start"}
             color={"#17F1D1"}
             backimg={infOne.src}
+            adjust={true}
             />
             <Service
             title={"Experience Design & Web Development"}

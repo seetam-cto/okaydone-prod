@@ -1,5 +1,5 @@
 import LayeredButton, { ArrowButton, ArrowButtonAction } from '@/components/Button';
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Tilt from 'react-parallax-tilt';
 import { motion } from 'framer-motion';
 
@@ -10,7 +10,7 @@ export const TextLine = ({text, middle}) => {
         <motion.div
         initial={{x: 150, opacity: 0}}
         animate={{x: 0, opacity:1}}
-        transition={{duration: 1, delay: 0.5+0.05*i, type: 'spring', bounce: 0.6}}
+        transition={{duration: 1, delay: 2.5+0.05*i, type: 'spring', bounce: 0.6}}
         className='hero-header-lines-line'
         key={`hero-header-line-letter-i${Math.random()}`}>
           {letter}
@@ -22,6 +22,15 @@ export const TextLine = ({text, middle}) => {
 }
 
 const Hero = () => {
+  const [ww, setWw] = useState(true)
+  useEffect(() => {
+    const media = window.innerWidth
+    if(media > 768){
+      setWw(true)
+    }else{
+      setWw(false)
+    }
+  },[])
   return (
     <section className="hero">
       <motion.div
@@ -51,16 +60,26 @@ const Hero = () => {
         </Tilt>
       </motion.div>
       <h1 className="hero-header">
-        <div className='hero-header-context'>content that is</div>
+        <motion.div
+        key={"hero-top-context-text"}
+        initial={{x: 150, opacity: 0}}
+        animate={{x: ww ? -100 : 0, opacity: 1}}
+        transition={{duration: 2, delay: 2, type: 'spring', bounce: 0.6}}
+        className='hero-header-context'>content that is</motion.div>
         <TextLine text={"recent"} />
         <TextLine text={"relevant"} middle={true} />
         <TextLine text={"relatable"} />
       </h1>
-      <div className="hero-cta">
+      <motion.div
+      key={"hero-btn-what-we-do"}
+      initial={{scale: 0}}
+      animate={{scale: 1}}
+      transition={{duration: 1.5, delay: 3, type: 'spring', bounce: 0.6}}
+      className="hero-cta">
         <LayeredButton link={"/solutions"} text={"Discover what we do"} />
-      </div>
+      </motion.div>
       <div className="hero-down">
-        <ArrowButtonAction action={() => window.scrollBy(0,1000)} direction='down' theme='dark' />
+        <ArrowButtonAction link={'#clients'} direction='down' theme='dark' />
       </div>
     </section>
   )

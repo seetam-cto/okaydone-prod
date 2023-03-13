@@ -4,8 +4,10 @@ import Navigation from '@/components/Navigation'
 import ScrollContainer from '@/components/ScrollContainer'
 import Head from 'next/head'
 import React, {useRef, useState} from "react"
-import LayeredButton from '@/components/Button'
+import {FormButton} from '@/components/Button'
 import { LoaderScreen } from '@/utilities'
+import { toast } from 'react-toastify'
+import emailjs from '@emailjs/browser';
 
 export default function ContactUs() {
   const [userData, setUserData] = useState({
@@ -16,15 +18,25 @@ export default function ContactUs() {
   })
   const form = useRef();
 
-  const sendEmail = (e) => {
-    e.preventDefault();
+  const sendEmail = () => {
 
-    emailjs.sendForm('service_ykz9dze', 'template_2296oar', form.current, 'NQEfer8jvyEvzUa4n')
-      .then((result) => {
-          console.log(result.text);
-      }, (error) => {
-          console.log(error.text);
-      });
+    if(userData.name && userData.phone && userData.email && userData.message){
+        emailjs.sendForm('service_6gt14gh', 'template_uq5v8cn', form.current, 'QEvGf7dAJI0DRwLdU')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+        toast.success("We'll get back to you shortly 😁")
+        setUserData({
+            name: '',
+            phone: '',
+            email: '',
+            message: ''
+          })
+    }else{
+        toast.error("Please fill out all the fields ⚠️")
+    }
   };
   return (
     <>
@@ -56,17 +68,19 @@ export default function ContactUs() {
                         <p>Reach out and we&apos;ll be happy to discuss your plans!</p>
                     </div>
                 </div>
-                <div className="contact-form">
+                <form ref={form} className="contact-form">
                     <div className="row">
                         <div className="col-6 col-sm-12">
                             <div className="contact-form-group">
                                 <input value={userData.name}
+                                name="user_name"
                                 placeholder={"Your name"}
                                 onChange={(e) => setUserData({...userData, name: e.target.value})}
                                 type="text" className="contact-form-input" required/>
                             </div>
                             <div className="contact-form-group">
                                 <input value={userData.phone}
+                                name="user_phone"
                                 placeholder={"Your phone number"}
                                 onChange={(e) => setUserData({...userData, phone: e.target.value})}
                                 type="tel" className="contact-form-input" required/>
@@ -74,19 +88,20 @@ export default function ContactUs() {
                             <div className="contact-form-group">
                                 <input value={userData.email}
                                 placeholder={"Your email"}
+                                name="user_email"
                                 onChange={(e) => setUserData({...userData, email: e.target.value})}
                                 type="email" className="contact-form-input" required/>
                             </div>
                         </div>
                         <div className="col-6 col-sm-12">
-                            <textarea placeholder='Your Message' value={userData.message} onChange={(e) => setUserData({...userData, message: e.target.value})} cols="30" rows="10"></textarea>
+                            <textarea name="message" placeholder='Your Message' value={userData.message} onChange={(e) => setUserData({...userData, message: e.target.value})} cols="30" rows="10"></textarea>
                         </div>
                         <div className="col-12 contact-form-center">
                             <p>&nbsp;</p>
-                            <LayeredButton text={"Submit"} />
+                            <FormButton key={"contact-form-button"} action={() => sendEmail()} text={"Submit"} />
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
             </div>
             <Footer />

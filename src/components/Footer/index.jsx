@@ -34,7 +34,7 @@ const Footer = () => {
                         </h2>
                         <a href="mailto:contact@okaydone.in">contact@okaydone.in</a>
                         <a href="tel:+91 98860 98992">+91 98860 98992</a>
-                        <p>#17, 13th Cross Road,<br />7th Main Rd, Indiranagar,<br /> Bengaluru, Karnataka - 560038</p>
+                        {/* <p>#17, 13th Cross Road,<br />7th Main Rd, Indiranagar,<br /> Bengaluru, Karnataka - 560038</p> */}
                     </div>
                 </div>
                 <div className="footer-divider" />

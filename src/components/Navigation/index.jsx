@@ -24,7 +24,7 @@ const LinkText = ({text, second = false}) => {
 
 const Logo = ({status}) => {
   return (
-    <Link href="/" className="navbar-logo-container">
+    <a href="https://okaydone.in" className="navbar-logo-container">
       <motion.img
       initial={{x: 100, rotate: 90, scale: 0, opacity: 0}}
       animate={{x: 0, scale: 1, rotate: 0, opacity: 1}}
@@ -47,7 +47,7 @@ const Logo = ({status}) => {
           transition={{duration: 1, type: 'spring', bounce: 0.6}}
           className='part-two'>D<span>o</span>ne</motion.div>
         </div>
-    </Link>
+    </a>
   )
 }
 
@@ -96,9 +96,9 @@ const Navigation = ({theme = false}) => {
             <h2>Get In Touch</h2>
             <a href="mailto:contact@okaydone.in" className="menupage-contact-link">contact@okaydone.in</a>
             <a href="tel:+91 98860 98992" className="menupage-contact-link">+91 98860 98992</a>
-            <p className="menupage-contact-address">
+            {/* <p className="menupage-contact-address">
             #17, 13th Cross Road,<br />7th Main Rd, Indiranagar, <br />Bengaluru, Karnataka - 560038
-            </p>
+            </p> */}
             </div>
           </div>
           <div className="col-7 col-sm-12">
@@ -196,7 +196,7 @@ const Navigation = ({theme = false}) => {
                     <LinkText second={true} text={"let us do it"}/>
                   </Link>
                 </li>
-                <li
+                {/* <li
                 key={'menu-link5'}
                 onMouseEnter={() => setActiveLink("five")}
                 onMouseLeave={() => setActiveLink("")}
@@ -218,7 +218,7 @@ const Navigation = ({theme = false}) => {
                     </div>}
                     <LinkText second={true} text={"read about it"}/>
                   </Link>
-                </li>
+                </li> */}
               </ul>}
             </div>
           </div>
