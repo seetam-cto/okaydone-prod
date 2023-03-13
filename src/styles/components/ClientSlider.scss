@@ -17,6 +17,9 @@
       transform-style: preserve-3d;
       user-select:none;
       transition: all 0.5s ease-out;
+      @include mobile{
+        transition: unset;
+      }
       }
     div, svg {
       position: absolute;

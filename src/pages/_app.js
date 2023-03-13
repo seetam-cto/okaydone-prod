@@ -44,7 +44,7 @@ export default function App({ Component, pageProps }) {
   },[router])
   return (
     <>
-    {ww && <Cursor isGelly={true} cursorBackgrounColor="#17F1D150" sizeAnimationEase="ease" />}
+    <Cursor isGelly={true} cursorBackgrounColor="#17F1D150" sizeAnimationEase="ease" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet' />
     <Script src="https://kit.fontawesome.com/cbd809fbae.js" crossOrigin='anonymous' />
     <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-2SVMGLKE6P" />
