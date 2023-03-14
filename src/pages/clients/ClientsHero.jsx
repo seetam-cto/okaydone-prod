@@ -19,8 +19,7 @@ const ClientsHero = () => {
                 </MouseParallaxContainer>
             </div> */}
             <div className="container clientsgrid-hero-head">
-                <h1>we worked with</h1>
-                <h3>We craft <span className='yellow'>immersive digital experiences</span> for <span className="teal">forward-thinking companies</span></h3>
+                <h1>our clientele</h1>
             </div>
         </div>
     )

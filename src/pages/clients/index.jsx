@@ -16,7 +16,7 @@ const images = [
   {img:'btp-logo.png', name: 'Bangalore Traffic Police', color: '#c8fff6'},
   {img:'bira-logo.png', name: 'Bira', color: '#ffbdbd'},
   {img:'ceat-logo.png', name: 'Ceat', color: '#FFFFFF'},
-  {img:'ayatana-black.png', name: 'Ayatana Coorg', color: '#c8fff6'},
+  {img:'ayatana-logo.png', name: 'Ayatana Coorg', color: '#c8fff6'},
   {img:'clear-trip-logo.png', name: 'Clear Trip', color: '#FFFFFF'},
   {img:'lll-logo.png', name: 'The Live Love Laugh Foundation', color: '#FF9066'},
   {img:'google-logo.png', name: 'Google', color: '#FFFFFF'},
@@ -86,10 +86,10 @@ export default function ClientsGrid() {
                 {images.map((img, i) => 
                   <motion.div
                   initial={{opacity: 0, scale: 0}}
-                  whileInView={{opacity: 1, scale: 1}}
-                  transition={{delay: 0.04*i, duration: 0.3}}
+                  animate={{opacity: 1, scale: 1}}
+                  transition={{delay: 3+0.04*i, duration: 0.3}}
                   key={i}
-                  style={{backgroundColor: img.color}}
+                  // style={{backgroundColor: img.color}}
                   className="clientsgrid-container-item">
                     <Image
                     data-tooltip-id="my-tooltip" 
