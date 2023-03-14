@@ -41,6 +41,7 @@
     "react-player": "^2.11.2",
     "react-scroll-parallax": "^3.3.2",
     "react-toastify": "^9.1.1",
+    "react-tooltip": "^5.10.0",
     "react-twitter-embed": "^4.0.4",
     "sass": "^1.57.1",
     "sharp": "^0.31.3",

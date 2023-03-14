@@ -9,7 +9,7 @@
      })    
      .from('.img', {
      duration:2.5,
-     y:200,
+     y:0,
      opacity:0,
      stagger:0.05,
      ease:'expo'

@@ -21,7 +21,7 @@ const Clients = () => {
         <ClientSlider />
         <div className="container">
             <div className="clients-cta">
-                <BorderedButton link={"/work"} text={"Discover our work"} />
+                <BorderedButton link={"/clients"} text={"View All"} />
             </div>
         </div>
     </section>

@@ -25,10 +25,10 @@ const Footer = () => {
                             </button>
                         </div>
                     </div>
-                    <div className="col-2 d-only footer-logo">
-                        {/* <img src="/logo.svg" alt="okaydone-logo" /> */}
-                    </div>
-                    <div className="col-5 col-sm-12 footer-title-contact">
+                    {/* <div className="col-2 d-only footer-logo">
+                        <img src="/logo.svg" alt="okaydone-logo" />
+                    </div> */}
+                    <div className="col-7 col-sm-12 footer-title-contact">
                         <h2 className="footer-title-small">
                             GET IN TOUCH
                         </h2>
