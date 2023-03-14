@@ -6,8 +6,7 @@ import { LoaderScreen } from '@/utilities'
 import Head from 'next/head'
 import Image from 'next/image'
 import ClientsHero from './ClientsHero'
-import 'react-tooltip/dist/react-tooltip.css'
-import { Tooltip } from 'react-tooltip'
+// import { Tooltip } from 'react-tooltip'
 import {motion} from "framer-motion"
 
 const images = [
@@ -71,9 +70,6 @@ export default function ClientsGrid() {
         <meta name="description" content="Okay Done is one bangalore's top agencies, that focuses on millennial marketing methods to help brands and organizations reach their optimum potential in the digital space." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js" crossOrigin='anonymous' defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js" crossOrigin='anonymous' defer></script>
-        <script type='text/javascript' src="/scripts/script.js" defer></script>
       </Head>
       <LoaderScreen />
       <main className={"main"}>
@@ -92,16 +88,16 @@ export default function ClientsGrid() {
                   // style={{backgroundColor: img.color}}
                   className="clientsgrid-container-item">
                     <Image
-                    data-tooltip-id="my-tooltip" 
-                    data-tooltip-content={img.name}
-                    data-tooltip-place="bottom"
+                    // data-tooltip-id="my-tooltip" 
+                    // data-tooltip-content={img.name}
+                    // data-tooltip-place="bottom"
                     alt={img.name}
                     src={`/clients/${img.img}`} width={180} height={180} quality={100} />
                   </motion.div>
                 )}
               </div>
               </div>
-            <Tooltip className='tooltip' id="my-tooltip" />
+            {/* <Tooltip className='tooltip' id="my-tooltip" /> */}
             <Footer />
         </ScrollContainer>
       </main>

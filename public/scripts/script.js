@@ -24,8 +24,8 @@
      })
      }, '-=0.5')
 
- $(window).on('mousedown touchstart', dragStart);
- $(window).on('mouseup touchend', dragEnd);
+ $('.stage').on('mousedown touchstart', dragStart);
+ $('.stage').on('mouseup touchend', dragEnd);
 
  function dragStart(e){ 
    if (e.touches) e.clientX = e.touches[0].clientX;

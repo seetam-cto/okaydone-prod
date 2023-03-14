@@ -8,7 +8,7 @@ import { useEffect, useState } from 'react';
 import { Cursor } from 'react-creative-cursor';
 import 'react-creative-cursor/dist/styles.css';
 import { ToastContainer } from 'react-toastify';
-
+import 'react-tooltip/dist/react-tooltip.css'
 import 'react-toastify/dist/ReactToastify.css';
 // const AnimatedCursor = dynamic(() => import('react-animated-cursor'), {
 //   ssr: false
