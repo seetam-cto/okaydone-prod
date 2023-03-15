@@ -4,7 +4,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 
-const WorkHero = ({brand, categories = [], color = "", logo, banner, extraClass="", back="/"}) => {
+const WorkHero = ({brand, categories = [], color = "", logo, banner, extraClass="", back="/", alt}) => {
     const router = useRouter()
   return (
     <div className={`brandpage-hero ${extraClass}`}>
@@ -16,7 +16,7 @@ const WorkHero = ({brand, categories = [], color = "", logo, banner, extraClass=
                 <div className={`brandpage-hero-casestudy ${color}`}>Case Study</div>
                 <h1 className={`brandpage-hero-title ${color}`}>
                     <div className="logo">
-                        <Image width={500} height={400} quality={100}  src={logo} alt="" />
+                        <Image alt={alt} width={500} height={400} quality={100}  src={logo} />
                     </div>
                     {brand}
                 </h1>

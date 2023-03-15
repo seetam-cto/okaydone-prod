@@ -48,6 +48,7 @@ export default function Ayatana() {
             categories={["Social Media", "Performance Marketing"]}
             back={"/work"}
             logo={logo.src}
+            alt="Ayatana Resort & Spa - Coorg Logo 2019 x OkayDone Media partnership"
             color={"black"} />
           </div>
           <div className="container">
@@ -88,7 +89,7 @@ export default function Ayatana() {
               </div>
             </div>
             <div className="brandpage-section-image notop">
-              <Image width={1440} height={1080} quality={100} src={ayatana2.src} alt="" />
+              <Image width={1440} height={1080} quality={100} src={ayatana2.src} alt="Ayatana Resort & Spa - Coorg partners with Bengaluru's best content marketing agency - OkayDone Media" />
             </div>
             <div className="brandpage-section-content">
               <div className="title">
@@ -238,13 +239,13 @@ export default function Ayatana() {
                   onSwiper={(swiper) => console.log(swiper)}
                 >
                   <SwiperSlide className="brandpage-section-campaign-slider-slide">
-                    <Image width={500} height={400} quality={100} src={slide1.src} alt="" />
+                    <Image width={500} height={400} quality={100} src={slide1.src} alt="Ayatana Resort Coorg Infinity Pool shot by Bengaluru's finest content marketing agency - OkayDone Media" />
                   </SwiperSlide>
                   <SwiperSlide className="brandpage-section-campaign-slider-slide">
-                    <Image width={500} height={400} quality={100} src={slide2.src} alt="" />
+                    <Image width={500} height={400} quality={100} src={slide2.src} alt="Ayatana Resort Coorg Infinity pool shot with social media influencer - OkayDone Media" />
                   </SwiperSlide>
                   <SwiperSlide className="brandpage-section-campaign-slider-slide">
-                    <Image width={500} height={400} quality={100} src={slide3.src} alt="" />
+                    <Image width={500} height={400} quality={100} src={slide3.src} alt="Ayatana Resort Coorg evening shot by Bengaluru's finest content marketing agency - OkayDone Media" />
                   </SwiperSlide>
                   <SwiperSlide className="brandpage-section-campaign-slider-slide">
                     <Image width={500} height={400} quality={100} src={slide4.src} alt="" />

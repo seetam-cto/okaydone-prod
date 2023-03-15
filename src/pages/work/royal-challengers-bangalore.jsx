@@ -146,6 +146,7 @@ export default function RCB() {
             categories={["Social Media"]}
             back={"/work"}
             logo={logo.src}
+            alt={"Royal Challengers Bangalore (RCB) IPL 2022 Logo x Okay Done Media"}
             color={"gold"} />
           </div>
           <div className="container">
@@ -186,7 +187,7 @@ export default function RCB() {
               </div>
             </div>
             <div className="brandpage-section-image">
-              <Image src={rcb.src} width={1080} height={720} style={{objectFit: 'cover'}} quality={100} />
+              <Image src={rcb.src} alt="Royal Challengers Bangalore (RCB) Team IPL 2022 #PlayBold campaign by social media agency in Bengaluru" width={1080} height={720} style={{objectFit: 'cover'}} quality={100} />
             </div>
             <div className="brandpage-section-content">
               <div className="title">

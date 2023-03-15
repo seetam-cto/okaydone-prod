@@ -70,6 +70,7 @@ export default function OnePlus() {
             brand={"OnePlus"}
             categories={["Influencer Marketing"]}
             back={"/work"}
+            alt="OnePlus phone logo x Okay Done Media Brand collaboration 2019"
             logo={logo.src}
             color={"red"} />
           </div>
@@ -117,10 +118,10 @@ export default function OnePlus() {
                     <div className="brandpage-section-campaign-stats-divider">&nbsp;</div>
                   </div>
                   <div className="col-6 col-sm-12">
-                    <Image width={800} height={600} quality={100} className='brandpage-section-campaign-stats-image left' src={mirrorMain1.src} alt="" />
+                    <Image alt="Vijay Deverakonda in black and white as part of massive OnePlus 7T Pro mirror influencer campaign" width={800} height={600} quality={100} className='brandpage-section-campaign-stats-image left' src={mirrorMain1.src} />
                   </div>
                   <div className="col-6 col-sm-12">
-                    <Image width={800} height={600} quality={100} className='brandpage-section-campaign-stats-image right' src={mirrorMain2.src} alt="" />
+                    <Image alt="Divya Agarwal in black and white as part of massive OnePlus 7T Pro mirror influencer campaign" width={800} height={600} quality={100} className='brandpage-section-campaign-stats-image right' src={mirrorMain2.src} />
                   </div>
                 </div>
                 <div className="brandpage-section-campaign-slider">
@@ -154,28 +155,28 @@ export default function OnePlus() {
                   onSwiper={(swiper) => console.log(swiper)}
                 >
                   <SwiperSlide className="brandpage-section-campaign-slider-slide">
-                    <Image width={500} height={400} quality={100} src={mpic1.src} alt="" />
+                    <Image alt="Anita Hassanandani Reddy in black and white as part of massive OnePlus 7T Pro mirror influencer campaign" width={500} height={400} quality={100} src={mpic1.src} />
                   </SwiperSlide>
                   <SwiperSlide className="brandpage-section-campaign-slider-slide">
-                    <Image width={500} height={400} quality={100} src={mpic2.src} alt="" />
+                    <Image alt="Carry Minati in black and white as part of massive OnePlus 7T Pro mirror influencer campaign" width={500} height={400} quality={100} src={mpic2.src} />
                   </SwiperSlide>
                   <SwiperSlide className="brandpage-section-campaign-slider-slide">
-                    <Image width={500} height={400} quality={100} src={mpic3.src} alt="" />
+                    <Image alt="Nupur Sanon in black and white as part of massive OnePlus 7T Pro mirror influencer campaign" width={500} height={400} quality={100} src={mpic3.src} />
                   </SwiperSlide>
                   <SwiperSlide className="brandpage-section-campaign-slider-slide">
-                    <Image width={500} height={400} quality={100} src={mpic4.src} alt="" />
+                    <Image alt="Vijay Deverakonda in black and white as part of massive OnePlus 7T Pro mirror influencer campaign" width={500} height={400} quality={100} src={mpic4.src} />
                   </SwiperSlide>
                   <SwiperSlide className="brandpage-section-campaign-slider-slide">
-                    <Image width={500} height={400} quality={100} src={mpic5.src} alt="" />
+                    <Image alt="" width={500} height={400} quality={100} src={mpic5.src} />
                   </SwiperSlide>
                   <SwiperSlide className="brandpage-section-campaign-slider-slide">
-                    <Image width={500} height={400} quality={100} src={mpic6.src} alt="" />
+                    <Image alt="" width={500} height={400} quality={100} src={mpic6.src} />
                   </SwiperSlide>
                   <SwiperSlide className="brandpage-section-campaign-slider-slide">
-                    <Image width={500} height={400} quality={100} src={mpic7.src} alt="" />
+                    <Image alt="" width={500} height={400} quality={100} src={mpic7.src} />
                   </SwiperSlide>
                   <SwiperSlide className="brandpage-section-campaign-slider-slide">
-                    <Image width={500} height={400} quality={100} src={mpic8.src} alt="" />
+                    <Image alt="Divya Agarwal in black and white as part of massive OnePlus 7T Pro mirror influencer campaign" width={500} height={400} quality={100} src={mpic8.src} />
                   </SwiperSlide>
                 </Swiper>
                </div>
@@ -221,10 +222,10 @@ export default function OnePlus() {
                     <div className="brandpage-section-campaign-stats-divider">&nbsp;</div>
                   </div>
                   <div className="col-6 col-sm-12">
-                    <Image width={800} height={600} quality={100} className='brandpage-section-campaign-stats-image left' src={cMain1.src} alt="" />
+                    <Image width={800} height={600} quality={100} className='brandpage-section-campaign-stats-image left' src={cMain1.src} alt="Neha Sharma in black posing for OnePlus 7T Pro Mclaren edition influencer campaign" />
                   </div>
                   <div className="col-6 col-sm-12">
-                    <Image width={800} height={600} quality={100} className='brandpage-section-campaign-stats-image right' src={cMain2.src} alt="" />
+                    <Image width={800} height={600} quality={100} className='brandpage-section-campaign-stats-image right' src={cMain2.src} alt="Kajol Aggarwal in black posing for OnePlus 7T Pro Mclaren edition influencer campaign" />
                   </div>
                 </div>
                 <div className="brandpage-section-campaign-slider">
@@ -258,25 +259,25 @@ export default function OnePlus() {
                   onSwiper={(swiper) => console.log(swiper)}
                 >
                   <SwiperSlide className="brandpage-section-campaign-slider-slide">
-                    <Image width={500} height={400} quality={100} src={cpic1.src} alt="" />
+                    <Image width={500} height={400} quality={100} src={cpic1.src} alt="Sunny Leone in black posing for OnePlus 7T Pro Mclaren edition influencer campaign" />
                   </SwiperSlide>
                   <SwiperSlide className="brandpage-section-campaign-slider-slide">
-                    <Image width={500} height={400} quality={100} src={cpic2.src} alt="" />
+                    <Image width={500} height={400} quality={100} src={cpic2.src} alt="Kajol Aggarwal in black posing for OnePlus 7T Pro Mclaren edition influencer campaign" />
                   </SwiperSlide>
                   <SwiperSlide className="brandpage-section-campaign-slider-slide">
-                    <Image width={500} height={400} quality={100} src={cpic3.src} alt="" />
+                    <Image width={500} height={400} quality={100} src={cpic3.src} alt="Neha Sharma in black posing for OnePlus 7T Pro Mclaren edition influencer campaign" />
                   </SwiperSlide>
                   <SwiperSlide className="brandpage-section-campaign-slider-slide">
-                    <Image width={500} height={400} quality={100} src={cpic4.src} alt="" />
+                    <Image width={500} height={400} quality={100} src={cpic4.src} alt="Rakul Preet Singh in black posing for OnePlus 7T Pro Mclaren edition influencer campaign" />
                   </SwiperSlide>
                   <SwiperSlide className="brandpage-section-campaign-slider-slide">
-                    <Image width={500} height={400} quality={100} src={cpic5.src} alt="" />
+                    <Image width={500} height={400} quality={100} src={cpic5.src} alt="Heena Khan in black posing for OnePlus 7T Pro Mclaren edition influencer campaign" />
                   </SwiperSlide>
                   <SwiperSlide className="brandpage-section-campaign-slider-slide">
-                    <Image width={500} height={400} quality={100} src={cpic6.src} alt="" />
+                    <Image width={500} height={400} quality={100} src={cpic6.src} alt="Jannat Zubair Rahmani in black posing for OnePlus 7T Pro Mclaren edition influencer campaign" />
                   </SwiperSlide>
                   <SwiperSlide className="brandpage-section-campaign-slider-slide">
-                    <Image width={500} height={400} quality={100} src={cpic7.src} alt="" />
+                    <Image width={500} height={400} quality={100} src={cpic7.src} alt="Avneet Kaur in black posing for OnePlus 7T Pro Mclaren edition influencer campaign" />
                   </SwiperSlide>
                 </Swiper>
                </div>
@@ -323,10 +324,10 @@ export default function OnePlus() {
                     <div className="brandpage-section-campaign-stats-divider">&nbsp;</div>
                   </div>
                   <div className="col-6 col-sm-12">
-                    <Image width={800} height={600} quality={100} className='brandpage-section-campaign-stats-image left' src={dMain1.src} alt="" />
+                    <Image width={800} height={600} quality={100} className='brandpage-section-campaign-stats-image left' src={dMain1.src} alt="#ShotonOnePlus campaign billboard " />
                   </div>
                   <div className="col-6 col-sm-12">
-                    <Image width={800} height={600} quality={100} className='brandpage-section-campaign-stats-image right' src={dMain2.src} alt="" />
+                    <Image width={800} height={600} quality={100} className='brandpage-section-campaign-stats-image right' src={dMain2.src} alt="#ShotonOnePlus campaign billboard " />
                   </div>
                 </div>
               </div>
