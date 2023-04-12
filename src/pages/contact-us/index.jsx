@@ -8,6 +8,7 @@ import {FormButton} from '@/components/Button'
 import { LoaderScreen } from '@/utilities'
 import { toast } from 'react-toastify'
 import emailjs from '@emailjs/browser';
+import Script from 'next/script'
 
 export default function ContactUs() {
   const [userData, setUserData] = useState({
@@ -45,6 +46,14 @@ export default function ContactUs() {
         <meta name="description" content="Okay Done is one bangalore's top agencies, that focuses on millennial marketing methods to help brands and organizations reach their optimum potential in the digital space." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
+        <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=AW-11060009434" />
+        <Script id="google-analytics"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+        __html: `
+        gtag('event', 'conversion', {'send_to': 'AW-11060009434/B0CnCO3SypcYENqz6Zkp'});
+        `}}
+        />
       </Head>
       <LoaderScreen />
       <main className={"main"}>
