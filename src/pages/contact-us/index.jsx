@@ -23,12 +23,12 @@ export default function ContactUs() {
     if(userData.name && userData.phone && userData.email && userData.message){
         emailjs.sendForm('service_6gt14gh', 'template_uq5v8cn', form.current, 'QEvGf7dAJI0DRwLdU')
             .then((result) => {
-                fetch(process.env.REACT_SHEETDB_API, {
+                fetch(process.env.NEXT_PUBLIC_SHEETDB_API, {
                     method: 'POST',
                     headers: {
                         'Accept': 'application/json',
                         'Content-Type': 'application/json',
-                        'Authorization': `Bearer ${process.env.REACT_SHEETDB_TOKEN}`
+                        'Authorization': `Bearer ${process.env.NEXT_PUBLIC_SHEETDB_TOKEN}`
                     },
                     body: JSON.stringify({
                         data: [
