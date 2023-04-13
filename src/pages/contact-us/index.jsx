@@ -20,10 +20,29 @@ export default function ContactUs() {
   const form = useRef();
 
   const sendEmail = () => {
-
     if(userData.name && userData.phone && userData.email && userData.message){
         emailjs.sendForm('service_6gt14gh', 'template_uq5v8cn', form.current, 'QEvGf7dAJI0DRwLdU')
             .then((result) => {
+                fetch(process.env.REACT_SHEETDB_API, {
+                    method: 'POST',
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${process.env.REACT_SHEETDB_TOKEN}`
+                    },
+                    body: JSON.stringify({
+                        data: [
+                            {
+                                'date': new Date(),
+                                'name': userData.name,
+                                'email': userData.email,
+                                'phone': userData.phone,
+                                'message': userData.message
+                            }
+                        ]
+                    })
+                }).then((response) => response.json())
+                .then((data) => console.log(data));
                 console.log(result.text);
             }, (error) => {
                 console.log(error.text);
