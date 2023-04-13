@@ -58,6 +58,13 @@ export default function App({ Component, pageProps }) {
       gtag('config', 'AW-11060009434', {page_path: window.location.pathname,});
       `}}
     />
+    <Script id="google-analytics"
+      strategy="afterInteractive"
+      dangerouslySetInnerHTML={{
+      __html: `
+      gtag('event', 'conversion', {'send_to': 'AW-11060009434/B0CnCO3SypcYENqz6Zkp'});
+      `}}
+      />
     <AnimatePresence>
     <Component {...pageProps} />
     </AnimatePresence>
