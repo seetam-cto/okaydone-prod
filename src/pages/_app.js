@@ -48,7 +48,7 @@ export default function App({ Component, pageProps }) {
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet' />
     <Script src="https://kit.fontawesome.com/cbd809fbae.js" crossOrigin='anonymous' />
     <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=AW-11060009434" />
-    <Script id="google-analytics"
+    <script id="google-analytics"
     strategy="afterInteractive"
     dangerouslySetInnerHTML={{
       __html: `
@@ -57,7 +57,7 @@ export default function App({ Component, pageProps }) {
       gtag('js', new Date());
       gtag('config', 'AW-11060009434', {page_path: window.location.pathname,});
       `}}
-    />
+    ></script>
     <Script id="google-analytics"
       strategy="afterInteractive"
       dangerouslySetInnerHTML={{
