@@ -58,6 +58,38 @@ export default function App({ Component, pageProps }) {
       gtag('config', 'AW-11060009434', {page_path: window.location.pathname,});
       `}}
     ></script>
+    <script type="application/ld+json" strategy={"afterInteractive"}
+    dangerouslySetInnerHTML={{
+      __html: `
+      {
+        "@context": "https://schema.org/", 
+        "@type": "BreadcrumbList", 
+        "itemListElement": [{
+          "@type": "ListItem", 
+          "position": 1, 
+          "name": "What We Do - Solutions",
+          "item": "https://www.okaydone.in/solutions"  
+        },{
+          "@type": "ListItem", 
+          "position": 2, 
+          "name": "What We Did - Our Work",
+          "item": "https://www.okaydone.in/work"  
+        },{
+          "@type": "ListItem", 
+          "position": 3, 
+          "name": "Royal Challengers Bangalore - Empowering an epic fan moment through powerful social media showmanship",
+          "item": "https://www.okaydone.in/work/royal-challengers-bangalore"  
+        },{
+          "@type": "ListItem", 
+          "position": 4, 
+          "name": "Contact Us",
+          "item": "https://www.okaydone.in/contact-us"  
+        }]
+      }
+      `
+    }}
+    >
+    </script>
     <Script id="google-analytics"
       strategy="afterInteractive"
       dangerouslySetInnerHTML={{
