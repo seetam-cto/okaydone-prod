@@ -24,13 +24,13 @@ const LinkText = ({text, second = false}) => {
 
 const Logo = ({status}) => {
   return (
-    <a href="https://okaydone.in" className="navbar-logo-container">
+    <a aria-label="navbar-logo" href="https://okaydone.in" className="navbar-logo-container">
       <motion.img
       initial={{x: 100, rotate: 90, scale: 0, opacity: 0}}
       animate={{x: 0, scale: 1, rotate: 0, opacity: 1}}
       exit={{x: 100, opacity: 0}}
       transition={{duration: 1, type: 'spring', bounce: 0.3}}
-      key="navbar-logo" className='navbar-logo-img' src="/logo.svg" />
+      key="navbar-logo" className='navbar-logo-img' src="/logo.svg" alt="okaydone logo"/>
       <div className='navbar-logo-text'>
           <motion.div 
           initial={{x: 100, skew: -20, opacity: 0}}
@@ -94,8 +94,8 @@ const Navigation = ({theme = false}) => {
           <div className="col-5 col-sm-12">
             <div className="menupage-contact">
             <h2>Get In Touch</h2>
-            <a href="mailto:contact@okaydone.in" className="menupage-contact-link">contact@okaydone.in</a>
-            <a href="tel:+91 98860 98992" className="menupage-contact-link">+91 98860 98992</a>
+            <a aria-label="contact@okaydone.in" href="mailto:contact@okaydone.in" className="menupage-contact-link">contact@okaydone.in</a>
+            <a aria-label="+91 98860 98992" href="tel:+91 98860 98992" className="menupage-contact-link">+91 98860 98992</a>
             {/* <p className="menupage-contact-address">
             #17, 13th Cross Road,<br />7th Main Rd, Indiranagar, <br />Bengaluru, Karnataka - 560038
             </p> */}

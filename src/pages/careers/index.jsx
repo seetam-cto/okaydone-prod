@@ -44,7 +44,7 @@ export default function Careers() {
                         <p>We are looking for visualisers who can bring life to social media creatives. Apply Now if you are a Graphic Designer, Photo Manipulator / Illustrator who is up to creating a buzz in the digital space.</p>
                     </div>
                     <div className="apply">
-                    <a href="https://www.linkedin.com/jobs/view/3484847764" className='apply-link' style={{"--color": "teal"}}>Apply Now</a>
+                    <a aria-label="linked in" href="https://www.linkedin.com/jobs/view/3484847764" className='apply-link' style={{"--color": "teal"}}>Apply Now</a>
                     </div>
                 </div>
             </div>

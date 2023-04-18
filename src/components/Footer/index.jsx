@@ -20,7 +20,7 @@ const Footer = () => {
                         </h3>
                         <div className="footer-newsletter">
                             <input type="email" className="footer-newsletter-input" placeholder='Enter your email' />
-                            <button className="footer-newsletter-button">
+                            <button aria-label="subscribe to newsletter" className="footer-newsletter-button">
                                 <i className='bx bx-right-arrow-alt'></i>
                             </button>
                         </div>
@@ -32,8 +32,8 @@ const Footer = () => {
                         <h2 className="footer-title-small">
                             GET IN TOUCH
                         </h2>
-                        <a href="mailto:contact@okaydone.in">contact@okaydone.in</a>
-                        <a href="tel:+91 98860 98992">+91 98860 98992</a>
+                        <a aria-label="contact@okaydone.in" href="mailto:contact@okaydone.in">contact@okaydone.in</a>
+                        <a aria-label="+91 98860 98992" href="tel:+91 98860 98992">+91 98860 98992</a>
                         {/* <p>#17, 13th Cross Road,<br />7th Main Rd, Indiranagar,<br /> Bengaluru, Karnataka - 560038</p> */}
                     </div>
                 </div>
