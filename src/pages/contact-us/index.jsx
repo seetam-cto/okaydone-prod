@@ -17,7 +17,8 @@ export default function ContactUs() {
     name: '',
     phone: '',
     email: '',
-    message: ''
+    message: '',
+    service: ''
   })
   const form = useRef();
 
@@ -32,7 +33,8 @@ export default function ContactUs() {
                             'name': userData.name,
                             'email': userData.email,
                             'phone': userData.phone,
-                            'message': userData.message
+                            'message': userData.message,
+                            'service': userData.service
                         }
                     ]
                 })
@@ -115,6 +117,14 @@ export default function ContactUs() {
                             </div>
                         </div>
                         <div className="col-6 col-sm-12">
+                            <select value={userData.service} onChange={(e) => setUserData({...userData, service: e.target.value})}>
+                                <option value="#">Select Service</option>
+                                <option value="Social Media & Marketing">Social Media & Marketing</option>
+                                <option value="Production">Production House</option>
+                                <option value="Influencer Marketing">Influencer Marketing</option>
+                                <option value="Web Development">Web Development</option>
+                                <option value="Performance Marketing">Performance Marketing</option>
+                            </select>
                             <textarea name="message" placeholder='Your Message' value={userData.message} onChange={(e) => setUserData({...userData, message: e.target.value})} cols="30" rows="10"></textarea>
                         </div>
                         <div className="col-12 contact-form-center">
