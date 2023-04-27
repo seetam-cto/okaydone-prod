@@ -18,6 +18,9 @@
 # production
 /build
 
+#Unwanted Files
+/src/styles/fonts/Fonts.zip
+
 # misc
 .DS_Store
 *.pem
