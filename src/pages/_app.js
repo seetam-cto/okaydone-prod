@@ -10,6 +10,7 @@ import 'react-creative-cursor/dist/styles.css';
 import { ToastContainer } from 'react-toastify';
 import 'react-tooltip/dist/react-tooltip.css'
 import 'react-toastify/dist/ReactToastify.css';
+import Router from 'next/router';
 // const AnimatedCursor = dynamic(() => import('react-animated-cursor'), {
 //   ssr: false
 // });
@@ -17,6 +18,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 export default function App({ Component, pageProps }) {
   const [ww, setWw] = useState(true)
+
   useEffect(() => {
     const media = window.innerWidth
     if(media > 768){
@@ -26,6 +28,18 @@ export default function App({ Component, pageProps }) {
     }
   },[])
   const router = useRouter()
+  useEffect(() => {
+    import('react-facebook-pixel')
+      .then((x) => x.default)
+      .then((ReactPixel) => {
+        ReactPixel.init('FACEBOOK_PIXEL_ID')
+        ReactPixel.pageView()
+
+        router.events.on('routeChangeComplete', () => {
+          ReactPixel.pageView()
+        })
+      })
+  }, [router.events])
   useEffect(() => {
     if (typeof window !== 'undefined'){
       const loader = document.getElementById('globalLoader');
