@@ -31,7 +31,7 @@ export default function App({ Component, pageProps }) {
     import('react-facebook-pixel')
       .then((x) => x.default)
       .then((ReactPixel) => {
-        ReactPixel.init('FACEBOOK_PIXEL_ID')
+        ReactPixel.init('552935527031747')
         ReactPixel.pageView()
 
         router.events.on('routeChangeComplete', () => {
