@@ -13,12 +13,6 @@ import 'react-toastify/dist/ReactToastify.css';
 // const AnimatedCursor = dynamic(() => import('react-animated-cursor'), {
 //   ssr: false
 // });
-import ReactPixel from 'react-facebook-pixel';
-const options = {
-  autoConfig: true, // set pixel's autoConfig. More info: https://developers.facebook.com/docs/facebook-pixel/advanced/
-  debug: false, // enable logs
-};
-const advancedMatching = { em: 'seetam@okaydone.in' };
 
 
 export default function App({ Component, pageProps }) {
@@ -30,8 +24,6 @@ export default function App({ Component, pageProps }) {
     }else{
       setWw(false)
     }
-    ReactPixel.init('552935527031747', advancedMatching, options);
-    ReactPixel.pageView();
   },[])
   const router = useRouter()
   useEffect(() => {
