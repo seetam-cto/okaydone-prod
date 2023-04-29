@@ -6,7 +6,7 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <meta name="facebook-domain-verification" content="wwkoankymfywphuax29ajrthwbqhp7" />
-        <Script>
+        <Script id="facebook-pixel-code">
           {`
             !function(f,b,e,v,n,t,s)
             {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
