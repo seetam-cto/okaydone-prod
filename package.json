@@ -34,6 +34,7 @@
     "react-countup": "^6.4.1",
     "react-creative-cursor": "^1.2.7",
     "react-dom": "18.2.0",
+    "react-facebook-pixel": "^1.0.4",
     "react-lazyload": "^3.2.0",
     "react-lottie": "^1.2.3",
     "react-lottie-player": "^1.5.4",
