@@ -117,7 +117,7 @@ export default function ContactUs() {
                             </div>
                         </div>
                         <div className="col-6 col-sm-12">
-                            <select value={userData.service} onChange={(e) => setUserData({...userData, service: e.target.value})}>
+                            <select name="user_service" value={userData.service} onChange={(e) => setUserData({...userData, service: e.target.value})}>
                                 <option value="#">Select Service</option>
                                 <option value="Social Media & Marketing">Social Media & Marketing</option>
                                 <option value="Production">Production House</option>
