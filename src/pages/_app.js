@@ -3,14 +3,13 @@ import '../styles/blobz.min.css'
 import Script from 'next/script'
 import dynamic from 'next/dynamic'
 import { AnimatePresence } from 'framer-motion';
-import Router, { useRouter } from 'next/router';
+import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { Cursor } from 'react-creative-cursor';
 import 'react-creative-cursor/dist/styles.css';
 import { ToastContainer } from 'react-toastify';
 import 'react-tooltip/dist/react-tooltip.css'
 import 'react-toastify/dist/ReactToastify.css';
-import Router from 'next/router';
 // const AnimatedCursor = dynamic(() => import('react-animated-cursor'), {
 //   ssr: false
 // });
