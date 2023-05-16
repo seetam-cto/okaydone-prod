@@ -36,6 +36,7 @@ export default function Ayatana() {
         <meta name="description" content="Our winning marketing strategy has unlocked the door to marvellous sales for Ayatana Resorts" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="canonical" href="https://okaydone.in/work/ayatana" />
       </Head>
       <LoaderScreen />
       <main className={"main"}>

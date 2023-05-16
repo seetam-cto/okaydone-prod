@@ -134,6 +134,7 @@ export default function RCB() {
         <meta name="description" content="Ever wondered who's behind World's most popular cricket team's digital startegy? Wonder no more, it was us at Okay Done." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="canonical" href="https://okaydone.in/work/royal-challengers-bangalore" />
       </Head>
       <LoaderScreen />
       <main className={"main"}>

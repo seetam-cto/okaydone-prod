@@ -26,6 +26,7 @@ export default function BCP() {
         <meta name="description" content="Consistent, platform-centric content with humor and relatable communication for Bengaluru City Police, ensured we bridged the gap between the public and the police. Okay Done took BCP's social media game to another level." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="canonical" href="https://okaydone.in/work/bengaluru-city-police" />
       </Head>
       <LoaderScreen />
       <main className={"main"}>
