@@ -39,7 +39,7 @@ export default function BCP() {
             categories={["Social Media"]}
             back={"/work"}
             logo={logo.src}
-            alt={"Bengaluru City Police (BCP) Logo 2017 x OkayDone partnership"}
+            alt={"Bengaluru City Police (BCP) Logo 2017 x Okay Done partnership"}
             color={"black"} />
           </div>
           <div className="container">

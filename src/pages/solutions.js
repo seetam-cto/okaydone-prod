@@ -25,7 +25,7 @@ export default function Solutions() {
   return (
     <>
       <Head>
-        <title>OkayDone | Solutions</title>
+        <title>Okay Done | Solutions</title>
         <meta name="description" content="Okay Done is one bangalore's top agencies, that focuses on millennial marketing methods to help brands and organizations reach their optimum potential in the digital space." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
