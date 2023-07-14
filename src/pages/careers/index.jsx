@@ -5,8 +5,9 @@ import Navigation from '@/components/Navigation'
 import ScrollContainer from '@/components/ScrollContainer'
 import { LoaderScreen } from '@/utilities'
 import Head from 'next/head'
+import axios from 'axios'
 
-export default function Careers() {
+export default function Careers({data}) {
   return (
     <>
       <Head>
@@ -36,21 +37,67 @@ export default function Careers() {
                     </div>
                 </div>
             </div>
+            {[...data, ...data].map((jp, i) =>
             <div className="container vacancies" id='vacancies'>
                 <div className="job">
-                    <h1 className="title">Manipulator / <br/>Graphic Designer</h1>
+                    <h1 className="title">{jp.title}</h1>
                     <div className="description">
-                        <h2>(3-5 yrs Experience)</h2>
-                        <p>We are looking for visualisers who can bring life to social media creatives. Apply Now if you are a Graphic Designer, Photo Manipulator / Illustrator who is up to creating a buzz in the digital space.</p>
+                        <h2>({jp.experience})</h2>
+                        <p>{jp.description}</p>
                     </div>
                     <div className="apply">
-                    <a aria-label="linked in" href="https://www.linkedin.com/jobs/view/3484847764" className='apply-link' style={{"--color": "teal"}}>Apply Now</a>
+                    <a aria-label="linked in" href={jp.linkedInJobPostLink} className='apply-link' style={{"--color": "teal"}}>Apply Now</a>
                     </div>
                 </div>
-            </div>
+            </div>)}
             <Footer />
         </ScrollContainer>
       </main>
     </>
   )
+}
+
+// This gets called on every request
+export async function getServerSideProps() {
+
+  let finalData = null
+
+  let query = JSON.stringify({
+    query: `query JobPosts {
+      jobPosts {
+        createdAt
+        description
+        experience
+        id
+        linkedInJobPostLink
+        publishedAt
+        title
+        updatedAt
+      }
+    }`,
+    variables: {}
+  });
+
+  // Fetch data from external API
+  let config = {
+    method: 'post',
+    maxBodyLength: Infinity,
+    url: 'https://api-ap-south-1.hygraph.com/v2/clk27gdle0jgc01t80koo6myr/master',
+    headers: { 
+      'Content-Type': 'application/json'
+    },
+    data : query
+  };
+
+  await axios.request(config)
+  .then((response) => {
+    finalData = response.data
+    return { props: { data: finalData.data.jobPosts } }
+  })
+  .catch((error) => {
+    console.log(error)
+    return { props: { data: null } }
+  });
+
+  return { props: { data: finalData?.data?.jobPosts } }
 }
