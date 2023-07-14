@@ -33,6 +33,7 @@ const Footer = () => {
                             GET IN TOUCH
                         </h2>
                         <a aria-label="contact@okaydone.in" href="mailto:contact@okaydone.in">contact@okaydone.in</a>
+                        <a aria-label="careers@okaydone.in" href="mailto:careers@okaydone.in">careers@okaydone.in</a>
                         <a aria-label="+91 98860 98992" href="tel:+91 98860 98992">+91 98860 98992</a>
                         {/* <p>#17, 13th Cross Road,<br />7th Main Rd, Indiranagar,<br /> Bengaluru, Karnataka - 560038</p> */}
                     </div>
