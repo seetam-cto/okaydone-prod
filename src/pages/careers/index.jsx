@@ -38,7 +38,7 @@ export default function Careers({data}) {
                 </div>
             </div>
             {[...data, ...data].map((jp, i) =>
-            <div className="container vacancies" id='vacancies'>
+            <div className="container vacancies" id='vacancies' key={i}>
                 <div className="job">
                     <h1 className="title">{jp.title}</h1>
                     <div className="description">
