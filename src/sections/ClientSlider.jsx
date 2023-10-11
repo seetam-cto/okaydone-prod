@@ -1,5 +1,10 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import Image from 'next/image'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { useState } from 'react'
+import { useEffect } from 'react'
+import { Autoplay, Navigation, A11y, Pagination, Grid } from 'swiper';
+
 
 const ClientSlider = () => {
     return (
@@ -71,6 +76,104 @@ const ClientSlider = () => {
             </div>
         </div>
       </div>
+    )
+}
+
+const CustoArrow = ({dir}) => (
+    <div data-cursor-sticky={`#bw-${dir}`} data-cursor-text={dir == "next" ? "Next" : "Prev"} data-cursor-size="60px" data-cursor-color="#000000" className={`bw-client-slider-arrow bw-${dir}`}>
+        {/* <i id={`bw-${dir}`} class='bx bx-left-arrow-alt'></i> */}
+    </div>
+)
+
+export const BWClientSlider = ({data}) => {
+
+    return (
+        <div data-cursor-text="DRAG" data-cursor-size="100px" data-cursor-color="#A374FF" className="bw-client-slider">
+            <Swiper
+            spaceBetween={50}
+            slidesPerView={5}
+            centeredSlides
+            modules={[Navigation, A11y, Autoplay]}
+            navigation={{
+                prevEl: '.bw-prev',
+                nextEl: '.bw-next'
+            }}
+            loop
+            allowTouchMove={false}
+            disableOnInteraction={false}
+            autoplay={{
+                delay: 0,
+            }}
+            speed={5000}
+            breakpoints={{
+                300: {
+                    slidesPerView: 3,
+                    spaceBetween: 20
+                },
+                // when window width is >= 640px
+                640: {
+                  slidesPerView: 2,
+                },
+                // when window width is >= 768px
+                768: {
+                  slidesPerView: 2,
+                },
+            }}
+            >
+                <CustoArrow dir={'prev'} />
+                <CustoArrow dir={'next'} />
+                {data?.clientDetails.slice(0, 12)?.map((item,index) => (
+                        <SwiperSlide key={index}>
+                            <div className="bw-client-slider-slide">
+                                <Image src={item?.clientLogo.url} alt={item.clientName} width={120} height={100} style={{objectFit: 'contain'}} />
+                            </div>
+                        </SwiperSlide>
+                ))}
+            </Swiper>
+            <Swiper
+            spaceBetween={50}
+            slidesPerView={5}
+            centeredSlides
+            modules={[Navigation, A11y, Autoplay]}
+            navigation={{
+                prevEl: '.bw-prev',
+                nextEl: '.bw-next'
+            }}
+            loop
+            allowTouchMove={false}
+            disableOnInteraction={false}
+            autoplay={{
+                delay: 0,
+                reverseDirection: true
+            }}
+            speed={5000}
+            breakpoints={{
+                300: {
+                    slidesPerView: 3,
+                    spaceBetween: 20
+                },
+                // when window width is >= 640px
+                640: {
+                  slidesPerView: 2,
+                },
+                // when window width is >= 768px
+                768: {
+                  slidesPerView: 2,
+                },
+
+            }}
+            >
+                <CustoArrow dir={'prev'} />
+                <CustoArrow dir={'next'} />
+                {data?.clientDetails.slice(12,24).map((item,index) => (
+                        <SwiperSlide key={index}>
+                            <div className="bw-client-slider-slide">
+                                <Image src={item?.clientLogo.url} alt={item.clientName} width={120} height={100} style={{objectFit: 'contain'}} />
+                            </div>
+                        </SwiperSlide>
+                ))}
+            </Swiper>
+        </div>
     )
 }
 

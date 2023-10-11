@@ -95,6 +95,7 @@ const Navigation = ({theme = false}) => {
             <div className="menupage-contact">
             <h2>Get In Touch</h2>
             <a aria-label="contact@okaydone.in" href="mailto:contact@okaydone.in" className="menupage-contact-link">contact@okaydone.in</a>
+            <a aria-label="contact@okaydone.in" href="mailto:careers@okaydone.in" className="menupage-contact-link">careers@okaydone.in</a>
             <a aria-label="+91 98860 98992" href="tel:+91 98860 98992" className="menupage-contact-link">+91 98860 98992</a>
             {/* <p className="menupage-contact-address">
             #17, 13th Cross Road,<br />7th Main Rd, Indiranagar, <br />Bengaluru, Karnataka - 560038

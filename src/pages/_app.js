@@ -1,7 +1,11 @@
 import '../styles/App.scss'
 import '../styles/blobz.min.css'
 import Script from 'next/script'
-import dynamic from 'next/dynamic'
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/autoplay';
+import 'swiper/css/pagination';
+import 'swiper/css/grid';
 import { AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
