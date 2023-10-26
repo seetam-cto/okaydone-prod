@@ -88,7 +88,7 @@ const CustoArrow = ({dir}) => (
 export const BWClientSlider = ({data}) => {
 
     return (
-        <div data-cursor-text="DRAG" data-cursor-size="100px" data-cursor-color="#A374FF" className="bw-client-slider">
+        <div data-cursor-text="OUR CLIENTS" data-cursor-size="100px" data-cursor-color="#A374FF" className="bw-client-slider">
             <Swiper
             spaceBetween={50}
             slidesPerView={5}
@@ -116,16 +116,16 @@ export const BWClientSlider = ({data}) => {
                 },
                 // when window width is >= 768px
                 768: {
-                  slidesPerView: 2,
+                  slidesPerView: 5,
                 },
             }}
             >
-                <CustoArrow dir={'prev'} />
-                <CustoArrow dir={'next'} />
+                {/* <CustoArrow dir={'prev'} />
+                <CustoArrow dir={'next'} /> */}
                 {data?.clientDetails.slice(0, 12)?.map((item,index) => (
                         <SwiperSlide key={index}>
                             <div className="bw-client-slider-slide">
-                                <Image src={item?.clientLogo.url} alt={item.clientName} width={120} height={100} style={{objectFit: 'contain'}} />
+                                <Image src={item?.clientLogo.url} alt={item.clientName} width={300} height={100} style={{objectFit: 'contain'}} />
                             </div>
                         </SwiperSlide>
                 ))}
@@ -158,17 +158,17 @@ export const BWClientSlider = ({data}) => {
                 },
                 // when window width is >= 768px
                 768: {
-                  slidesPerView: 2,
+                  slidesPerView: 5,
                 },
 
             }}
             >
-                <CustoArrow dir={'prev'} />
-                <CustoArrow dir={'next'} />
+                {/* <CustoArrow dir={'prev'} />
+                <CustoArrow dir={'next'} /> */}
                 {data?.clientDetails.slice(12,24).map((item,index) => (
                         <SwiperSlide key={index}>
                             <div className="bw-client-slider-slide">
-                                <Image src={item?.clientLogo.url} alt={item.clientName} width={120} height={100} style={{objectFit: 'contain'}} />
+                                <Image src={item?.clientLogo.url} alt={item.clientName} width={300} height={100} style={{objectFit: 'contain'}} />
                             </div>
                         </SwiperSlide>
                 ))}
