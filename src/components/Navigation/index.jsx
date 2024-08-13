@@ -51,7 +51,7 @@ const Logo = ({status}) => {
   )
 }
 
-const Navigation = ({theme = false}) => {
+const Navigation = ({noLogo = false, theme = false}) => {
   const [menuOpen, setMenuOpen] = useState(false)
   const [status, setStatus] = useState(true)
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -74,7 +74,7 @@ const Navigation = ({theme = false}) => {
     <AnimatePresence>
     <header className={`navbar ${status ? 'bghide' : ''}`}>
         <div className={`navbar-logo ${menuOpen || theme ? 'active' : ''}`}>
-          {!theme && <Logo status={status} />}
+          {!theme || !noLogo && <Logo status={status} />}
         </div>
         <div className="navbar-menu">
           {status && <BorderedButton link={"/contact-us"} invert={menuOpen || theme} text={"Get in touch"} />}

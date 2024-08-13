@@ -6,6 +6,7 @@ import ScrollContainer from '@/components/ScrollContainer'
 import { LoaderScreen } from '@/utilities'
 import Head from 'next/head'
 import axios from 'axios'
+import Link from 'next/link'
 
 export default function Careers({data}) {
   return (
@@ -46,7 +47,8 @@ export default function Careers({data}) {
                         <p>{jp.description}</p>
                     </div>
                     <div className="apply">
-                    <a aria-label="linked in" href={jp.linkedInJobPostLink} className='apply-link' style={{"--color": "teal"}}>Apply Now</a>
+                      {jp.platform == "linkedIn" && <a aria-label="linked in" href={jp.linkedInJobPostLink} className='apply-link' rel="noreferrer" target='_blank' style={{"--color": "teal"}}>Apply Now</a>}
+                      {jp.platform == "tallySo" && <Link aria-label="linked in" href={`/careers/${jp.id}`} className='apply-link' style={{"--color":"teal"}}>Apply Now</Link>}
                     </div>
                 </div>
             </div>)}
@@ -65,6 +67,7 @@ export async function getServerSideProps() {
   let query = JSON.stringify({
     query: `query JobPosts {
       jobPosts {
+        platform
         createdAt
         description
         experience

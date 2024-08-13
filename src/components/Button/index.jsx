@@ -108,10 +108,10 @@ export const BorderedButton = ({link = "#", action = null, text, invert=false}) 
   )
 }
 
-export const ArrowButton = ({link, direction = 'down', theme = 'dark'}) => {
+export const ArrowButton = ({arrowColor = '', link, direction = 'down', theme = 'dark'}) => {
   return (
     <Link href={link} className="button-arrow">
-      <div className={`button-arrow-container ${theme}`}>
+      <div className={`button-arrow-container ${arrowColor} ${theme}`}>
         <i className={`bx bx-${direction}-arrow-alt static`}></i>
         <i className={`bx bx-${direction}-arrow-alt hover`}></i>
       </div>
@@ -119,7 +119,7 @@ export const ArrowButton = ({link, direction = 'down', theme = 'dark'}) => {
   )
 }
 
-export const ArrowButtonAction = ({link = '',action = console.log(""), direction = 'down', theme = 'dark'}) => {
+export const ArrowButtonAction = ({link = '', action = console.log(""), direction = 'down', theme = 'dark'}) => {
   return (
     <>
     {link ? (
