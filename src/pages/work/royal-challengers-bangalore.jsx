@@ -139,7 +139,7 @@ export default function RCB() {
       <LoaderScreen />
       <main className={"main"}>
         <Background />
-        <Navigation theme={true} />
+        <Navigation noLogo={true} theme={true} />
         <ScrollContainer>
           <div className="brandpage-hero">
             <WorkHero

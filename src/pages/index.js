@@ -5,7 +5,7 @@ import ScrollContainer from '@/components/ScrollContainer'
 import Clients from '@/sections/Clients'
 import HomeContact from '@/sections/Contact'
 import Featured from '@/sections/Featured'
-import Hero from '@/sections/Hero'
+import Hero, { HeroSlider } from '@/sections/Hero'
 import { LoaderScreen } from '@/utilities'
 import Head from 'next/head'
 import axios from 'axios'
@@ -14,8 +14,8 @@ export default function Home({data}) {
   return (
     <>
       <Head>
-        <title>Best Digital Marketing Agency In Bengaluru: Okay Done</title>
-        <meta name="description" content="Okay Done is one of India's top agencies, that focuses on millennial marketing methods to help brands and organizations reach their optimum potential in the digital space." />
+        <title>{data.seo.pageTitle}</title>
+        <meta name="description" content={data.seo.metaDescription} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="canonical" href="https://okaydone.in/" />
@@ -28,9 +28,9 @@ export default function Home({data}) {
         <Background />
         <Navigation />
         <ScrollContainer>
-        <Hero />
-        <Clients clients={data} />
-        <Featured />
+        {data?.heroSectionType === 'video' ? <Hero data={data.video} /> : <HeroSlider />}
+        {data.sections.filter(section => section.sectionType === 'clients')[0] && <Clients data={data.sections.filter(section => section.sectionType === 'clients')[0]} />}
+        {data.sections.filter(section => section.sectionType === 'insights')[0] && <Featured data={data.sections.filter(section => section.sectionType === 'insights')[0]} />}
         <HomeContact />
         <Footer />
         </ScrollContainer>
@@ -45,10 +45,69 @@ export async function getServerSideProps() {
 
   let query = JSON.stringify({
     query: `query MyQuery {
-      clients {
-        clientDetails(first: 30){
-          clientName
-          clientLogo {
+      homePages(last: 1) {
+        seo {
+          pageTitle
+          metaDescription
+        }
+        sections {
+          ... on ClientSection {
+            id
+            clients {
+              ... on Client {
+                id
+                clientDetails (first: 100) {
+                  clientLogo {
+                    url
+                  }
+                  clientName
+                }
+              }
+            }
+            title
+            description
+            sectionType
+          }
+          ... on FeaturedInsight {
+            id
+            title
+            ctaText
+            ctaLink
+            insightCards {
+              ... on InsightCard {
+                id
+                caption
+                clientName
+                coverImage {
+                  url
+                }
+                pageLink
+              }
+            }
+            sectionType
+          }
+        }
+        heroSectionType
+        slides {
+          title
+          subTitle
+          id
+          ctaLinkText
+          ctaLink
+          backgroundImage {
+            url
+          }
+        }
+        video {
+          title
+          subTitle
+          ctaText
+          ctaLink
+          id
+          video {
+            url
+          }
+          videoFallBackImage {
             url
           }
         }
@@ -71,12 +130,11 @@ export async function getServerSideProps() {
   await axios.request(config)
   .then((response) => {
     finalData = response.data
-    return { props: { data: finalData.data.clients[0] } }
+    return { props: { data: finalData?.data?.homePages[0] } }
   })
   .catch((error) => {
-    console.log(error)
     return { props: { data: null } }
   });
 
-  return { props: { data: finalData?.data?.clients[0] } }
+  return { props: { data: finalData?.data?.homePages[0] } }
 }

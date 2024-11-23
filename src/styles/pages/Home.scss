@@ -147,6 +147,9 @@
             }
         }
     }
+    &.nobp{
+        padding-bottom: 0px !important;
+    }
     @include mobile{
         padding-bottom: 100px;
     }

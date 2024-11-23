@@ -139,8 +139,11 @@
                 &-box{
                     &-texts{
                         color: $white;
-                        &.invert{
+                        &.odinvert{
                             color: $black;
+                            span{
+                                color: $black;
+                            }
                         }
                     }
                 }

@@ -2,6 +2,7 @@ import LayeredButton, { ArrowButton, ArrowButtonAction } from '@/components/Butt
 import React, { useEffect, useState } from 'react'
 import Tilt from 'react-parallax-tilt';
 import { motion } from 'framer-motion';
+import { ImagesSlider } from '@/components/ui/images-slider';
 
 export const TextLine = ({text, middle}) => {
   return (
@@ -21,7 +22,7 @@ export const TextLine = ({text, middle}) => {
   )
 }
 
-const Hero = () => {
+const Hero = ({data}) => {
   const [ww, setWw] = useState(true)
   useEffect(() => {
     const media = window.innerWidth
@@ -55,7 +56,7 @@ const Hero = () => {
         loop={true}
         muted={true}
         playsInline={true}
-        src={'/hero-video.mp4'} />
+        src={data.video.url} />
         <div className="hero-video-overlay" />
         </Tilt>
       </motion.div>
@@ -65,10 +66,10 @@ const Hero = () => {
         initial={{x: 150, opacity: 0}}
         animate={{x: ww ? -100 : 0, opacity: 1}}
         transition={{duration: 2, delay: 2, type: 'spring', bounce: 0.6}}
-        className='hero-header-context'>content that is</motion.div>
-        <TextLine text={"recent"} />
-        <TextLine text={"relevant"} middle={true} />
-        <TextLine text={"relatable"} />
+        className='hero-header-context'>{data.subTitle}</motion.div>
+        <TextLine text={data.title.split(" ")[0]} />
+        <TextLine text={data.title.split(" ")[1]} middle={true} />
+        <TextLine text={data.title.split(" ")[2]} />
       </h1>
       <motion.div
       key={"hero-btn-what-we-do"}
@@ -76,12 +77,40 @@ const Hero = () => {
       animate={{scale: 1}}
       transition={{duration: 1.5, delay: 3, type: 'spring', bounce: 0.6}}
       className="hero-cta">
-        <LayeredButton link={"/solutions"} text={"Discover what we do"} />
+        <LayeredButton link={`/${data.ctaLink}`} text={data.ctaText} />
       </motion.div>
       <div className="hero-down">
         <ArrowButtonAction link={'#clients'} direction='down' theme='dark' />
       </div>
     </section>
+  )
+}
+
+export const HeroSlider = () => {
+  const images = [
+    "https://images.unsplash.com/photo-1485433592409-9018e83a1f0d?q=80&w=1814&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://images.unsplash.com/photo-1483982258113-b72862e6cff6?q=80&w=3456&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://images.unsplash.com/photo-1482189349482-3defd547e0e9?q=80&w=2848&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  ];
+  const [slides, setSlides] = useState([])
+  useEffect(() => {
+    setSlides(images.map((img, i) => {
+      return {
+        img,
+        title: `slide title here for slide ${i+1}`,
+        ctaText: 'CTA Text Here',
+        ctaLink: '/solutions'
+      }
+    }))
+  },[])
+
+  return (
+    <div className='hero nobp'>
+      <ImagesSlider className="h-[100svh]" direction='burn' images={images} slides={slides} />
+      <div className="hero-down">
+        <ArrowButtonAction link={'#clients'} direction='down' theme='dark' />
+      </div>
+    </div>
   )
 }
 

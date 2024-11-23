@@ -24,7 +24,7 @@ const LinkText = ({text, second = false}) => {
 
 const Logo = ({status}) => {
   return (
-    <a aria-label="navbar-logo" href="https://okaydone.in" className="navbar-logo-container">
+    <Link aria-label="navbar-logo" href="/" className="navbar-logo-container">
       <motion.img
       initial={{x: 100, rotate: 90, scale: 0, opacity: 0}}
       animate={{x: 0, scale: 1, rotate: 0, opacity: 1}}
@@ -47,7 +47,7 @@ const Logo = ({status}) => {
           transition={{duration: 1, type: 'spring', bounce: 0.6}}
           className='part-two'>D<span>o</span>ne</motion.div>
         </div>
-    </a>
+    </Link>
   )
 }
 
@@ -74,7 +74,7 @@ const Navigation = ({noLogo = false, theme = false}) => {
     <AnimatePresence>
     <header className={`navbar ${status ? 'bghide' : ''}`}>
         <div className={`navbar-logo ${menuOpen || theme ? 'active' : ''}`}>
-          {!theme || !noLogo && <Logo status={status} />}
+          {(!theme || !noLogo) && <Logo status={status} />}
         </div>
         <div className="navbar-menu">
           {status && <BorderedButton link={"/contact-us"} invert={menuOpen || theme} text={"Get in touch"} />}

@@ -5,7 +5,8 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <meta name="facebook-domain-verification" content="wwkoankymfywphuax29ajrthwbqhp7" />
+        <meta name="facebook-domain-verification" content="wwkoankymfywphuax29ajrthwbqhp7"/>
+        <meta name="author" content="Created by Seetam Divkar (seetam.divkar@gmail.com)"/>
       </Head>
       <body>
         <Main />

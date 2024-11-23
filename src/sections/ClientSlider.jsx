@@ -125,7 +125,7 @@ export const BWClientSlider = ({data}) => {
                 {data?.clientDetails.slice(0, 12)?.map((item,index) => (
                         <SwiperSlide key={index}>
                             <div className="bw-client-slider-slide">
-                                <Image src={item?.clientLogo.url} alt={item.clientName} width={300} height={100} style={{objectFit: 'contain'}} />
+                                <Image className='md:h-[120px] h-[80px]' src={item?.clientLogo.url} alt={item.clientName} width={300} height={100} style={{objectFit: 'contain'}} />
                             </div>
                         </SwiperSlide>
                 ))}
@@ -168,7 +168,7 @@ export const BWClientSlider = ({data}) => {
                 {data?.clientDetails.slice(12,24).map((item,index) => (
                         <SwiperSlide key={index}>
                             <div className="bw-client-slider-slide">
-                                <Image src={item?.clientLogo.url} alt={item.clientName} width={300} height={100} style={{objectFit: 'contain'}} />
+                                <Image className='md:h-[120px] h-[80px]' src={item?.clientLogo.url} alt={item.clientName} width={300} height={100} style={{objectFit: 'contain'}} />
                             </div>
                         </SwiperSlide>
                 ))}

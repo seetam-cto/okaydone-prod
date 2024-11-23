@@ -1,3 +1,4 @@
+import '../styles/main.css'
 import '../styles/App.scss'
 import '../styles/blobz.min.css'
 import Script from 'next/script'

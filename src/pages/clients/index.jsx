@@ -104,6 +104,7 @@ export default function ClientsGrid() {
                     // data-tooltip-content={img.name}
                     // data-tooltip-place="bottom"
                     alt={img.name}
+                    className='h-[10px]'
                     src={`/clients/${img.img}`} width={180} height={180} quality={100} />
                   </motion.div>
                 )}

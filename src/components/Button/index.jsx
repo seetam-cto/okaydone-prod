@@ -83,7 +83,7 @@ export const BorderedButton = ({link = "#", action = null, text, invert=false}) 
   {
     action ? (
     <div onClick={() => action} className="button-box bordered">
-      <div className={`button-box-texts ${invert ? 'invert' : ''}`}>
+      <div className={`button-box-texts ${invert ? 'odinvert' : ''}`}>
           <span className="button-box-texts-top">{text}</span>
           <span className="button-box-texts-bottom">{text}</span>
       </div>
@@ -96,7 +96,7 @@ export const BorderedButton = ({link = "#", action = null, text, invert=false}) 
     transition={{duration: 0.4}}
     >
       <Link href={link} className="button-box bordered">
-      <div className={`button-box-texts ${invert ? 'invert' : ''}`}>
+      <div className={`button-box-texts ${invert ? 'odinvert' : ''}`}>
           <span className="button-box-texts-top">{text}</span>
           <span className="button-box-texts-bottom">{text}</span>
       </div>
