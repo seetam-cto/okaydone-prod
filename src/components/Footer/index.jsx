@@ -9,7 +9,7 @@ const Footer = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-sm-12 m-only footer-logo">
-                        <Image width={200} height={200} quality={100} src={logo.src} />
+                        <Image width={200} height={200} quality={100} src={logo.src} alt="okaydone-logo" />
                     </div>
                     <div className="col-5 col-sm-12">
                         <h2 className="footer-title-small">

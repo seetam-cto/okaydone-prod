@@ -21,7 +21,7 @@ const TallySoPage = ({data}) => {
           <LoaderScreen />
           <main className={"main"}>
             <Background />
-            <Navigation noLogo={true} />
+            <Navigation noLogo={true} theme={true} />
             <ScrollContainer>
               <div className="brandpage-hero-back">
                 <ArrowButton link={"/careers"} direction='down' theme={'white'} />
