@@ -65,7 +65,7 @@ export default function App({ Component, pageProps }) {
     {ww && <Cursor isGelly={true} cursorBackgrounColor="#17F1D150" sizeAnimationEase="ease" />}
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet' />
     <Script src="https://kit.fontawesome.com/cbd809fbae.js" crossOrigin='anonymous' />
-    <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=AW-16609281914" />
+    <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-0GHRTCF3HF" />
     <script id="google-analytics"
     strategy="afterInteractive"
     dangerouslySetInnerHTML={{
@@ -73,7 +73,7 @@ export default function App({ Component, pageProps }) {
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'AW-16609281914', {page_path: window.location.pathname,});
+      gtag('config', 'G-0GHRTCF3HF');
       `}}
     ></script>
     <script type="application/ld+json" strategy={"afterInteractive"}
